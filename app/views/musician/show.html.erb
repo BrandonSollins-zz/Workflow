@@ -51,25 +51,25 @@ th {
 
 
 <html>
-  
+
   <% if @musician.is_a? String %>
     <h3> <%= @musician %> </h3>
   <% else %>
-  
+
     <div>
-      <h1> <u>Musician Info</u> </h1>
+      <h1> <u>Musician Info Woohoo</u> </h1>
       <p> <u>Name:</u> <%= @musician.name %> </p>
       <p> <u>Email:</u> <%= @musician.email %> </p>
       <p> <u>Phone:</u> <%= @musician.phone_number %> </p>
       <p> <u>Instrument:</u> <%= @musician.primary_instrument %> </p>
     </div>
-    
+
     <br><br>
-    
+
     <div>
       <h1> <u>Musician Availability</u> </h1>
       <h3> <%= @busy_header %> </h3>
-      <% unless @busy_times.empty? %>      
+      <% unless @busy_times.empty? %>
         <table>
           <tr>
             <th> Day (GMT) </th>
@@ -79,7 +79,7 @@ th {
             <th> From (EST) </th>
             <th> To (EST) </th>
           </tr>
-          
+
           <% @busy_times.each do |time| %>
             <tr>
               <td> <%= Time.parse(time[0]).strftime("%D") %> </td>
@@ -93,9 +93,9 @@ th {
         </table>
       <% end %>
     </div>
-    
+
     <br><br>
-    
+
     <div>
       <h1> <u>Recent Bookings</u> </h1>
         <table>
@@ -103,7 +103,7 @@ th {
             <th> Date/Time </th>
             <th> More Info </th>
           </tr>
-        
+
           <% @bookings.each do |booking| %>
             <tr>
               <td> <%= booking.time %> </td>
@@ -111,7 +111,7 @@ th {
             </tr>
           <% end %>
         </table>
-    </div> 
+    </div>
   <% end %>
 
 
