@@ -1,0 +1,15 @@
+development:
+  adapter: mysql
+  database: daneyo_workflow
+  host: localhost
+  reconnect: true
+  username: daneyo_workflow
+  password: w3EHda5UFmd6p2GA
+  
+production:
+  adapter: mysql
+  database: daneyo_workflow
+  host: localhost
+  reconnect: true
+  username: daneyo_workflow
+  password: w3EHda5UFmd6p2GA

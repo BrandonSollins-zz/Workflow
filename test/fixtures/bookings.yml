@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  available_musicians: MyText
+  available_times: MyText
+  time: 2016-12-27 13:38:47
+  completed_at: 2016-12-27 13:38:47
+  required_instruments: MyText
+  chosen_musicians: MyText
+
+two:
+  available_musicians: MyText
+  available_times: MyText
+  time: 2016-12-27 13:38:47
+  completed_at: 2016-12-27 13:38:47
+  required_instruments: MyText
+  chosen_musicians: MyText
