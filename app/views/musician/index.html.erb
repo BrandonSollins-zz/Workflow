@@ -51,7 +51,7 @@ th {
 
 <html>
 
-  <h1> <u> Musicians Registered <u> </h1>
+  <h1> <u> Musicians Registered Woohoo <u> </h1>
 
   <br>
 
@@ -61,7 +61,7 @@ th {
       <th> Instrument </th>
       <th> Available Times </th>
     </tr>
-  
+
     <% Musician.all.sort_by{ |x| x.name }.each do |musician| %>
       <tr>
         <td> <%= musician.name %> </td>
