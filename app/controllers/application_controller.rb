@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   
   def get_busy_times(calendar_ids, min_date, max_date, access_token)
     form_data = {
-      "items" => [{:id => calendar_ids}],
+      "items" => calendar_ids.map{ |x| {:id => x} },
       "timeMin" => "#{min_date.year}-#{min_date.month}-#{min_date.day}T00:00:00+00:00",
       "timeMax" => "#{max_date.year}-#{max_date.month}-#{max_date.day}T23:59:00+00:00"   
     }

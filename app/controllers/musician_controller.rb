@@ -6,7 +6,7 @@ class MusicianController < ApplicationController
       @bookings = Booking.all.select{ |x| x.chosen_musicians.include?(params["id"].to_i) unless x.chosen_musicians.nil? }.sort_by{ |x| x.completed_at }
       access_token = get_access_token(@musician.refresh_token)
       max_date = Time.now + 60*60*24*30
-      @busy_times = get_busy_times(@musician.email, Time.now, max_date, access_token)
+      @busy_times = get_busy_times(@musician.calendar_ids, Time.now, max_date, access_token)
       if @busy_times.empty?
         @busy_header = "No busy times found for the next 30 days"
       else

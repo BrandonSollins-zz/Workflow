@@ -17,7 +17,8 @@ class SignUpController < ApplicationController
         :primary_instrument => params[:primary_instrument],
 	:secondary_instrument => params[:secondary_instrument],
         :access_token => params[:access_token],
-        :refresh_token => params[:refresh_token]
+        :refresh_token => params[:refresh_token],
+        :calendar_ids => params[:calendar_ids]
       )
       @musician.save!  
       booking = Booking.new
@@ -84,7 +85,7 @@ class SignUpController < ApplicationController
     @calendars = ""
     @calendar_size = @response_json["items"].size
     @response_json["items"].each do |x|
-      @calendars += "<option value='#{x["etag"]}'>#{x["summary"]}</option>"
+      @calendars += "<option value='#{x["id"]}'>#{x["summary"]}</option>"
     end
   end
  
