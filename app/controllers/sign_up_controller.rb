@@ -41,6 +41,7 @@ class SignUpController < ApplicationController
       @code = @base_url[:code]
       get_access_tokens
       get_user_email
+      get_calendars
     end
   end
   
@@ -71,6 +72,10 @@ class SignUpController < ApplicationController
     response = http.request(request)
     @response_json = JSON.parse(response.body)
     @user_email = @response_json["emailAddress"]
+  end
+  
+  def get_calendars
+  
   end
  
  

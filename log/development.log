@@ -22088,3 +22088,381 @@ Processing MusicianController#show (for 72.188.103.214 at 2017-03-13 14:44:37) [
   [4;36;1mBooking Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
 Rendering musician/show
 Completed in 543ms (View: 42, DB: 5) | 200 OK [https://www.custom-tracks.com/workflow/musicians/16]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 20:04:05) [GET]
+  [4;35;1mMusician Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 17ms (View: 11, DB: 2) | 200 OK [http://custom-tracks.com/workflow/sign-up/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 20:04:07) [GET]
+  [4;35;1mMusician Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://custom-tracks.com/workflow/sign-up/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 20:09:53) [GET]
+  [4;35;1mMusician Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://custom-tracks.com/workflow/sign-up/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 20:10:21) [GET]
+  [4;35;1mMusician Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+ERROR: compiling _run_erb_app47views47sign_up47index46html46erb RAISED compile error
+/home1/daneyo/workflow/app/views/sign_up/index.html.erb:13: odd number list for Hash
+...lendars, option = {"multiple": true}) ).to_s); @output_buffe...
+                              ^
+/home1/daneyo/workflow/app/views/sign_up/index.html.erb:13: syntax error, unexpected ':', expecting '}'
+...lendars, option = {"multiple": true}) ).to_s); @output_buffe...
+                              ^
+Function body:           def _run_erb_app47views47sign_up47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<html>\n\n  <h1> Musician Sign Up </h1>\n  <h3> Fill out the following information to be considered for future bookings! </h3>\n  <h5> Step 1: Click the \"authenticate email\" button below and follow each of the steps </h5>\n  <p><i> NOTE: You will be asked to authenticate your gmail account with our app. Failure to do so will prevent you from receiving future bookings! </i></p>\n  <button onclick=\"auth()\"> Authenticate Email </button>\n  \n  <h5> Step 2: Fill out the rest of the information and click submit! </h5>\n  "
+
+
+
+
+
+
+
+
+;  form_for :musician, @musician, :url => { :action => "create" } do |f| ; @output_buffer.concat "\n    Email: "
+; @output_buffer.concat(( text_field_tag(:email, defined?(@user_email) ? @user_email : nil)  ).to_s); @output_buffer.concat "<br>\n    Select Calendars To Track: <br>\n      "
+
+; @output_buffer.concat(( select_tag(:calendars, option = {"multiple": true}) ).to_s); @output_buffer.concat " <br>\n    Phone Number: "
+; @output_buffer.concat(( text_field_tag(:phone_number) ).to_s); @output_buffer.concat "<br>\n    Name: "
+; @output_buffer.concat(( text_field_tag(:name) ).to_s); @output_buffer.concat "<br>\n    Primary Instrument: "
+; @output_buffer.concat(( select_tag "primary_instrument", "<option>Guitar</option><option>Drums</option><option>Bass</option><option>Keys/Piano</option>" ).to_s); @output_buffer.concat "<br>\n    Secondary Instrument: "
+; @output_buffer.concat(( select_tag "secondary_instrument", "<option>Guitar</option><option>Drums</option><option>Bass</option><option>Keys/Piano</option><option selected=\"selected\">None</option>" ).to_s); @output_buffer.concat "<br>\n    "
+; @output_buffer.concat(( hidden_field_tag(:access_token, defined?(@access_token) ? @access_token : nil) ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( hidden_field_tag(:refresh_token, defined?(@refresh_token) ? @refresh_token : nil) ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( submit_tag "Submit" ).to_s); @output_buffer.concat "\n  "
+;  end ; @output_buffer.concat "\n            \n  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n  <script>\n  \n    current_path = window.location.href\n    if (current_path.indexOf(\"?flash=\") > -1) {\n      message = current_path.split(\"?flash=\")[1].replace(/\\+/g, \" \")\n      alert(message)\n    }\n    \n    function auth() {\n      redirect_uri = \""
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( @redirect_uri ).to_s); @output_buffer.concat "\"\n      client_id = \""
+; @output_buffer.concat(( @client_id ).to_s); @output_buffer.concat "\"\n      auth_url = \"https://accounts.google.com/o/oauth2/auth?prompt=consent&response_type=code&scope=https://www.googleapis.com/auth/calendar+https://www.googleapis.com/auth/gmail.readonly&access_type=offline&redirect_uri=\" + redirect_uri + \"&client_id=\" + client_id \n      window.location.replace(auth_url)\n    }\n    \n  </script>\n\n</html>"
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home1/daneyo/workflow/app/views/sign_up/index.html.erb:44:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/template.rb:205:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:265:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1252:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1328:in `default_render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1334:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/flash.rb:151:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:438:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/handler/fastcgi.rb:57:in `serve'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:103:in `process_request'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:153:in `with_signal_handler'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:101:in `process_request'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:78:in `process_each_request'
+/usr/lib/ruby/gems/1.8/gems/fcgi-0.8.8/lib/fcgi.rb:117:in `session'
+/usr/lib/ruby/gems/1.8/gems/fcgi-0.8.8/lib/fcgi.rb:104:in `each_request'
+/usr/lib/ruby/gems/1.8/gems/fcgi-0.8.8/lib/fcgi.rb:36:in `each'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:77:in `process_each_request'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:76:in `catch'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:76:in `process_each_request'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:51:in `process!'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:23:in `process!'
+dispatch.fcgi:24
+
+ActionView::TemplateError (compile error
+/home1/daneyo/workflow/app/views/sign_up/index.html.erb:13: odd number list for Hash
+...lendars, option = {"multiple": true}) ).to_s); @output_buffe...
+                              ^
+/home1/daneyo/workflow/app/views/sign_up/index.html.erb:13: syntax error, unexpected ':', expecting '}'
+...lendars, option = {"multiple": true}) ).to_s); @output_buffe...
+                              ^) on line #13 of app/views/sign_up/index.html.erb:
+10:   <% form_for :musician, @musician, :url => { :action => "create" } do |f| %>
+11:     Email: <%= text_field_tag(:email, defined?(@user_email) ? @user_email : nil)  %><br>
+12:     Select Calendars To Track: <br>
+13:       <%= select_tag(:calendars, option = {"multiple": true}) %> <br>
+14:     Phone Number: <%= text_field_tag(:phone_number) %><br>
+15:     Name: <%= text_field_tag(:name) %><br>
+16:     Primary Instrument: <%= select_tag "primary_instrument", "<option>Guitar</option><option>Drums</option><option>Bass</option><option>Keys/Piano</option>" %><br>
+
+    app/views/sign_up/index.html.erb:44:in `compile!'
+    fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+    fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+    fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+    dispatch.fcgi:24
+
+Rendered rescues/_trace (35.0ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 20:10:34) [GET]
+  [4;35;1mMusician Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+ERROR: compiling _run_erb_app47views47sign_up47index46html46erb RAISED compile error
+/home1/daneyo/workflow/app/views/sign_up/index.html.erb:13: odd number list for Hash
+...endars, options = {"multiple": true}) ).to_s); @output_buffe...
+                              ^
+/home1/daneyo/workflow/app/views/sign_up/index.html.erb:13: syntax error, unexpected ':', expecting '}'
+...endars, options = {"multiple": true}) ).to_s); @output_buffe...
+                              ^
+Function body:           def _run_erb_app47views47sign_up47index46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<html>\n\n  <h1> Musician Sign Up </h1>\n  <h3> Fill out the following information to be considered for future bookings! </h3>\n  <h5> Step 1: Click the \"authenticate email\" button below and follow each of the steps </h5>\n  <p><i> NOTE: You will be asked to authenticate your gmail account with our app. Failure to do so will prevent you from receiving future bookings! </i></p>\n  <button onclick=\"auth()\"> Authenticate Email </button>\n  \n  <h5> Step 2: Fill out the rest of the information and click submit! </h5>\n  "
+
+
+
+
+
+
+
+
+;  form_for :musician, @musician, :url => { :action => "create" } do |f| ; @output_buffer.concat "\n    Email: "
+; @output_buffer.concat(( text_field_tag(:email, defined?(@user_email) ? @user_email : nil)  ).to_s); @output_buffer.concat "<br>\n    Select Calendars To Track: <br>\n      "
+
+; @output_buffer.concat(( select_tag(:calendars, options = {"multiple": true}) ).to_s); @output_buffer.concat " <br>\n    Phone Number: "
+; @output_buffer.concat(( text_field_tag(:phone_number) ).to_s); @output_buffer.concat "<br>\n    Name: "
+; @output_buffer.concat(( text_field_tag(:name) ).to_s); @output_buffer.concat "<br>\n    Primary Instrument: "
+; @output_buffer.concat(( select_tag "primary_instrument", "<option>Guitar</option><option>Drums</option><option>Bass</option><option>Keys/Piano</option>" ).to_s); @output_buffer.concat "<br>\n    Secondary Instrument: "
+; @output_buffer.concat(( select_tag "secondary_instrument", "<option>Guitar</option><option>Drums</option><option>Bass</option><option>Keys/Piano</option><option selected=\"selected\">None</option>" ).to_s); @output_buffer.concat "<br>\n    "
+; @output_buffer.concat(( hidden_field_tag(:access_token, defined?(@access_token) ? @access_token : nil) ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( hidden_field_tag(:refresh_token, defined?(@refresh_token) ? @refresh_token : nil) ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( submit_tag "Submit" ).to_s); @output_buffer.concat "\n  "
+;  end ; @output_buffer.concat "\n            \n  <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n  <script>\n  \n    current_path = window.location.href\n    if (current_path.indexOf(\"?flash=\") > -1) {\n      message = current_path.split(\"?flash=\")[1].replace(/\\+/g, \" \")\n      alert(message)\n    }\n    \n    function auth() {\n      redirect_uri = \""
+
+
+
+
+
+
+
+
+
+
+
+; @output_buffer.concat(( @redirect_uri ).to_s); @output_buffer.concat "\"\n      client_id = \""
+; @output_buffer.concat(( @client_id ).to_s); @output_buffer.concat "\"\n      auth_url = \"https://accounts.google.com/o/oauth2/auth?prompt=consent&response_type=code&scope=https://www.googleapis.com/auth/calendar+https://www.googleapis.com/auth/gmail.readonly&access_type=offline&redirect_uri=\" + redirect_uri + \"&client_id=\" + client_id \n      window.location.replace(auth_url)\n    }\n    \n  </script>\n\n</html>"
+
+
+
+
+
+
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home1/daneyo/workflow/app/views/sign_up/index.html.erb:44:in `compile!'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:61:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/renderable.rb:28:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/template.rb:205:in `render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_view/base.rb:265:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1252:in `render_for_file'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:936:in `render_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:51:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1328:in `default_render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:1334:in `perform_action_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:617:in `call_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.18/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/flash.rb:151:in `perform_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `send'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:532:in `process_without_filters'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/filters.rb:606:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:391:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/base.rb:386:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/routing/route_set.rb:438:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:87:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:121:in `_call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:29:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:9:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/query_cache.rb:28:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-2.3.18/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/string_coercion.rb:25:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/head.rb:9:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/params_parser.rb:15:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/session/cookie_store.rb:99:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/failsafe.rb:26:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:114:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/reloader.rb:34:in `run'
+/usr/lib/ruby/gems/1.8/gems/actionpack-2.3.18/lib/action_controller/dispatcher.rb:108:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.1.3/lib/rack/handler/fastcgi.rb:57:in `serve'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:103:in `process_request'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:153:in `with_signal_handler'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:101:in `process_request'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:78:in `process_each_request'
+/usr/lib/ruby/gems/1.8/gems/fcgi-0.8.8/lib/fcgi.rb:117:in `session'
+/usr/lib/ruby/gems/1.8/gems/fcgi-0.8.8/lib/fcgi.rb:104:in `each_request'
+/usr/lib/ruby/gems/1.8/gems/fcgi-0.8.8/lib/fcgi.rb:36:in `each'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:77:in `process_each_request'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:76:in `catch'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:76:in `process_each_request'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:51:in `process!'
+/usr/lib/ruby/gems/1.8/gems/rails-2.3.18/lib/fcgi_handler.rb:23:in `process!'
+dispatch.fcgi:24
+
+ActionView::TemplateError (compile error
+/home1/daneyo/workflow/app/views/sign_up/index.html.erb:13: odd number list for Hash
+...endars, options = {"multiple": true}) ).to_s); @output_buffe...
+                              ^
+/home1/daneyo/workflow/app/views/sign_up/index.html.erb:13: syntax error, unexpected ':', expecting '}'
+...endars, options = {"multiple": true}) ).to_s); @output_buffe...
+                              ^) on line #13 of app/views/sign_up/index.html.erb:
+10:   <% form_for :musician, @musician, :url => { :action => "create" } do |f| %>
+11:     Email: <%= text_field_tag(:email, defined?(@user_email) ? @user_email : nil)  %><br>
+12:     Select Calendars To Track: <br>
+13:       <%= select_tag(:calendars, options = {"multiple": true}) %> <br>
+14:     Phone Number: <%= text_field_tag(:phone_number) %><br>
+15:     Name: <%= text_field_tag(:name) %><br>
+16:     Primary Instrument: <%= select_tag "primary_instrument", "<option>Guitar</option><option>Drums</option><option>Bass</option><option>Keys/Piano</option>" %><br>
+
+    app/views/sign_up/index.html.erb:44:in `compile!'
+    fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+    fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+    fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+    dispatch.fcgi:24
+
+Rendered rescues/_trace (87.9ms)
+Rendered rescues/_request_and_response (1.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 20:11:50) [GET]
+  [4;35;1mMusician Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://custom-tracks.com/workflow/sign-up/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 20:12:15) [GET]
+  [4;35;1mMusician Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 9ms (View: 6, DB: 1) | 200 OK [http://custom-tracks.com/workflow/sign-up/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 20:12:53) [GET]
+  [4;35;1mMusician Columns (2.1ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+
+ActionView::TemplateError (undefined method `defined' for #<ActionView::Base:0x7fb52185b898>) on line #13 of app/views/sign_up/index.html.erb:
+10:   <% form_for :musician, @musician, :url => { :action => "create" } do |f| %>
+11:     Email: <%= text_field_tag(:email, defined?(@user_email) ? @user_email : nil)  %><br>
+12:     Select Calendars To Track: <br>
+13:       <%= select_tag(:calendars, defined(@calendars) ? @calendars : nil, :multiple => true) %> <br>
+14:     Phone Number: <%= text_field_tag(:phone_number) %><br>
+15:     Name: <%= text_field_tag(:name) %><br>
+16:     Primary Instrument: <%= select_tag "primary_instrument", "<option>Guitar</option><option>Drums</option><option>Bass</option><option>Keys/Piano</option>" %><br>
+
+    app/views/sign_up/index.html.erb:13
+    app/views/sign_up/index.html.erb:10
+    fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+    fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+    fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+    dispatch.fcgi:24
+
+Rendered rescues/_trace (85.0ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (5.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 20:13:06) [GET]
+  [4;35;1mMusician Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 13ms (View: 8, DB: 6) | 200 OK [http://custom-tracks.com/workflow/sign-up/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 20:13:23) [GET]
+  [4;35;1mMusician Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 11ms (View: 7, DB: 1) | 200 OK [http://custom-tracks.com/workflow/sign-up/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 20:13:24) [GET]
+  [4;35;1mMusician Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [http://custom-tracks.com/workflow/sign-up/]
