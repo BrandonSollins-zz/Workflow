@@ -7,6 +7,7 @@ class MusicianController < ApplicationController
       access_token = get_access_token(@musician.refresh_token)
       max_date = Time.now + 60*60*24*30
       @busy_times = get_busy_times(@musician.calendar_ids, Time.now, max_date, access_token)
+      @busy_times = @busy_times.sort_by { |x| Time.parse(x[0]) }
       if @busy_times.empty?
         @busy_header = "No busy times found for the next 30 days"
       else

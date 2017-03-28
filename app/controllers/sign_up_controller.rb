@@ -8,14 +8,14 @@ class SignUpController < ApplicationController
     email = params[:email]
     access_token = params[:access_token]
     refresh_token = params[:refresh_token]
+    calendar_ids = params[:calendar_ids]
     found_emails = Musician.all(:conditions => { :email => email } ).count 
-    if found_emails == 0 && !access_token.blank? && !refresh_token.blank?
+    if found_emails == 0 && !access_token.blank? && !refresh_token.blank? && !calendar_ids.blank?
       @musician = Musician.new(
         :name => params[:name],
         :email => params[:email],
         :phone_number => params[:phone_number],
         :primary_instrument => params[:primary_instrument],
-	:secondary_instrument => params[:secondary_instrument],
         :access_token => params[:access_token],
         :refresh_token => params[:refresh_token],
         :calendar_ids => params[:calendar_ids]
@@ -27,6 +27,8 @@ class SignUpController < ApplicationController
       booking.save!
     elsif found_emails > 0
       redirect_to :controller => "sign_up", :action => "index", :flash => "Email already exsists. Please sign up with a different email."
+    elsif calendar_ids.blank?
+      redirect_to :controller => "sign_up", :action => "index", :flash => "Please select at least 1 calendar to track."
     elsif access_token.blank? || refresh_token.blank? 
       redirect_to :controller => "sign_up", :action => "index", :flash => "Error validating email. Please try again."
     end  

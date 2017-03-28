@@ -65,6 +65,7 @@ th {
     </div>
 
     <br><br>
+    
 
     <div>
       <h1> <u>Musician Availability</u> </h1>
@@ -72,22 +73,18 @@ th {
       <% unless @busy_times.empty? %>
         <table>
           <tr>
-            <th> Day (GMT) </th>
             <th> From (GMT) </th>
             <th> To (GMT) </th>
-            <th> Day (EST) </th>
             <th> From (EST) </th>
             <th> To (EST) </th>
           </tr>
 
           <% @busy_times.each do |time| %>
             <tr>
-              <td> <%= Time.parse(time[0]).strftime("%D") %> </td>
-              <td> <%= Time.parse(time[0]).strftime("%r") %> </td>
-              <td> <%= Time.parse(time[1]).strftime("%r") %> </td>
-              <td> <%= (Time.parse(time[0]) + Time.zone_offset('EST')).strftime("%D") %> </td>
-              <td> <%= (Time.parse(time[0]) + Time.zone_offset('EST')).strftime("%r") %> </td>
-              <td> <%= (Time.parse(time[1]) + Time.zone_offset('EST')).strftime("%r") %> </td>
+              <td> <%= Time.parse(time[0]).strftime("%D") %> <%= Time.parse(time[0]).strftime("%r") %> </td>
+              <td> <%= Time.parse(time[1]).strftime("%D") %> <%= Time.parse(time[1]).strftime("%r") %></td>
+              <td> <%= (Time.parse(time[0]) + Time.zone_offset('EST')).strftime("%D") %> <%= (Time.parse(time[0]) + Time.zone_offset('EST')).strftime("%r") %></td>
+              <td> <%= (Time.parse(time[1]) + Time.zone_offset('EST')).strftime("%D") %> <%= (Time.parse(time[1]) + Time.zone_offset('EST')).strftime("%r") %></td>
             </tr>
           <% end %>
         </table>

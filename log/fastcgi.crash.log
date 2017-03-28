@@ -319,3 +319,10 @@ unhandled dispatch error
 [27/Mar/2017:20:04:04 :: 46242] starting
 [27/Mar/2017:20:04:07 :: 46426] starting
 [27/Mar/2017:21:07:10 :: 116225] starting
+[27/Mar/2017:21:58:39 :: 9367] starting
+[27/Mar/2017:21:58:39 :: 116225] asked to stop immediately
+[27/Mar/2017:21:58:39 :: 116225] stopping after explicit exit
+[27/Mar/2017:22:00:08 :: 9367] asked to stop immediately
+[27/Mar/2017:22:00:08 :: 9367] stopping after explicit exit
+[27/Mar/2017:22:00:25 :: 15412] starting
+[27/Mar/2017:22:00:26 :: 15471] starting
