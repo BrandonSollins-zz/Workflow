@@ -75,7 +75,17 @@ class SignUpController < ApplicationController
   end
   
   def get_calendars
-  
+    uri = URI.parse("https://www.googleapis.com/calendar/v3/users/me/calendarList?access_token=#{@access_token}")
+    http = Net::HTTP.new(uri.host, uri.port)
+    http.use_ssl = true
+    request = Net::HTTP::Get.new(uri.request_uri)
+    response = http.request(request)
+    @response_json = JSON.parse(response.body)
+    @calendars = ""
+    @calendar_size = @response_json["items"].size
+    @response_json["items"].each do |x|
+      @calendars += "<option value='#{x["etag"]}'>#{x["summary"]}</option>"
+    end
   end
  
  
