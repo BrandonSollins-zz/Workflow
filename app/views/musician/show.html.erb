@@ -85,9 +85,9 @@ th {
               <td> <%= Time.parse(time[0]).strftime("%D") %> </td>
               <td> <%= Time.parse(time[0]).strftime("%r") %> </td>
               <td> <%= Time.parse(time[1]).strftime("%r") %> </td>
-              <td> <%= (Time.parse(time[0]) + Time.zone_offset('EST')).strftime("%D") %> </td>
-              <td> <%= (Time.parse(time[0]) + Time.zone_offset('EST')).strftime("%r") %> </td>
-              <td> <%= (Time.parse(time[1]) + Time.zone_offset('EST')).strftime("%r") %> </td>
+              <td> <%= (Time.parse(time[0]) + Time.zone_offset('EDT')).strftime("%D") %> </td>
+              <td> <%= (Time.parse(time[0]) + Time.zone_offset('EDT')).strftime("%r") %> </td>
+              <td> <%= (Time.parse(time[1]) + Time.zone_offset('EDT')).strftime("%r") %> </td>
             </tr>
           <% end %>
         </table>
