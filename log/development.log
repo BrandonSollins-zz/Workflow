@@ -22758,3 +22758,1400 @@ Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 20:37:44) [GET
   [4;35;1mMusician Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
 Rendering sign_up/index
 Completed in 1127ms (View: 4, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up?code=4/cc9pQSlzMMgC4B3dMgy71zRuoETRsUh8WlKJuC3e8b8]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mMusician Load (0.3ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+  [4;35;1mMusician Load (0.5ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Delete all (1.1ms)[0m   [0;1mDELETE FROM `musicians` WHERE (`id` IN (17)) [0m
+  [4;35;1mMusician Load (0.3ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mBooking Load (0.7ms)[0m   [0;1mSELECT * FROM `bookings` ORDER BY bookings.id DESC LIMIT 1[0m
+  [4;35;1mBooking Columns (1.0ms)[0m   [0mSHOW FIELDS FROM `bookings`[0m
+  [4;36;1mBooking Load (0.6ms)[0m   [0;1mSELECT * FROM `bookings` ORDER BY bookings.id DESC LIMIT 1[0m
+  [4;35;1mBooking Delete all (0.9ms)[0m   [0mDELETE FROM `bookings` WHERE (`id` IN (66)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (4.9ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateEmails (20161126064945)
+Migrating to AddMessageIdToEmail (20161126065812)
+Migrating to AddEnumToEmail (20161126071539)
+Migrating to RenameMusicianColumn (20161127183649)
+Migrating to CreateMusicians (20161128234041)
+Migrating to CreateBookings (20161227193847)
+Migrating to AddPhoneNumberToMusician (20161227200203)
+Migrating to AddTimesAndMusiciansToBooking (20161230210000)
+Migrating to AddCalendarsToMusicians (20170328014911)
+  [4;35;1mSQL (22.5ms)[0m   [0mALTER TABLE `musicians` ADD `calendar_ids` text[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20170328014911')[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `bookings`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `bookings`[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSHOW FIELDS FROM `emails`[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mdescribe `emails`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSHOW KEYS FROM `emails`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mdescribe `musicians`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSHOW KEYS FROM `musicians`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mMusician Load (0.4ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+  [4;35;1mMusician Load (0.8ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Load (0.4ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Delete all (0.8ms)[0m   [0;1mDELETE FROM `musicians` WHERE (`id` IN (18)) [0m
+  [4;35;1mMusician Load (0.4ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Load (0.5ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Load (0.4ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Delete all (1.6ms)[0m   [0;1mDELETE FROM `musicians` WHERE (`id` IN (19)) [0m
+  [4;35;1mMusician Load (0.3ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Delete all (1.0ms)[0m   [0mDELETE FROM `musicians` WHERE (`id` IN (20)) [0m
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Load (0.3ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Delete all (0.6ms)[0m   [0;1mDELETE FROM `musicians` WHERE (`id` IN (21)) [0m
+  [4;35;1mMusician Load (0.3ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Load (0.3ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Load (0.3ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Load (0.2ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Load (0.3ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Load (0.4ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Load (0.4ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Load (0.3ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Load (3.6ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Load (0.7ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Delete all (4.9ms)[0m   [0mDELETE FROM `musicians` WHERE (`id` IN (22)) [0m
+  [4;36;1mMusician Load (1.3ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Load (0.8ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Load (0.7ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mSQL (518.7ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mBooking Columns (9.5ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+  [4;35;1mBooking Load (9.6ms)[0m   [0mSELECT * FROM `bookings` ORDER BY bookings.id DESC LIMIT 1[0m
+  [4;36;1mBooking Load (0.6ms)[0m   [0;1mSELECT * FROM `bookings` ORDER BY bookings.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mMusician Load (0.9ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+  [4;35;1mMusician Load (0.8ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Load (0.9ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Load (0.7ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Load (0.5ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:07:10) [GET]
+Rendering musician/index
+  [4;35;1mMusician Load (0.8ms)[0m   [0mSELECT * FROM `musicians` [0m
+  [4;36;1mMusician Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Completed in 17ms (View: 15, DB: 1) | 200 OK [https://custom-tracks.com/workflow/musicians]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:07:12) [GET]
+  Parameters: {"id"=>"16"}
+  [4;36;1mMusician Load (0.6ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '16') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.2ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 16) [0m
+  [4;35;1mBooking Load (0.6ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.map):
+  app/controllers/application_controller.rb:13:in `get_busy_times'
+  app/controllers/musician_controller.rb:9:in `show'
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (73.4ms)
+Rendered rescues/_request_and_response (1.2ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:07:37) [GET]
+  Parameters: {"id"=>"23"}
+  [4;36;1mMusician Load (0.8ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '23') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.2ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 23) [0m
+  [4;35;1mBooking Load (0.7ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 315ms (View: 20, DB: 3) | 200 OK [https://www.custom-tracks.com/workflow/musicians/23]
+  [4;35;1mMusician Load (0.3ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Delete all (0.9ms)[0m   [0;1mDELETE FROM `musicians` WHERE (`id` IN (23)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:07:51) [GET]
+  Parameters: {"id"=>"23"}
+  [4;36;1mMusician Load (0.5ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '23') LIMIT 1[0m
+Rendering musician/show
+Completed in 5ms (View: 1, DB: 1) | 200 OK [https://www.custom-tracks.com/workflow/musicians/23]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:07:53) [GET]
+Rendering musician/index
+  [4;36;1mMusician Load (0.3ms)[0m   [0;1mSELECT * FROM `musicians` [0m
+  [4;35;1mMusician Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Completed in 9ms (View: 6, DB: 1) | 200 OK [https://custom-tracks.com/workflow/musicians]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:08:05) [GET]
+Rendering musician/index
+  [4;35;1mMusician Load (0.5ms)[0m   [0mSELECT * FROM `musicians` [0m
+  [4;36;1mMusician Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Completed in 6ms (View: 4, DB: 1) | 200 OK [http://custom-tracks.com/workflow/musicians]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 71.47.30.247 at 2017-03-27 21:08:07) [GET]
+
+ActionController::MethodNotAllowed (Only post requests are allowed.):
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (22.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (method_not_allowed)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:08:09) [GET]
+  [4;35;1mMusician Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 61ms (View: 57, DB: 1) | 200 OK [http://custom-tracks.com/workflow/sign-up/]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:08:15) [GET]
+  Parameters: {"code"=>"4/7JrnVPD2kvG5d8ZqCYOBFcA3ZX7Mv4cHxV4OJjoA1ds"}
+  [4;35;1mMusician Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 602ms (View: 4, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up?code=4/7JrnVPD2kvG5d8ZqCYOBFcA3ZX7Mv4cHxV4OJjoA1ds]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#create (for 71.47.30.247 at 2017-03-27 21:08:26) [POST]
+  Parameters: {"name"=>"", "secondary_instrument"=>"None", "commit"=>"Submit", "authenticity_token"=>"RCuuDmiDq3yvfSaCVFRN/yH6tKNaW5z8tEWB3HbwI5s=", "calendar_ids"=>["brandon.sollins@izea.com", "brianf@izea.com", "careers@izea.com", "vj.leblanc@izea.com", "davidu@izea.com", "izea.com_nmq62eleqb8t70gm14u8q8k894@group.calendar.google.com", "#contacts@group.v.calendar.google.com", "en.usa#holiday@group.v.calendar.google.com"], "phone_number"=>"", "primary_instrument"=>"Guitar", "email"=>"brandon.sollins@izea.com", "access_token"=>"ya29.GlscBBxAeAogjXARlGXk-heyMptUPl_nFTDPCOCAu6hJzbP6v8LdYCrZw06j5dkY_S3OeBmAH3MfLNBEmwAdvzwbBIT0OUB7PnKLUv_wvbZtxkcwMEo435P3cXpa", "refresh_token"=>"1/46bsxE0PMoCuz5YqF8TuHFwSH35Vi085NPH6qkbJ9n4"}
+  [4;35;1mMusician Load (0.8ms)[0m   [0mSELECT * FROM `musicians` WHERE (`musicians`.`email` = 'brandon.sollins@izea.com') [0m
+  [4;36;1mMusician Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMusician Create (0.3ms)[0m   [0;1mINSERT INTO `musicians` (`name`, `secondary_instrument`, `created_at`, `updated_at`, `calendar_ids`, `phone_number`, `primary_instrument`, `email`, `access_token`, `refresh_token`) VALUES('', 'None', '2017-03-28 02:08:26', '2017-03-28 02:08:26', '--- \n- brandon.sollins@izea.com\n- brianf@izea.com\n- careers@izea.com\n- vj.leblanc@izea.com\n- davidu@izea.com\n- izea.com_nmq62eleqb8t70gm14u8q8k894@group.calendar.google.com\n- \"#contacts@group.v.calendar.google.com\"\n- en.usa#holiday@group.v.calendar.google.com\n', '', 'Guitar', 'brandon.sollins@izea.com', 'ya29.GlscBBxAeAogjXARlGXk-heyMptUPl_nFTDPCOCAu6hJzbP6v8LdYCrZw06j5dkY_S3OeBmAH3MfLNBEmwAdvzwbBIT0OUB7PnKLUv_wvbZtxkcwMEo435P3cXpa', '1/46bsxE0PMoCuz5YqF8TuHFwSH35Vi085NPH6qkbJ9n4')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mBooking Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mBooking Create (0.7ms)[0m   [0;1mINSERT INTO `bookings` (`completed_at`, `available_musicians`, `chosen_musicians`, `created_at`, `required_instruments`, `updated_at`, `time`, `available_times`, `times_and_musicians`, `times_and_musicians_attempts`, `times_and_musicians_attempted`) VALUES('2017-03-28 02:08:26', NULL, '--- \n- 24\n', '2017-03-28 02:08:26', NULL, '2017-03-28 02:08:26', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mCOMMIT[0m
+Rendering sign_up/create
+Completed in 23ms (View: 4, DB: 5) | 200 OK [https://custom-tracks.com/workflow/sign-up/create]
+  [4;35;1mMusician Load (0.4ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:08:36) [GET]
+Rendering musician/index
+  [4;35;1mMusician Load (0.4ms)[0m   [0mSELECT * FROM `musicians` [0m
+  [4;36;1mMusician Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Completed in 8ms (View: 6, DB: 1) | 200 OK [https://custom-tracks.com/workflow/musicians]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:08:38) [GET]
+  Parameters: {"id"=>"24"}
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '24') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.3ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 24) [0m
+  [4;35;1mBooking Load (0.5ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 765ms (View: 86, DB: 2) | 200 OK [https://www.custom-tracks.com/workflow/musicians/24]
+  [4;36;1mMusician Load (0.8ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Delete all (0.4ms)[0m   [0mDELETE FROM `musicians` WHERE (`id` IN (24)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BookingController#show (for 71.47.30.247 at 2017-03-27 21:10:15) [GET]
+  Parameters: {"id"=>"73"}
+Rendering booking/show
+Completed in 65ms (View: 19, DB: 0) | 200 OK [https://www.custom-tracks.com/workflow/bookings/73]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:15:36) [GET]
+  [4;35;1mMusician Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 9ms (View: 4, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 71.47.30.247 at 2017-03-27 21:15:36) [GET]
+
+ActionController::MethodNotAllowed (Only post requests are allowed.):
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (23.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (method_not_allowed)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:16:29) [GET]
+  [4;36;1mMusician Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 13ms (View: 8, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:16:48) [GET]
+  [4;36;1mMusician Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 10ms (View: 7, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:16:56) [GET]
+  Parameters: {"code"=>"4/gWMk00LlZk1oNRYemeXRzs_Lq2JCSv6NdAB_rvACtaQ"}
+  [4;36;1mMusician Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 537ms (View: 4, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up?code=4/gWMk00LlZk1oNRYemeXRzs_Lq2JCSv6NdAB_rvACtaQ]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:20:16) [GET]
+  Parameters: {"code"=>"4/gWMk00LlZk1oNRYemeXRzs_Lq2JCSv6NdAB_rvACtaQ"}
+  [4;36;1mMusician Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.size):
+  app/controllers/sign_up_controller.rb:85:in `get_calendars'
+  app/controllers/sign_up_controller.rb:44:in `index'
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (24.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:20:21) [GET]
+  [4;36;1mMusician Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 11ms (View: 7, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:20:21) [GET]
+  [4;36;1mMusician Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:20:28) [GET]
+  Parameters: {"code"=>"4/rKfo2yAN4LDWeSgaSo0ZPFbXagZR9KX7YcQ3wnMGYko"}
+  [4;36;1mMusician Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 549ms (View: 4, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up?code=4/rKfo2yAN4LDWeSgaSo0ZPFbXagZR9KX7YcQ3wnMGYko]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mMusician Load (0.7ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#create (for 71.47.30.247 at 2017-03-27 21:20:55) [POST]
+  Parameters: {"name"=>"Brandon Sollins", "commit"=>"Submit", "authenticity_token"=>"RCuuDmiDq3yvfSaCVFRN/yH6tKNaW5z8tEWB3HbwI5s=", "phone_number"=>"772-631-3753", "primary_instrument"=>"Guitar", "email"=>"brandon.sollins@izea.com", "access_token"=>"ya29.GlscBBnaZxHuZr_KoMGH1lWo2vae7T_RhGj8mtslJktoR3mhoT-iW_dBk0L3ATp5nSgaYAZdoi0EYILplwhJamiXsvrNktaCXxMuej-PO_-sKF5MSDYmEs_IZdf0", "refresh_token"=>"1/Q6us0asUl_q8eDquBpVwNvnCa59DCRb8eHq_UvJvMthVLFypltZ-yiXjBeWpUnwK"}
+  [4;36;1mMusician Load (0.5ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`email` = 'brandon.sollins@izea.com') [0m
+  [4;35;1mMusician Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMusician Create (0.6ms)[0m   [0mINSERT INTO `musicians` (`name`, `secondary_instrument`, `created_at`, `updated_at`, `calendar_ids`, `phone_number`, `primary_instrument`, `email`, `access_token`, `refresh_token`) VALUES('Brandon Sollins', NULL, '2017-03-28 02:20:55', '2017-03-28 02:20:55', NULL, '772-631-3753', 'Guitar', 'brandon.sollins@izea.com', 'ya29.GlscBBnaZxHuZr_KoMGH1lWo2vae7T_RhGj8mtslJktoR3mhoT-iW_dBk0L3ATp5nSgaYAZdoi0EYILplwhJamiXsvrNktaCXxMuej-PO_-sKF5MSDYmEs_IZdf0', '1/Q6us0asUl_q8eDquBpVwNvnCa59DCRb8eHq_UvJvMthVLFypltZ-yiXjBeWpUnwK')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mBooking Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `bookings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBooking Create (0.8ms)[0m   [0mINSERT INTO `bookings` (`completed_at`, `available_musicians`, `chosen_musicians`, `created_at`, `required_instruments`, `updated_at`, `time`, `available_times`, `times_and_musicians`, `times_and_musicians_attempts`, `times_and_musicians_attempted`) VALUES('2017-03-28 02:20:55', NULL, '--- \n- 25\n', '2017-03-28 02:20:55', NULL, '2017-03-28 02:20:55', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendering sign_up/create
+Completed in 22ms (View: 1, DB: 5) | 200 OK [https://custom-tracks.com/workflow/sign-up/create]
+  [4;35;1mMusician Load (0.5ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:22:25) [GET]
+  [4;36;1mMusician Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 71.47.30.247 at 2017-03-27 21:22:25) [GET]
+
+ActionController::MethodNotAllowed (Only post requests are allowed.):
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (18.8ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (method_not_allowed)
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:22:34) [GET]
+  Parameters: {"code"=>"4/ju1P5OibfLcuUp-bS7VQfWHmH7imqyPZBmyOpLYdj8g"}
+  [4;35;1mMusician Columns (12.0ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 607ms (View: 4, DB: 22) | 200 OK [https://custom-tracks.com/workflow/sign-up?code=4/ju1P5OibfLcuUp-bS7VQfWHmH7imqyPZBmyOpLYdj8g]
+  [4;36;1mMusician Load (0.9ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Load (0.3ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Delete all (0.7ms)[0m   [0;1mDELETE FROM `musicians` WHERE (`id` IN (25)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#create (for 71.47.30.247 at 2017-03-27 21:22:44) [POST]
+  Parameters: {"name"=>"", "commit"=>"Submit", "authenticity_token"=>"RCuuDmiDq3yvfSaCVFRN/yH6tKNaW5z8tEWB3HbwI5s=", "phone_number"=>"", "primary_instrument"=>"Guitar", "email"=>"brandon.sollins@izea.com", "access_token"=>"ya29.GlscBD6maU36m6q4bxXPbwIL4GNIzbM1AoVJZYiR1clPcEn7IcNw10AfiALWHjwzk2NQICFWlaswqbLbmkuMypZWrmYyBpTglIgHbTLSNpFSzzrdroh1gv2mmlZq", "refresh_token"=>"1/cPKDJWO7p_F1iCngerDRP8WK25Z0zJp94aqGTy85Yec"}
+  [4;35;1mMusician Load (0.5ms)[0m   [0mSELECT * FROM `musicians` WHERE (`musicians`.`email` = 'brandon.sollins@izea.com') [0m
+Redirected to https://custom-tracks.com/workflow/sign-up?flash=Please+select+at+least+1+calendar+to+track.
+Completed in 5ms (DB: 1) | 302 Found [https://custom-tracks.com/workflow/sign-up/create]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:22:44) [GET]
+  Parameters: {"flash"=>"Please select at least 1 calendar to track."}
+  [4;35;1mMusician Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 8ms (View: 3, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up?flash=Please+select+at+least+1+calendar+to+track.]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:22:51) [GET]
+  Parameters: {"code"=>"4/1m0bSH5IoynnVQRF36Pa3g42KkMUqLoA3n0LiiYFJbo"}
+  [4;35;1mMusician Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 543ms (View: 4, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up?code=4/1m0bSH5IoynnVQRF36Pa3g42KkMUqLoA3n0LiiYFJbo]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#create (for 71.47.30.247 at 2017-03-27 21:23:19) [POST]
+  Parameters: {"name"=>"", "commit"=>"Submit", "authenticity_token"=>"RCuuDmiDq3yvfSaCVFRN/yH6tKNaW5z8tEWB3HbwI5s=", "calendar_ids"=>["izea.com_nmq62eleqb8t70gm14u8q8k894@group.calendar.google.com"], "phone_number"=>"", "primary_instrument"=>"Guitar", "email"=>"brandon.sollins@izea.com", "access_token"=>"ya29.GlscBFVc4-g7yBfpwhDfzLbXdQUBRTSqev7_2DVn6vMJrv6UTG6MFHBt3XwAABAlpDA25RnNP3pkAiKw3pubdf510XbhhZWR0WaS940pT-SkCs4FxD3sq7jeUw8E", "refresh_token"=>"1/ZhGsASiWUPGCC_7XRPTMpfgKcTAfZG9G1ZeXIwuCRrlh5h-4pqsj2QZsjqS2HY_I"}
+  [4;35;1mMusician Load (0.8ms)[0m   [0mSELECT * FROM `musicians` WHERE (`musicians`.`email` = 'brandon.sollins@izea.com') [0m
+  [4;36;1mMusician Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mMusician Create (0.6ms)[0m   [0;1mINSERT INTO `musicians` (`name`, `secondary_instrument`, `created_at`, `updated_at`, `calendar_ids`, `phone_number`, `primary_instrument`, `email`, `access_token`, `refresh_token`) VALUES('', NULL, '2017-03-28 02:23:19', '2017-03-28 02:23:19', '--- \n- izea.com_nmq62eleqb8t70gm14u8q8k894@group.calendar.google.com\n', '', 'Guitar', 'brandon.sollins@izea.com', 'ya29.GlscBFVc4-g7yBfpwhDfzLbXdQUBRTSqev7_2DVn6vMJrv6UTG6MFHBt3XwAABAlpDA25RnNP3pkAiKw3pubdf510XbhhZWR0WaS940pT-SkCs4FxD3sq7jeUw8E', '1/ZhGsASiWUPGCC_7XRPTMpfgKcTAfZG9G1ZeXIwuCRrlh5h-4pqsj2QZsjqS2HY_I')[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mCOMMIT[0m
+  [4;36;1mBooking Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mBooking Create (0.6ms)[0m   [0;1mINSERT INTO `bookings` (`completed_at`, `available_musicians`, `chosen_musicians`, `created_at`, `required_instruments`, `updated_at`, `time`, `available_times`, `times_and_musicians`, `times_and_musicians_attempts`, `times_and_musicians_attempted`) VALUES('2017-03-28 02:23:19', NULL, '--- \n- 26\n', '2017-03-28 02:23:19', NULL, '2017-03-28 02:23:19', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendering sign_up/create
+Completed in 21ms (View: 1, DB: 5) | 200 OK [https://custom-tracks.com/workflow/sign-up/create]
+  [4;35;1mMusician Load (0.4ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:23:28) [GET]
+Rendering musician/index
+  [4;35;1mMusician Load (0.4ms)[0m   [0mSELECT * FROM `musicians` [0m
+  [4;36;1mMusician Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Completed in 6ms (View: 5, DB: 1) | 200 OK [https://custom-tracks.com/workflow/musicians]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:23:29) [GET]
+  Parameters: {"id"=>"26"}
+  [4;36;1mMusician Load (0.3ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '26') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.2ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 26) [0m
+  [4;35;1mBooking Load (0.2ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 507ms (View: 7, DB: 2) | 200 OK [https://www.custom-tracks.com/workflow/musicians/26]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 71.47.30.247 at 2017-03-27 21:26:27) [GET]
+
+ActionController::MethodNotAllowed (Only post requests are allowed.):
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (16.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (method_not_allowed)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:26:27) [GET]
+  [4;35;1mMusician Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up/]
+  [4;36;1mMusician Load (0.7ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Delete all (0.8ms)[0m   [0mDELETE FROM `musicians` WHERE (`id` IN (26)) [0m
+  [4;36;1mSQL (9.9ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:26:51) [GET]
+  Parameters: {"code"=>"4/zYcfrbAbvRJxpTbtl4p4j7BgJnwysSxvXjQtL_Ih5H0"}
+  [4;35;1mMusician Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 562ms (View: 3, DB: 11) | 200 OK [https://custom-tracks.com/workflow/sign-up?code=4/zYcfrbAbvRJxpTbtl4p4j7BgJnwysSxvXjQtL_Ih5H0]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#create (for 71.47.30.247 at 2017-03-27 21:26:58) [POST]
+  Parameters: {"name"=>"", "commit"=>"Submit", "authenticity_token"=>"RCuuDmiDq3yvfSaCVFRN/yH6tKNaW5z8tEWB3HbwI5s=", "calendar_ids"=>["brandon.sollins@izea.com", "izea.com_nmq62eleqb8t70gm14u8q8k894@group.calendar.google.com"], "phone_number"=>"", "primary_instrument"=>"Guitar", "email"=>"brandon.sollins@izea.com", "access_token"=>"ya29.GlscBHdMSzeJqk45YrP0zbotnlfvg-KLk5pQwEylxtUAsYN8UXDT3OlP6vKtZ6gYcF0uQ5L121x2viNIDpsMjOXwgCZUvV-SpXxTlbXdGaJIkgxLWVx_b2LlLBpn", "refresh_token"=>"1/uwJ0JqQZcdqo-v13X0QhMZIYITRmt1ihFaqdL68yMmo"}
+  [4;35;1mMusician Load (0.6ms)[0m   [0mSELECT * FROM `musicians` WHERE (`musicians`.`email` = 'brandon.sollins@izea.com') [0m
+  [4;36;1mMusician Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mMusician Create (0.3ms)[0m   [0;1mINSERT INTO `musicians` (`name`, `secondary_instrument`, `created_at`, `updated_at`, `calendar_ids`, `phone_number`, `primary_instrument`, `email`, `access_token`, `refresh_token`) VALUES('', NULL, '2017-03-28 02:26:58', '2017-03-28 02:26:58', '--- \n- brandon.sollins@izea.com\n- izea.com_nmq62eleqb8t70gm14u8q8k894@group.calendar.google.com\n', '', 'Guitar', 'brandon.sollins@izea.com', 'ya29.GlscBHdMSzeJqk45YrP0zbotnlfvg-KLk5pQwEylxtUAsYN8UXDT3OlP6vKtZ6gYcF0uQ5L121x2viNIDpsMjOXwgCZUvV-SpXxTlbXdGaJIkgxLWVx_b2LlLBpn', '1/uwJ0JqQZcdqo-v13X0QhMZIYITRmt1ihFaqdL68yMmo')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mBooking Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mBooking Create (0.8ms)[0m   [0;1mINSERT INTO `bookings` (`completed_at`, `available_musicians`, `chosen_musicians`, `created_at`, `required_instruments`, `updated_at`, `time`, `available_times`, `times_and_musicians`, `times_and_musicians_attempts`, `times_and_musicians_attempted`) VALUES('2017-03-28 02:26:58', NULL, '--- \n- 27\n', '2017-03-28 02:26:58', NULL, '2017-03-28 02:26:58', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mCOMMIT[0m
+Rendering sign_up/create
+Completed in 21ms (View: 1, DB: 4) | 200 OK [https://custom-tracks.com/workflow/sign-up/create]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:27:08) [GET]
+Rendering musician/index
+  [4;35;1mMusician Load (1.0ms)[0m   [0mSELECT * FROM `musicians` [0m
+  [4;36;1mMusician Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Completed in 7ms (View: 5, DB: 2) | 200 OK [http://custom-tracks.com/workflow/musicians]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:27:10) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '27') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.2ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 27) [0m
+  [4;35;1mBooking Load (0.3ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 369ms (View: 17, DB: 2) | 200 OK [https://www.custom-tracks.com/workflow/musicians/27]
+  [4;36;1mMusician Load (5.7ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Delete all (0.7ms)[0m   [0mDELETE FROM `musicians` WHERE (`id` IN (27)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:32:05) [GET]
+  Parameters: {"code"=>"4/zYcfrbAbvRJxpTbtl4p4j7BgJnwysSxvXjQtL_Ih5H0"}
+  [4;36;1mMusician Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.size):
+  app/controllers/sign_up_controller.rb:88:in `get_calendars'
+  app/controllers/sign_up_controller.rb:47:in `index'
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (24.7ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:32:09) [GET]
+  [4;36;1mMusician Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 6ms (View: 3, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up]
+  [4;35;1mSQL (10.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:32:15) [GET]
+  Parameters: {"code"=>"4/V3x20hTdaMwBy3OquFMRElq0x64VdKA6Fsz4x6wh5iw"}
+  [4;36;1mMusician Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 694ms (View: 5, DB: 11) | 200 OK [https://custom-tracks.com/workflow/sign-up?code=4/V3x20hTdaMwBy3OquFMRElq0x64VdKA6Fsz4x6wh5iw]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#create (for 71.47.30.247 at 2017-03-27 21:32:18) [POST]
+  Parameters: {"name"=>"", "commit"=>"Submit", "authenticity_token"=>"RCuuDmiDq3yvfSaCVFRN/yH6tKNaW5z8tEWB3HbwI5s=", "calendar_ids"=>["brandon.sollins@izea.com"], "phone_number"=>"", "primary_instrument"=>"Guitar", "email"=>"brandon.sollins@izea.com", "access_token"=>"ya29.GlscBJMpYqIrP639AwlHpIr2JBrfKYV0fZXr8IxPumoedl21Re2AM2ATkzV1CxWQQoK8N4DrwfednqdK-iI3VLEmbxdql85aOn1jlSUuxNeCvw9QeQ67P8_fVqkH", "refresh_token"=>"1/3fsRp8018PKXJWl9FB3BpK4crMq-9b1CE3JaW9orLic"}
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`email` = 'brandon.sollins@izea.com') [0m
+  [4;35;1mMusician Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMusician Create (0.2ms)[0m   [0mINSERT INTO `musicians` (`name`, `secondary_instrument`, `created_at`, `updated_at`, `calendar_ids`, `phone_number`, `primary_instrument`, `email`, `access_token`, `refresh_token`) VALUES('', NULL, '2017-03-28 02:32:18', '2017-03-28 02:32:18', '--- \n- brandon.sollins@izea.com\n', '', 'Guitar', 'brandon.sollins@izea.com', 'ya29.GlscBJMpYqIrP639AwlHpIr2JBrfKYV0fZXr8IxPumoedl21Re2AM2ATkzV1CxWQQoK8N4DrwfednqdK-iI3VLEmbxdql85aOn1jlSUuxNeCvw9QeQ67P8_fVqkH', '1/3fsRp8018PKXJWl9FB3BpK4crMq-9b1CE3JaW9orLic')[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mBooking Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `bookings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBooking Create (0.6ms)[0m   [0mINSERT INTO `bookings` (`completed_at`, `available_musicians`, `chosen_musicians`, `created_at`, `required_instruments`, `updated_at`, `time`, `available_times`, `times_and_musicians`, `times_and_musicians_attempts`, `times_and_musicians_attempted`) VALUES('2017-03-28 02:32:18', NULL, '--- \n- 28\n', '2017-03-28 02:32:18', NULL, '2017-03-28 02:32:18', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendering sign_up/create
+Completed in 16ms (View: 1, DB: 3) | 200 OK [https://custom-tracks.com/workflow/sign-up/create]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:32:21) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mMusician Load (0.5ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '27') LIMIT 1[0m
+Rendering musician/show
+Completed in 5ms (View: 1, DB: 1) | 200 OK [https://www.custom-tracks.com/workflow/musicians/27]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:32:22) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mMusician Load (0.5ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '27') LIMIT 1[0m
+Rendering musician/show
+Completed in 6ms (View: 1, DB: 1) | 200 OK [https://www.custom-tracks.com/workflow/musicians/27]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:32:23) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mMusician Load (0.5ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '27') LIMIT 1[0m
+Rendering musician/show
+Completed in 5ms (View: 1, DB: 1) | 200 OK [https://www.custom-tracks.com/workflow/musicians/27]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:32:25) [GET]
+  Parameters: {"id"=>"27"}
+  [4;36;1mMusician Load (0.2ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '27') LIMIT 1[0m
+Rendering musician/show
+Completed in 4ms (View: 1, DB: 0) | 200 OK [https://www.custom-tracks.com/workflow/musicians/27]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:32:27) [GET]
+Rendering musician/index
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT * FROM `musicians` [0m
+  [4;35;1mMusician Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://custom-tracks.com/workflow/musicians]
+  [4;36;1mSQL (3.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:32:28) [GET]
+  Parameters: {"id"=>"28"}
+  [4;35;1mMusician Load (0.5ms)[0m   [0mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '28') LIMIT 1[0m
+  [4;36;1mMusician Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+  [4;35;1mMusician Load (0.3ms)[0m   [0mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 28) [0m
+  [4;36;1mBooking Load (0.3ms)[0m   [0;1mSELECT * FROM `bookings` [0m
+  [4;35;1mBooking Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 300ms (View: 14, DB: 6) | 200 OK [https://www.custom-tracks.com/workflow/musicians/28]
+  [4;36;1mMusician Load (0.5ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Delete all (0.6ms)[0m   [0mDELETE FROM `musicians` WHERE (`id` IN (28)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:33:26) [GET]
+  Parameters: {"code"=>"4/V3x20hTdaMwBy3OquFMRElq0x64VdKA6Fsz4x6wh5iw"}
+  [4;35;1mMusician Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.size):
+  app/controllers/sign_up_controller.rb:88:in `get_calendars'
+  app/controllers/sign_up_controller.rb:47:in `index'
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (34.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:33:30) [GET]
+  [4;35;1mMusician Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 11ms (View: 6, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 71.47.30.247 at 2017-03-27 21:33:30) [GET]
+
+ActionController::MethodNotAllowed (Only post requests are allowed.):
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (22.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (method_not_allowed)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:33:35) [GET]
+  Parameters: {"code"=>"4/IetgrpBuXJYNxvLeqUrQInlBwd-z1NzYQ6qlzqKALAo"}
+  [4;36;1mMusician Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 609ms (View: 3, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up?code=4/IetgrpBuXJYNxvLeqUrQInlBwd-z1NzYQ6qlzqKALAo]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#create (for 71.47.30.247 at 2017-03-27 21:33:44) [POST]
+  Parameters: {"name"=>"", "commit"=>"Submit", "authenticity_token"=>"RCuuDmiDq3yvfSaCVFRN/yH6tKNaW5z8tEWB3HbwI5s=", "calendar_ids"=>["brandon.sollins@izea.com", "izea.com_nmq62eleqb8t70gm14u8q8k894@group.calendar.google.com"], "phone_number"=>"", "primary_instrument"=>"Guitar", "email"=>"brandon.sollins@izea.com", "access_token"=>"ya29.GlscBGFTNO6sVAExAIObIw4ta3LSvbxuVK-jWwLocYnJp3Bu1antnKF8vxBNxgYt7S5OVRF8cAHzEF3hKyAl7Or2LaIYGTWRMy3wdxs_lnuc0MjWuFw7AXPP17Xi", "refresh_token"=>"1/7XSRG4bCUS8MHBXQJqN8CtjFvsuOPHYpL4Q8wXeA7yU"}
+  [4;36;1mMusician Load (0.9ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`email` = 'brandon.sollins@izea.com') [0m
+  [4;35;1mMusician Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMusician Create (0.8ms)[0m   [0mINSERT INTO `musicians` (`name`, `secondary_instrument`, `created_at`, `updated_at`, `calendar_ids`, `phone_number`, `primary_instrument`, `email`, `access_token`, `refresh_token`) VALUES('', NULL, '2017-03-28 02:33:44', '2017-03-28 02:33:44', '--- \n- brandon.sollins@izea.com\n- izea.com_nmq62eleqb8t70gm14u8q8k894@group.calendar.google.com\n', '', 'Guitar', 'brandon.sollins@izea.com', 'ya29.GlscBGFTNO6sVAExAIObIw4ta3LSvbxuVK-jWwLocYnJp3Bu1antnKF8vxBNxgYt7S5OVRF8cAHzEF3hKyAl7Or2LaIYGTWRMy3wdxs_lnuc0MjWuFw7AXPP17Xi', '1/7XSRG4bCUS8MHBXQJqN8CtjFvsuOPHYpL4Q8wXeA7yU')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mBooking Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `bookings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBooking Create (0.5ms)[0m   [0mINSERT INTO `bookings` (`completed_at`, `available_musicians`, `chosen_musicians`, `created_at`, `required_instruments`, `updated_at`, `time`, `available_times`, `times_and_musicians`, `times_and_musicians_attempts`, `times_and_musicians_attempted`) VALUES('2017-03-28 02:33:44', NULL, '--- \n- 29\n', '2017-03-28 02:33:44', NULL, '2017-03-28 02:33:44', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Rendering sign_up/create
+Completed in 19ms (View: 1, DB: 5) | 200 OK [https://custom-tracks.com/workflow/sign-up/create]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:33:47) [GET]
+Rendering musician/index
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT * FROM `musicians` [0m
+  [4;35;1mMusician Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://custom-tracks.com/workflow/musicians]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:33:48) [GET]
+Rendering musician/index
+  [4;35;1mMusician Load (0.4ms)[0m   [0mSELECT * FROM `musicians` [0m
+  [4;36;1mMusician Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://custom-tracks.com/workflow/musicians]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:33:49) [GET]
+  Parameters: {"id"=>"29"}
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '29') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.3ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 29) [0m
+  [4;35;1mBooking Load (0.5ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 357ms (View: 21, DB: 2) | 200 OK [https://www.custom-tracks.com/workflow/musicians/29]
+  [4;36;1mMusician Load (0.7ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:34:56) [GET]
+  Parameters: {"code"=>"4/IetgrpBuXJYNxvLeqUrQInlBwd-z1NzYQ6qlzqKALAo"}
+  [4;36;1mMusician Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.size):
+  app/controllers/sign_up_controller.rb:88:in `get_calendars'
+  app/controllers/sign_up_controller.rb:47:in `index'
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (29.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:35:00) [GET]
+  [4;36;1mMusician Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 71.47.30.247 at 2017-03-27 21:35:00) [GET]
+
+ActionController::MethodNotAllowed (Only post requests are allowed.):
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (18.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (method_not_allowed)
+  [4;35;1mMusician Load (0.3ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mMusician Delete all (0.7ms)[0m   [0;1mDELETE FROM `musicians` WHERE (`id` IN (29)) [0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:35:10) [GET]
+  Parameters: {"code"=>"4/8VIoyx6cOOAtq5NVBRd61J58qRZS4xwxBYI_ZbkeEQE"}
+  [4;35;1mMusician Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 569ms (View: 4, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up?code=4/8VIoyx6cOOAtq5NVBRd61J58qRZS4xwxBYI_ZbkeEQE]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#create (for 71.47.30.247 at 2017-03-27 21:35:15) [POST]
+  Parameters: {"name"=>"", "commit"=>"Submit", "authenticity_token"=>"RCuuDmiDq3yvfSaCVFRN/yH6tKNaW5z8tEWB3HbwI5s=", "calendar_ids"=>["izea.com_nmq62eleqb8t70gm14u8q8k894@group.calendar.google.com"], "phone_number"=>"", "primary_instrument"=>"Guitar", "email"=>"brandon.sollins@izea.com", "access_token"=>"ya29.GlscBFee0ZprumZwgFD3GCI4ffK8BypDNNte_f4YLZQDQTLSvnIHgjg7zkF5ZaylTnSFQeREsKHW3xwXhMvnSTrGObi3umwK61vWqWJaJmSgFFtIGgGtsIONQomg", "refresh_token"=>"1/lhGJb_NkbqmFOcXped26DfeShIIWWitG23mJjcoXzvg"}
+  [4;35;1mMusician Load (0.6ms)[0m   [0mSELECT * FROM `musicians` WHERE (`musicians`.`email` = 'brandon.sollins@izea.com') [0m
+  [4;36;1mMusician Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mMusician Create (0.4ms)[0m   [0;1mINSERT INTO `musicians` (`name`, `secondary_instrument`, `created_at`, `updated_at`, `calendar_ids`, `phone_number`, `primary_instrument`, `email`, `access_token`, `refresh_token`) VALUES('', NULL, '2017-03-28 02:35:15', '2017-03-28 02:35:15', '--- \n- izea.com_nmq62eleqb8t70gm14u8q8k894@group.calendar.google.com\n', '', 'Guitar', 'brandon.sollins@izea.com', 'ya29.GlscBFee0ZprumZwgFD3GCI4ffK8BypDNNte_f4YLZQDQTLSvnIHgjg7zkF5ZaylTnSFQeREsKHW3xwXhMvnSTrGObi3umwK61vWqWJaJmSgFFtIGgGtsIONQomg', '1/lhGJb_NkbqmFOcXped26DfeShIIWWitG23mJjcoXzvg')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mCOMMIT[0m
+  [4;36;1mBooking Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mBEGIN[0m
+  [4;36;1mBooking Create (0.7ms)[0m   [0;1mINSERT INTO `bookings` (`completed_at`, `available_musicians`, `chosen_musicians`, `created_at`, `required_instruments`, `updated_at`, `time`, `available_times`, `times_and_musicians`, `times_and_musicians_attempts`, `times_and_musicians_attempted`) VALUES('2017-03-28 02:35:15', NULL, '--- \n- 30\n', '2017-03-28 02:35:15', NULL, '2017-03-28 02:35:15', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mCOMMIT[0m
+Rendering sign_up/create
+Completed in 17ms (View: 1, DB: 4) | 200 OK [https://custom-tracks.com/workflow/sign-up/create]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:35:20) [GET]
+  Parameters: {"id"=>"29"}
+  [4;35;1mMusician Load (0.3ms)[0m   [0mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '29') LIMIT 1[0m
+Rendering musician/show
+Completed in 4ms (View: 1, DB: 0) | 200 OK [https://www.custom-tracks.com/workflow/musicians/29]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:35:22) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mMusician Load (0.4ms)[0m   [0mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '9') LIMIT 1[0m
+  [4;36;1mMusician Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+  [4;35;1mMusician Load (0.2ms)[0m   [0mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 9) [0m
+  [4;36;1mBooking Load (0.4ms)[0m   [0;1mSELECT * FROM `bookings` [0m
+  [4;35;1mBooking Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `bookings`[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.map):
+  app/controllers/application_controller.rb:13:in `get_busy_times'
+  app/controllers/musician_controller.rb:9:in `show'
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (71.3ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:35:22) [GET]
+Rendering musician/index
+  [4;35;1mMusician Load (0.4ms)[0m   [0mSELECT * FROM `musicians` [0m
+  [4;36;1mMusician Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Completed in 6ms (View: 4, DB: 1) | 200 OK [https://www.custom-tracks.com/workflow/musicians]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:35:23) [GET]
+Rendering musician/index
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT * FROM `musicians` [0m
+  [4;35;1mMusician Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Completed in 6ms (View: 4, DB: 1) | 200 OK [https://www.custom-tracks.com/workflow/musicians]
+  [4;36;1mSQL (10.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:35:25) [GET]
+  Parameters: {"id"=>"30"}
+  [4;35;1mMusician Load (0.3ms)[0m   [0mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '30') LIMIT 1[0m
+  [4;36;1mMusician Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+  [4;35;1mMusician Load (0.2ms)[0m   [0mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 30) [0m
+  [4;36;1mBooking Load (0.3ms)[0m   [0;1mSELECT * FROM `bookings` [0m
+  [4;35;1mBooking Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 327ms (View: 8, DB: 12) | 200 OK [https://www.custom-tracks.com/workflow/musicians/30]
+  [4;35;1mMusician Load (8.6ms)[0m   [0mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:41:55) [GET]
+  Parameters: {"code"=>"4/8VIoyx6cOOAtq5NVBRd61J58qRZS4xwxBYI_ZbkeEQE"}
+  [4;35;1mMusician Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.size):
+  app/controllers/sign_up_controller.rb:88:in `get_calendars'
+  app/controllers/sign_up_controller.rb:47:in `index'
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (22.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:41:59) [GET]
+  [4;35;1mMusician Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 71.47.30.247 at 2017-03-27 21:41:59) [GET]
+
+ActionController::MethodNotAllowed (Only post requests are allowed.):
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (17.9ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (method_not_allowed)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:42:03) [GET]
+  Parameters: {"code"=>"4/mif0QUZXdkVrAoceK4A6iT1QMe_ua4H7MZzAIOYu5N0"}
+  [4;36;1mMusician Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 610ms (View: 4, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up?code=4/mif0QUZXdkVrAoceK4A6iT1QMe_ua4H7MZzAIOYu5N0]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#create (for 71.47.30.247 at 2017-03-27 21:42:07) [POST]
+  Parameters: {"name"=>"", "commit"=>"Submit", "authenticity_token"=>"RCuuDmiDq3yvfSaCVFRN/yH6tKNaW5z8tEWB3HbwI5s=", "calendar_ids"=>["brandon.sollins@izea.com", "izea.com_nmq62eleqb8t70gm14u8q8k894@group.calendar.google.com"], "phone_number"=>"", "primary_instrument"=>"Guitar", "email"=>"brandon.sollins@izea.com", "access_token"=>"ya29.GlscBCIqcqsEyx_9gy-FB1IjJYclHaOiZQwoGdt-VNK-ShqFVeN0zqGn7-BJ93ntrt8H3537nyUDXcHI8_VAqAQj49VI3j9rrnv88sduwqAXxWpO0XS4u7QrBTei", "refresh_token"=>"1/GETN4pEJdjTEhUh4jYUNj997wCN5a2QKFaLCAAlaNvM"}
+  [4;36;1mMusician Load (0.3ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`email` = 'brandon.sollins@izea.com') [0m
+Redirected to https://custom-tracks.com/workflow/sign-up?flash=Email+already+exsists.+Please+sign+up+with+a+different+email.
+Completed in 4ms (DB: 0) | 302 Found [https://custom-tracks.com/workflow/sign-up/create]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:42:07) [GET]
+  Parameters: {"flash"=>"Email already exsists. Please sign up with a different email."}
+  [4;36;1mMusician Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up?flash=Email+already+exsists.+Please+sign+up+with+a+different+email.]
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT * FROM `musicians` ORDER BY musicians.id DESC LIMIT 1[0m
+  [4;35;1mMusician Delete all (0.6ms)[0m   [0mDELETE FROM `musicians` WHERE (`id` IN (30)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:42:16) [GET]
+  Parameters: {"code"=>"4/Dt9Gj-Fq5O7xMLDkS2m4ax0Y7u1zss1lpRORFv77lC0"}
+  [4;36;1mMusician Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 509ms (View: 4, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up?code=4/Dt9Gj-Fq5O7xMLDkS2m4ax0Y7u1zss1lpRORFv77lC0]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#create (for 71.47.30.247 at 2017-03-27 21:42:21) [POST]
+  Parameters: {"name"=>"", "commit"=>"Submit", "authenticity_token"=>"RCuuDmiDq3yvfSaCVFRN/yH6tKNaW5z8tEWB3HbwI5s=", "calendar_ids"=>["brandon.sollins@izea.com", "izea.com_nmq62eleqb8t70gm14u8q8k894@group.calendar.google.com"], "phone_number"=>"", "primary_instrument"=>"Guitar", "email"=>"brandon.sollins@izea.com", "access_token"=>"ya29.GlscBGthZyTr3Z3K3bJSQxcwFug0fmRxQ7DAl731S8c0r4PeMVNcImIYe5H4kaz4r6aI_NzYl2OUbQKCQv-nTWlCSDNxIYMFbxOhIytPbRU_gNP-mr7D8cs7ZsWZ", "refresh_token"=>"1/X1k4Jrdbc_A1yWwGGuMLw4EeKEGM0dm565e71YWvES34uolgXG7en7Fn5yl7H0Xc"}
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`email` = 'brandon.sollins@izea.com') [0m
+  [4;35;1mMusician Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMusician Create (0.5ms)[0m   [0mINSERT INTO `musicians` (`name`, `secondary_instrument`, `created_at`, `updated_at`, `calendar_ids`, `phone_number`, `primary_instrument`, `email`, `access_token`, `refresh_token`) VALUES('', NULL, '2017-03-28 02:42:21', '2017-03-28 02:42:21', '--- \n- brandon.sollins@izea.com\n- izea.com_nmq62eleqb8t70gm14u8q8k894@group.calendar.google.com\n', '', 'Guitar', 'brandon.sollins@izea.com', 'ya29.GlscBGthZyTr3Z3K3bJSQxcwFug0fmRxQ7DAl731S8c0r4PeMVNcImIYe5H4kaz4r6aI_NzYl2OUbQKCQv-nTWlCSDNxIYMFbxOhIytPbRU_gNP-mr7D8cs7ZsWZ', '1/X1k4Jrdbc_A1yWwGGuMLw4EeKEGM0dm565e71YWvES34uolgXG7en7Fn5yl7H0Xc')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mBooking Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `bookings`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBooking Create (0.8ms)[0m   [0mINSERT INTO `bookings` (`completed_at`, `available_musicians`, `chosen_musicians`, `created_at`, `required_instruments`, `updated_at`, `time`, `available_times`, `times_and_musicians`, `times_and_musicians_attempts`, `times_and_musicians_attempted`) VALUES('2017-03-28 02:42:21', NULL, '--- \n- 31\n', '2017-03-28 02:42:21', NULL, '2017-03-28 02:42:21', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mCOMMIT[0m
+Rendering sign_up/create
+Completed in 71ms (View: 1, DB: 4) | 200 OK [https://custom-tracks.com/workflow/sign-up/create]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:42:27) [GET]
+Rendering musician/index
+  [4;36;1mMusician Load (0.5ms)[0m   [0;1mSELECT * FROM `musicians` [0m
+  [4;35;1mMusician Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://custom-tracks.com/workflow/musicians]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:42:28) [GET]
+  Parameters: {"id"=>"31"}
+  [4;35;1mMusician Load (0.4ms)[0m   [0mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '31') LIMIT 1[0m
+  [4;36;1mMusician Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+  [4;35;1mMusician Load (0.2ms)[0m   [0mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 31) [0m
+  [4;36;1mBooking Load (1.8ms)[0m   [0;1mSELECT * FROM `bookings` [0m
+  [4;35;1mBooking Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 466ms (View: 21, DB: 4) | 200 OK [https://www.custom-tracks.com/workflow/musicians/31]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:43:33) [GET]
+  Parameters: {"id"=>"31"}
+  [4;35;1mMusician Load (0.8ms)[0m   [0mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '31') LIMIT 1[0m
+  [4;36;1mMusician Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+  [4;35;1mMusician Load (0.1ms)[0m   [0mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 31) [0m
+  [4;36;1mBooking Load (0.4ms)[0m   [0;1mSELECT * FROM `bookings` [0m
+  [4;35;1mBooking Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 471ms (View: 27, DB: 2) | 200 OK [https://www.custom-tracks.com/workflow/musicians/31]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:44:50) [GET]
+  Parameters: {"id"=>"30"}
+  [4;35;1mMusician Load (0.9ms)[0m   [0mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '30') LIMIT 1[0m
+Rendering musician/show
+Completed in 8ms (View: 4, DB: 1) | 200 OK [https://www.custom-tracks.com/workflow/musicians/30]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:44:53) [GET]
+Rendering musician/index
+  [4;35;1mMusician Load (0.3ms)[0m   [0mSELECT * FROM `musicians` [0m
+  [4;36;1mMusician Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Completed in 6ms (View: 4, DB: 1) | 200 OK [https://www.custom-tracks.com/workflow/musicians]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:44:54) [GET]
+  Parameters: {"id"=>"31"}
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '31') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.2ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 31) [0m
+  [4;35;1mBooking Load (0.8ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+
+ActionView::TemplateError (private method `gsub!' called for #<Hash:0x7fce69164948>) on line #89 of app/views/musician/show.html.erb:
+86:             <tr>
+87:               <td> <%= Time.parse(time[0]).strftime("%D") %> </td>
+88:               <td> <%= Time.parse(time[0]).strftime("%r") %> </td>
+89:               <td> <%= Time.parse(time[1]).strftime("%r") %> </td>
+90:               <td> <%= (Time.parse(time[0]) + Time.zone_offset('EST')).strftime("%D") %> </td>
+91:               <td> <%= (Time.parse(time[0]) + Time.zone_offset('EST')).strftime("%r") %> </td>
+92:               <td> <%= (Time.parse(time[1]) + Time.zone_offset('EST')).strftime("%r") %> </td>
+
+    /usr/lib/ruby/1.8/date/format.rb:1061:in `_parse'
+    /usr/lib/ruby/1.8/time.rb:240:in `parse'
+    app/views/musician/show.html.erb:89
+    app/views/musician/show.html.erb:85:in `each'
+    app/views/musician/show.html.erb:85
+    fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+    fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+    fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+    dispatch.fcgi:24
+
+Rendered rescues/_trace (31.1ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:45:52) [GET]
+  Parameters: {"id"=>"31"}
+  [4;36;1mMusician Load (0.9ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '31') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.2ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 31) [0m
+  [4;35;1mBooking Load (0.8ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 400ms (View: 16, DB: 3) | 200 OK [https://www.custom-tracks.com/workflow/musicians/31]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:46:07) [GET]
+  Parameters: {"id"=>"31"}
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '31') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.2ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 31) [0m
+  [4;35;1mBooking Load (0.2ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 396ms (View: 38, DB: 2) | 200 OK [https://www.custom-tracks.com/workflow/musicians/31]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:49:15) [GET]
+  Parameters: {"id"=>"31"}
+  [4;36;1mMusician Load (0.7ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '31') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 31) [0m
+  [4;35;1mBooking Load (0.9ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+
+TypeError (can't convert String into Integer):
+  app/controllers/musician_controller.rb:10:in `[]'
+  app/controllers/musician_controller.rb:10:in `show'
+  app/controllers/musician_controller.rb:10:in `sort'
+  app/controllers/musician_controller.rb:10:in `show'
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (28.5ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:49:35) [GET]
+  Parameters: {"id"=>"29"}
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '29') LIMIT 1[0m
+Rendering musician/show
+Completed in 7ms (View: 4, DB: 1) | 200 OK [https://www.custom-tracks.com/workflow/musicians/29]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:49:37) [GET]
+  Parameters: {"id"=>"31"}
+  [4;36;1mMusician Load (0.5ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '31') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.1ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 31) [0m
+  [4;35;1mBooking Load (0.4ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.3ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 365ms (View: 23, DB: 2) | 200 OK [https://www.custom-tracks.com/workflow/musicians/31]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:50:32) [GET]
+  Parameters: {"id"=>"31"}
+  [4;36;1mMusician Load (1.0ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '31') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.2ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 31) [0m
+  [4;35;1mBooking Load (0.7ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+
+TypeError (can't convert String into Integer):
+  app/controllers/musician_controller.rb:10:in `[]'
+  app/controllers/musician_controller.rb:10:in `show'
+  /usr/lib/ruby/1.8/net/protocol.rb:135:in `sort_by'
+  app/controllers/musician_controller.rb:10:in `each'
+  app/controllers/musician_controller.rb:10:in `sort_by'
+  app/controllers/musician_controller.rb:10:in `show'
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (92.6ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:50:54) [GET]
+  Parameters: {"id"=>"31"}
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '31') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.2ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 31) [0m
+  [4;35;1mBooking Load (0.3ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+
+TypeError (can't convert String into Integer):
+  app/controllers/musician_controller.rb:10:in `[]'
+  app/controllers/musician_controller.rb:10:in `show'
+  app/controllers/musician_controller.rb:10:in `sort'
+  app/controllers/musician_controller.rb:10:in `show'
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (32.8ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:51:41) [GET]
+  Parameters: {"id"=>"31"}
+  [4;36;1mMusician Load (0.8ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '31') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.2ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 31) [0m
+  [4;35;1mBooking Load (0.7ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+
+NoMethodError (private method `gsub!' called for ["2017-03-29T16:00:00Z", "2017-03-29T17:00:00Z"]:Array):
+  /usr/lib/ruby/1.8/date/format.rb:1061:in `_parse'
+  /usr/lib/ruby/1.8/time.rb:240:in `parse'
+  app/controllers/musician_controller.rb:10:in `show'
+  app/controllers/musician_controller.rb:10:in `sort'
+  app/controllers/musician_controller.rb:10:in `show'
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (24.6ms)
+Rendered rescues/_request_and_response (0.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:52:45) [GET]
+  Parameters: {"id"=>"31"}
+  [4;36;1mMusician Load (0.7ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '31') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.2ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 31) [0m
+  [4;35;1mBooking Load (0.5ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.4ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 348ms (View: 23, DB: 3) | 200 OK [https://www.custom-tracks.com/workflow/musicians/31]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:55:30) [GET]
+  Parameters: {"id"=>"31"}
+  [4;36;1mMusician Load (0.7ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '31') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.2ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 31) [0m
+  [4;35;1mBooking Load (0.7ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 373ms (View: 25, DB: 3) | 200 OK [https://www.custom-tracks.com/workflow/musicians/31]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:55:49) [GET]
+  Parameters: {"id"=>"31"}
+  [4;36;1mMusician Load (0.5ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '31') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 31) [0m
+  [4;35;1mBooking Load (0.6ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 425ms (View: 35, DB: 3) | 200 OK [https://www.custom-tracks.com/workflow/musicians/31]
+  [4;36;1mMusician Load (6.2ms)[0m   [0;1mSELECT * FROM `musicians` [0m
+  [4;35;1mMusician Delete all (0.8ms)[0m   [0mDELETE FROM `musicians` WHERE (`id` IN (9)) [0m
+  [4;36;1mMusician Delete all (0.5ms)[0m   [0;1mDELETE FROM `musicians` WHERE (`id` IN (12)) [0m
+  [4;35;1mMusician Delete all (0.3ms)[0m   [0mDELETE FROM `musicians` WHERE (`id` IN (13)) [0m
+  [4;36;1mMusician Delete all (0.4ms)[0m   [0;1mDELETE FROM `musicians` WHERE (`id` IN (14)) [0m
+  [4;35;1mMusician Delete all (0.2ms)[0m   [0mDELETE FROM `musicians` WHERE (`id` IN (15)) [0m
+  [4;36;1mMusician Delete all (0.2ms)[0m   [0;1mDELETE FROM `musicians` WHERE (`id` IN (16)) [0m
+  [4;35;1mMusician Delete all (0.4ms)[0m   [0mDELETE FROM `musicians` WHERE (`id` IN (31)) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:57:27) [GET]
+Rendering musician/index
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT * FROM `musicians` [0m
+Completed in 4ms (View: 3, DB: 0) | 200 OK [https://www.custom-tracks.com/workflow/musicians]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:57:27) [GET]
+Rendering musician/index
+  [4;36;1mMusician Load (0.2ms)[0m   [0;1mSELECT * FROM `musicians` [0m
+Completed in 5ms (View: 3, DB: 0) | 200 OK [https://www.custom-tracks.com/workflow/musicians]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:57:28) [GET]
+Rendering musician/index
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT * FROM `musicians` [0m
+Completed in 4ms (View: 3, DB: 1) | 200 OK [https://www.custom-tracks.com/workflow/musicians]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:58:10) [GET]
+  [4;36;1mMusician Columns (0.9ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 7ms (View: 3, DB: 1) | 200 OK [https://www.custom-tracks.com/workflow/sign-up]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 21:58:15) [GET]
+  Parameters: {"code"=>"4/yBje8XAh7RbW4mxNLpn5WjvxaKFFjzkRQh7GZbGK_Do"}
+  [4;36;1mMusician Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 445ms (View: 3, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up?code=4/yBje8XAh7RbW4mxNLpn5WjvxaKFFjzkRQh7GZbGK_Do]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#create (for 71.47.30.247 at 2017-03-27 21:58:25) [POST]
+  Parameters: {"name"=>"Brandon Sollins", "commit"=>"Submit", "authenticity_token"=>"RCuuDmiDq3yvfSaCVFRN/yH6tKNaW5z8tEWB3HbwI5s=", "calendar_ids"=>["brandonsollins@gmail.com"], "phone_number"=>"7726313753", "primary_instrument"=>"Guitar", "email"=>"brandonsollins@gmail.com", "access_token"=>"ya29.GlscBHN7QMI7WHD9z-YxQAxHmRGHzAWhovrNeacT8cQCFYE-8Yij34CBKInIIz_Q78Dy57rn8S3SLp0TjU4mdiMeksqW6ZB5I3_IVMzy4H11_oIDJJDOgKpYPzJO", "refresh_token"=>"1/amFPWHpIs00cyJbZj17M8Y1QhGSrvSkl_8ZlM1JHzYa1EmW0rkMEk31RumVYL6b1"}
+  [4;36;1mMusician Load (0.8ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`email` = 'brandonsollins@gmail.com') [0m
+  [4;35;1mMusician Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMusician Create (0.3ms)[0m   [0mINSERT INTO `musicians` (`name`, `secondary_instrument`, `created_at`, `updated_at`, `calendar_ids`, `phone_number`, `primary_instrument`, `email`, `access_token`, `refresh_token`) VALUES('Brandon Sollins', NULL, '2017-03-28 02:58:25', '2017-03-28 02:58:25', '--- \n- brandonsollins@gmail.com\n', '7726313753', 'Guitar', 'brandonsollins@gmail.com', 'ya29.GlscBHN7QMI7WHD9z-YxQAxHmRGHzAWhovrNeacT8cQCFYE-8Yij34CBKInIIz_Q78Dy57rn8S3SLp0TjU4mdiMeksqW6ZB5I3_IVMzy4H11_oIDJJDOgKpYPzJO', '1/amFPWHpIs00cyJbZj17M8Y1QhGSrvSkl_8ZlM1JHzYa1EmW0rkMEk31RumVYL6b1')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mBooking Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `bookings`[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mBooking Create (0.5ms)[0m   [0mINSERT INTO `bookings` (`completed_at`, `available_musicians`, `chosen_musicians`, `created_at`, `required_instruments`, `updated_at`, `time`, `available_times`, `times_and_musicians`, `times_and_musicians_attempts`, `times_and_musicians_attempted`) VALUES('2017-03-28 02:58:25', NULL, '--- \n- 32\n', '2017-03-28 02:58:25', NULL, '2017-03-28 02:58:25', NULL, NULL, NULL, NULL, NULL)[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Rendering sign_up/create
+Completed in 20ms (View: 1, DB: 4) | 200 OK [https://custom-tracks.com/workflow/sign-up/create]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 71.47.30.247 at 2017-03-27 21:58:31) [GET]
+
+ActionController::MethodNotAllowed (Only post requests are allowed.):
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (23.4ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (method_not_allowed)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:58:33) [GET]
+Rendering musician/index
+  [4;35;1mMusician Load (0.5ms)[0m   [0mSELECT * FROM `musicians` [0m
+  [4;36;1mMusician Columns (0.6ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Completed in 8ms (View: 6, DB: 1) | 200 OK [http://custom-tracks.com/workflow/musicians]
+  [4;35;1mSQL (9.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#index (for 71.47.30.247 at 2017-03-27 21:58:35) [GET]
+Rendering musician/index
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT * FROM `musicians` [0m
+  [4;35;1mMusician Columns (0.5ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Completed in 7ms (View: 5, DB: 11) | 200 OK [http://custom-tracks.com/workflow/musicians]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:58:39) [GET]
+  Parameters: {"id"=>"32"}
+  [4;35;1mMusician Load (0.5ms)[0m   [0mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '32') LIMIT 1[0m
+  [4;36;1mMusician Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+  [4;35;1mMusician Load (0.4ms)[0m   [0mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 32) [0m
+  [4;36;1mBooking Load (0.4ms)[0m   [0;1mSELECT * FROM `bookings` [0m
+  [4;35;1mBooking Columns (0.8ms)[0m   [0mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 489ms (View: 10, DB: 3) | 200 OK [https://www.custom-tracks.com/workflow/musicians/32]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:59:05) [GET]
+  Parameters: {"id"=>"32"}
+  [4;35;1mMusician Load (0.9ms)[0m   [0mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '32') LIMIT 1[0m
+  [4;36;1mMusician Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+  [4;35;1mMusician Load (0.3ms)[0m   [0mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 32) [0m
+  [4;36;1mBooking Load (0.4ms)[0m   [0;1mSELECT * FROM `bookings` [0m
+  [4;35;1mBooking Columns (0.4ms)[0m   [0mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 330ms (View: 3, DB: 3) | 200 OK [https://www.custom-tracks.com/workflow/musicians/32]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing BookingController#show (for 71.47.30.247 at 2017-03-27 21:59:25) [GET]
+  Parameters: {"id"=>"81"}
+Rendering booking/show
+Completed in 6ms (View: 5, DB: 0) | 200 OK [https://www.custom-tracks.com/workflow/bookings/81]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MusicianController#show (for 71.47.30.247 at 2017-03-27 21:59:28) [GET]
+  Parameters: {"id"=>"32"}
+  [4;36;1mMusician Load (0.4ms)[0m   [0;1mSELECT `musicians`.id FROM `musicians` WHERE (`musicians`.`id` = '32') LIMIT 1[0m
+  [4;35;1mMusician Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+  [4;36;1mMusician Load (0.2ms)[0m   [0;1mSELECT * FROM `musicians` WHERE (`musicians`.`id` = 32) [0m
+  [4;35;1mBooking Load (0.4ms)[0m   [0mSELECT * FROM `bookings` [0m
+  [4;36;1mBooking Columns (0.5ms)[0m   [0;1mSHOW FIELDS FROM `bookings`[0m
+Rendering musician/show
+Completed in 447ms (View: 2, DB: 2) | 200 OK [https://www.custom-tracks.com/workflow/musicians/32]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 22:00:25) [GET]
+  [4;35;1mMusician Columns (0.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 18ms (View: 12, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 71.47.30.247 at 2017-03-27 22:00:26) [GET]
+
+ActionController::MethodNotAllowed (Only post requests are allowed.):
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (20.0ms)
+Rendered rescues/_request_and_response (1.4ms)
+Rendering rescues/layout (method_not_allowed)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 22:00:43) [GET]
+  Parameters: {"code"=>"4/7iICgfZ8P3TG308YYDZWhGTrZJ0zOYpKYXc6YRDMpCg"}
+  [4;36;1mMusician Columns (1.0ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 639ms (View: 23, DB: 1) | 200 OK [https://custom-tracks.com/workflow/sign-up?code=4/7iICgfZ8P3TG308YYDZWhGTrZJ0zOYpKYXc6YRDMpCg]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 22:01:41) [GET]
+  [4;35;1mMusician Columns (0.7ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 12ms (View: 8, DB: 1) | 200 OK [https://www.custom-tracks.com/workflow/sign-up]
+  [4;36;1mSQL (9.9ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 22:01:46) [GET]
+  Parameters: {"code"=>"4/rtf3w6P_aIMsDYe8nqeu4hGxFvK-u5jBnG3b_R2jXWg"}
+  [4;35;1mMusician Columns (0.9ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 542ms (View: 5, DB: 11) | 200 OK [https://custom-tracks.com/workflow/sign-up?code=4/rtf3w6P_aIMsDYe8nqeu4hGxFvK-u5jBnG3b_R2jXWg]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 22:01:52) [GET]
+  Parameters: {"code"=>"4/rtf3w6P_aIMsDYe8nqeu4hGxFvK-u5jBnG3b_R2jXWg"}
+  [4;36;1mMusician Columns (0.8ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.size):
+  app/controllers/sign_up_controller.rb:88:in `get_calendars'
+  app/controllers/sign_up_controller.rb:47:in `index'
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (33.2ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (9.9ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 22:02:14) [GET]
+  [4;36;1mMusician Columns (0.7ms)[0m   [0;1mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 14ms (View: 9, DB: 11) | 200 OK [https://custom-tracks.com/workflow/sign-up]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 71.47.30.247 at 2017-03-27 22:02:14) [GET]
+
+ActionController::MethodNotAllowed (Only post requests are allowed.):
+  fcgi (0.8.8) lib/fcgi.rb:117:in `session'
+  fcgi (0.8.8) lib/fcgi.rb:104:in `each_request'
+  fcgi (0.8.8) lib/fcgi.rb:36:in `each'
+  dispatch.fcgi:24
+
+Rendered rescues/_trace (23.4ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (method_not_allowed)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SignUpController#index (for 71.47.30.247 at 2017-03-27 22:02:20) [GET]
+  Parameters: {"code"=>"4/6EaNUVjFsJcLuHjMtSt9h43VcGIfJ71CrQeHL5zH810"}
+  [4;35;1mMusician Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `musicians`[0m
+Rendering sign_up/index
+Completed in 911ms (View: 8, DB: 2) | 200 OK [https://custom-tracks.com/workflow/sign-up?code=4/6EaNUVjFsJcLuHjMtSt9h43VcGIfJ71CrQeHL5zH810]

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20161230210000) do
+ActiveRecord::Schema.define(:version => 20170328014911) do
 
   create_table "bookings", :force => true do |t|
     t.text     "available_musicians"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(:version => 20161230210000) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "phone_number"
+    t.text     "calendar_ids"
   end
 
 end
