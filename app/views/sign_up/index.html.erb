@@ -1,10 +1,82 @@
 <html>
-
+<head>
+<!--<%= stylesheet_link_tag "sign_up.css" %>-->
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Roboto|Trocchi" rel="stylesheet">
+    <style type="text/css" media="screen">
+     body{
+margin:0px;
+}
+        h1{
+            
+            font-size: 400%;            
+        }
+        h3{
+            font-size: 200%; 
+            
+        }
+        
+       
+        h1, h3, h5, p {
+       
+        color: #ffffff;
+          font-family: roboto;
+          text-align: center;
+      }
+       
+        .centered-text{
+            
+            position: relative;
+            top: 150px;
+        }
+        .container{
+            
+            position: relative;
+            background: url("https://custom-tracks.com/wp-content/uploads/2017/02/20170120_130916.jpg") center center no-repeat;
+            background-size: cover; 
+            padding-bottom: 600px;
+            padding-top: 100px;
+        }
+        
+        .auth{
+            
+            color: #ffffff;
+            position: relative;
+            top: 160px;
+            text-align: center;
+        }
+        
+        .layer {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;    
+    width: 100%;
+    height: 100%;
+            
+}
+    </style>
+    </head>
+    
+    
+    <body>
+        <div class="container">
+            <div class="layer">
+            <div class="centered-text">
   <h1> Musician Sign Up </h1>
+                
   <h3> Fill out the following information to be considered for future bookings! </h3>
-  <h5> Step 1: Click the "authenticate email" button below and follow each of the steps </h5>
-  <p><i> NOTE: You will be asked to authenticate your gmail account with our app. Failure to do so will prevent you from receiving future bookings! </i></p>
+    </div>
+            <div class="auth">
+          
+                <p><i> NOTE: You will be asked to authenticate your gmail account with our app. Failure to do so will prevent you from receiving future bookings! </i></p>
+                <h3>Step one:</h3>
+                <h5> Click the "authenticate email" button below and login with Google </h5>
+  
   <button onclick="auth()"> Authenticate Email </button>
+            </div>
+            
+        </div>
+        </div>
   
   <h5> Step 2: Fill out the rest of the information and click submit! </h5>
   <% form_for :musician, @musician, :url => { :action => "create" } do |f| %>
@@ -35,5 +107,5 @@
     }
     
   </script>
-
+    </body>
 </html>
