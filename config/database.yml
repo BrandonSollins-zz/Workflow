@@ -1,15 +1,28 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+default: &default
+  adapter: sqlite3
+  pool: 5
+
 development:
-  adapter: mysql
-  database: daneyo_workflow
-  host: localhost
-  reconnect: true
-  username: daneyo_workflow
-  password: w3EHda5UFmd6p2GA
-  
+  <<: *default
+  database: db/development.sqlite3
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: db/test.sqlite3
+
 production:
-  adapter: mysql
-  database: daneyo_workflow
-  host: localhost
-  reconnect: true
-  username: daneyo_workflow
-  password: w3EHda5UFmd6p2GA
+  <<: *default
+  host: workflow.ckv1c0quf55y.us-east-1.rds.amazonaws.com
+  user: admin
+  port: 3306
+  password: Snare123!
+  database: workflow
