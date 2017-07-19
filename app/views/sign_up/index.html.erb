@@ -1,43 +1,127 @@
 <html>
+<head>
+<!--<%= stylesheet_link_tag "sign_up.css" %>-->
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic|Roboto|Trocchi" rel="stylesheet">
+    <style type="text/css" media="screen">
+     body{
+margin:0px;
+}
+        h1{
 
+            font-size: 400%;
+        }
+        h3{
+            font-size: 200%;
+
+        }
+
+
+        h1, h3, h5, p {
+
+        color: #ffffff;
+          font-family: roboto;
+          text-align: center;
+      }
+
+        .centered-text{
+
+            position: relative;
+            top: 150px;
+        }
+        .container{
+
+            position: relative;
+            background: url("https://custom-tracks.com/wp-content/uploads/2017/02/20170120_130916.jpg") center center no-repeat;
+            background-size: cover;
+            padding-bottom: 600px;
+            padding-top: 100px;
+        }
+
+        .auth{
+
+            color: #ffffff;
+            position: relative;
+            top: 160px;
+            text-align: center;
+        }
+
+        .layer {
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+    </style>
+    </head>
+
+
+    <body>
+        <div class="container">
+            <div class="layer">
+            <div class="centered-text">
   <h1> Musician Sign Up </h1>
+
   <h3> Fill out the following information to be considered for future bookings! </h3>
-  <h5> Step 1: Click the "authenticate email" button below and follow each of the steps </h5>
-  <p><i> NOTE: You will be asked to authenticate your gmail account with our app. Failure to do so will prevent you from receiving future bookings! </i></p>
+    </div>
+            <div class="auth">
+
+                <p><i> NOTE: You will be asked to authenticate your gmail account with our app. Failure to do so will prevent you from receiving future bookings! </i></p>
+                <h3>Step one:</h3>
+                <h5> Click the "authenticate email" button below and login with Google </h5>
+
   <button onclick="auth()"> Authenticate Email </button>
-  
-  <%= defined?(@calendars) ? @calendars : nil %>
-    
-  <h5> Step 2: Fill out the rest of the information and click submit! </h5>
-  <% form_for :musician, @musician, :url => { :action => "create" } do |f| %>
-    Email: <%= text_field_tag(:email, defined?(@user_email) ? @user_email : nil)  %><br>
-    Select Calendars To Track: <br>
-      <%= select_tag(:calendars, defined?(@calendars) ? @calendars : nil, :multiple => true, :size => defined?(@calendar_size) ? @calendar_size : 1) %> <br>
-    Phone Number: <%= text_field_tag(:phone_number) %><br>
-    Name: <%= text_field_tag(:name) %><br>
-    Primary Instrument: <%= select_tag "primary_instrument", "<option>Guitar</option><option>Drums</option><option>Bass</option><option>Keys/Piano</option>" %><br>
-    Secondary Instrument: <%= select_tag "secondary_instrument", "<option>Guitar</option><option>Drums</option><option>Bass</option><option>Keys/Piano</option><option selected=\"selected\">None</option>" %><br>
-    <%= hidden_field_tag(:access_token, defined?(@access_token) ? @access_token : nil) %>
-    <%= hidden_field_tag(:refresh_token, defined?(@refresh_token) ? @refresh_token : nil) %>
-    <%= submit_tag "Submit" %>
+            </div>
+
+        </div>
+        </div>
+
+
+  <div>
+  <%= form_for :musician do |f| %>
+
+    Email: <%= f.text_field :email, value: @user_email %>
+    <br>
+
+    Select Calendars To Track (hold CTRL on PC or COMMAND on MAC to select multiple):
+    <%= f.select :calendar_ids, @calendars.nil? ? [] : @calendars.map { |x| [x["summary"], x["id"]] }, {}, { multiple: true } %>
+    <br>
+
+    Phone Number: <%= f.text_field :phone_number %>
+    <br>
+
+    Name: <%= f.text_field :name %>
+    <br>
+
+    Primary Instrument: <%= f.select :primary_instrument, @primary_instruments.map { |x| [x[:value], x[:id]] } %>
+    <br>
+
+    <%= f.hidden_field :access_token, value: @access_token %>
+    <%= f.hidden_field :refresh_token, value: @refresh_token %>
+
+    <%= f.submit %>
+    <br> <br>
   <% end %>
-            
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script>
-  
+
     current_path = window.location.href
     if (current_path.indexOf("?flash=") > -1) {
       message = current_path.split("?flash=")[1].replace(/\+/g, " ")
       alert(message)
     }
-    
+
     function auth() {
       redirect_uri = "<%= @redirect_uri %>"
       client_id = "<%= @client_id %>"
-      auth_url = "https://accounts.google.com/o/oauth2/auth?prompt=consent&response_type=code&scope=https://www.googleapis.com/auth/calendar+https://www.googleapis.com/auth/gmail.readonly&access_type=offline&redirect_uri=" + redirect_uri + "&client_id=" + client_id 
+      auth_url = "https://accounts.google.com/o/oauth2/auth?prompt=consent&response_type=code&scope=https://www.googleapis.com/auth/calendar+https://www.googleapis.com/auth/gmail.readonly&access_type=offline&redirect_uri=" + redirect_uri + "&client_id=" + client_id
       window.location.replace(auth_url)
     }
-    
-  </script>
 
+  </script>
+    </body>
 </html>
