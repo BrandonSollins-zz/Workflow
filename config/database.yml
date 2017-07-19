@@ -21,6 +21,7 @@ test:
 
 production:
   <<: *default
+  secret_key_base: dffceb083986c7f25199757981513869cb783cdbd1b67a84dec7f0031fd008ef7872ad32f2f055ff8c1e8297f465aa3724e5a7531027eb7ebc3404ed262eca8d
   host: workflow.ckv1c0quf55y.us-east-1.rds.amazonaws.com
   user: admin
   port: 3306
