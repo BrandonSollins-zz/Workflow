@@ -2945,3 +2945,228 @@ Processing by SignUpController#index as HTML
 Completed 200 OK in 199ms (Views: 190.2ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/sign_up?flash=Error+validating+email.+Please+try+again." for 127.0.0.1 at 2017-07-19 19:23:10 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SignUpController#index as HTML
+  Parameters: {"flash"=>"Error validating email. Please try again."}
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (162.3ms)
+Completed 200 OK in 226ms (Views: 215.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-07-19 19:23:19 -0400
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-07-19 19:23:19 -0400
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2017-07-19 19:23:22 -0400
+Processing by SignUpController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BmBQxI7MLBadm0duqpiKX0wNKamdqAJJxYI0WOQw5sEWAIijnjjEE8KeSMwbv/ltXQ95Wia9g53V1Fw5J5ffrQ==", "musician"=>{"email"=>"", "calendar_ids"=>[""], "phone_number"=>"", "name"=>"", "primary_instrument"=>"bass", "access_token"=>"", "refresh_token"=>""}, "commit"=>"Save Musician"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "musicians" WHERE (email = '')[0m
+Redirected to 
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms)
+
+
+  
+NoMethodError (undefined method `keys' for "Error validating email. Please try again.":String):
+  
+app/controllers/sign_up_controller.rb:26:in `create'
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.8ms)
+Started GET "/sign_up" for 127.0.0.1 at 2017-07-19 19:24:41 -0400
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2017-07-19 19:24:44 -0400
+Processing by SignUpController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1ublQANcFUPAT7hlmcxL/esYzTuTW4m6FdClF87njaKaAt4e1cDzjh2t/UGC+L94Nr3/uNgelgNsGhp0eNMjyg==", "musician"=>{"email"=>"", "calendar_ids"=>[""], "phone_number"=>"", "name"=>"", "primary_instrument"=>"bass", "access_token"=>"", "refresh_token"=>""}, "commit"=>"Save Musician"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "musicians" WHERE (email = '')[0m
+Redirected to 
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `keys' for "Error validating email. Please try again.":String):
+  
+app/controllers/sign_up_controller.rb:26:in `create'
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.2ms)
+Started GET "/sign_up" for 127.0.0.1 at 2017-07-19 19:26:06 -0400
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2017-07-19 19:26:07 -0400
+Processing by SignUpController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aaqu5UJHopnCbxv7E9/RZfVL28THBwlpwP3IbhKJ/kNNTpW7lNtEVB+NXt8I6yXgKO7pR4xCFtC5N3cNpL1QKw==", "musician"=>{"email"=>"", "calendar_ids"=>[""], "phone_number"=>"", "name"=>"", "primary_instrument"=>"bass", "access_token"=>"", "refresh_token"=>""}, "commit"=>"Save Musician"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "musicians" WHERE (email = '')[0m
+Redirected to http://localhost:3000/workflow/sign_up
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/workflow/sign_up" for 127.0.0.1 at 2017-07-19 19:26:07 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/workflow/sign_up"):
+  
+actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.4) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.3) lib/rack/method_override.rb:22:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.4) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.4) lib/rails/engine.rb:522:in `call'
+puma (3.9.1) lib/puma/configuration.rb:224:in `call'
+puma (3.9.1) lib/puma/server.rb:602:in `handle_request'
+puma (3.9.1) lib/puma/server.rb:435:in `process_client'
+puma (3.9.1) lib/puma/server.rb:299:in `block in run'
+puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb [16 times] (11.3ms)
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.4ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (85.3ms)
+Started POST "/sign_up" for 127.0.0.1 at 2017-07-19 19:26:34 -0400
+Processing by SignUpController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z0M/DOa8MePwayoTWkXQ8n60J/WcZ4Q37Vh1q6juan13I+dr9kjZ5q9uJbHrYqPAb7Z3BidyBeP9Dh3Ka0lTEQ==", "musician"=>{"email"=>"", "calendar_ids"=>[""], "phone_number"=>"", "name"=>"", "primary_instrument"=>"bass", "access_token"=>"", "refresh_token"=>""}, "commit"=>"Save Musician"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "musicians" WHERE (email = '')[0m
+Redirected to http://localhost:3000/sign_up
+Completed 302 Found in 5ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-07-19 19:26:34 -0400
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2017-07-19 19:26:41 -0400
+Processing by SignUpController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7vq+mrfa8mOHcnwxWKczTX5Nw1C9c9y5WYMgmbxj6Ur+mmb9py4aZth3c5PpgEB/b0+TowZmXW1J1Uj4f8TQJg==", "musician"=>{"email"=>"", "calendar_ids"=>[""], "phone_number"=>"", "name"=>"", "primary_instrument"=>"bass", "access_token"=>"", "refresh_token"=>""}, "commit"=>"Save Musician"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "musicians" WHERE (email = '')[0m
+Redirected to http://localhost:3000/sign_up
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-07-19 19:26:41 -0400
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2017-07-19 19:26:53 -0400
+Processing by SignUpController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iw2oMDQ+K4zYfVrPmZdAu8zhdYuIh+Z5FuOywvWR3OObbXBXJMrDiYd4VW0osDOJ3eMleDOSZ60GtdqjNjbljw==", "musician"=>{"email"=>"", "calendar_ids"=>[""], "phone_number"=>"", "name"=>"", "primary_instrument"=>"bass", "access_token"=>"", "refresh_token"=>""}, "commit"=>"Save Musician"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "musicians" WHERE (email = '')[0m
+Redirected to 
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `keys' for "Error validating email. Please try again.":String):
+  
+app/controllers/sign_up_controller.rb:26:in `create'
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.5ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.6ms)
+Started GET "/sign_up" for 127.0.0.1 at 2017-07-19 19:27:04 -0400
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sign_up" for 127.0.0.1 at 2017-07-19 19:27:06 -0400
+Processing by SignUpController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6hhdBsXv9K9q3B0IQLYXLxloC4AjmcMD4+lneIp/lX+m/GZYE3MSYrc+WCxbguOqxM05A2jc3LqaI9gbPEs7Fw==", "musician"=>{"email"=>"", "calendar_ids"=>[""], "phone_number"=>"", "name"=>"", "primary_instrument"=>"bass", "access_token"=>"", "refresh_token"=>""}, "commit"=>"Save Musician"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "musicians" WHERE (email = '')[0m
+Redirected to http://localhost:3000/sign_up?flash=Error+validating+email.+Please+try+again.
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/sign_up?flash=Error+validating+email.+Please+try+again." for 127.0.0.1 at 2017-07-19 19:27:06 -0400
+Processing by SignUpController#index as HTML
+  Parameters: {"flash"=>"Error validating email. Please try again."}
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up?code=4/Zoh35BtP9-3SLv3JvleBXvdMW2ZYc9bpvHoNVVygd84" for 127.0.0.1 at 2017-07-19 19:33:12 -0400
+Processing by SignUpController#index as HTML
+  Parameters: {"code"=>"4/Zoh35BtP9-3SLv3JvleBXvdMW2ZYc9bpvHoNVVygd84"}
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 1259ms (Views: 16.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" ORDER BY "musicians"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMusicians (20170717011730)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[35mDROP TABLE "musicians"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20170717011730"]]
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMusicians (20170717011730)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "musicians" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "name" varchar, "email" varchar, "primary_instrument" varchar, "access_token" varchar, "refresh_token" varchar, "phone_number" text, "calendar_ids" text)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170717011730"]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
