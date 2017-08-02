@@ -3170,3 +3170,99 @@ Migrating to CreateMusicians (20170717011730)
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/sign_up" for 127.0.0.1 at 2017-08-01 19:46:27 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (392.0ms)
+Completed 200 OK in 1368ms (Views: 1244.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-08-01 19:47:19 -0400
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 425ms (Views: 306.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-08-01 19:48:44 -0400
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 376ms (Views: 311.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-08-01 19:49:16 -0400
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (320.0ms)
+Completed 500 Internal Server Error in 516ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `form_fr' for #<#<Class:0x50bb738>:0xaaccdd8>
+Did you mean?  form_for):
+    80: 
+    81: 
+    82:   <div>
+    83:   <%= form_fr :musician do |f| %>
+    84: 
+    85:     Email: <%= f.text_field :email, value: @user_email %>
+    86:     <br>
+  
+app/views/sign_up/index.html.erb:83:in `_app_views_sign_up_index_html_erb__142074496_89549388'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1376.1ms)
+Started GET "/sign_up" for 127.0.0.1 at 2017-08-01 19:50:25 -0400
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 784ms (Views: 720.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-08-01 19:54:35 -0400
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 408ms (Views: 324.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2017-08-01 19:55:47 -0400
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (724.0ms)
+Completed 500 Internal Server Error in 984ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `html' for #<#<Class:0x50bb738>:0xa6d1408>):
+    80: 
+    81: 
+    82:   <div>
+    83:   <%= form_for :musician, html => {:class => 'x'} do |f| %>
+    84: 
+    85:     Email: <%= f.text_field :email, value: @user_email %>
+    86:     <br>
+  
+app/views/sign_up/index.html.erb:83:in `_app_views_sign_up_index_html_erb__142074496_87462528'
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.0ms)
+  Rendered C:/RailsInstaller/Ruby2.3.0/lib/ruby/gems/2.3.0/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (1057.0ms)
+Started GET "/sign_up" for 127.0.0.1 at 2017-08-01 19:56:49 -0400
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 342ms (Views: 250.5ms | ActiveRecord: 0.0ms)
+
+
