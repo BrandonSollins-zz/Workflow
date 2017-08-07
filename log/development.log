@@ -15,9 +15,9 @@ Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/workflow" for 127.0.0.1 at 2017-07-16 18:51:06 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/workflow"):
-  
+
 actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -72,14 +72,14 @@ Processing by MusiciansController#index as HTML
 Completed 406 Not Acceptable in 29ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (MusiciansController#index is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.4) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -165,14 +165,14 @@ Processing by MusiciansController#index as HTML
 Completed 406 Not Acceptable in 28ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::UnknownFormat (MusiciansController#index is missing a template for this request format and variant.
 
 request.formats: ["text/html"]
 request.variant: []
 
 NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
-  
+
 actionpack (5.0.4) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
 actionpack (5.0.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
 actionpack (5.0.4) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
@@ -260,16 +260,16 @@ Processing by MusiciansController#index as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (uninitialized constant ActionView::CompiledTemplates::Musician):
     62:       <th> Available Times </th>
     63:     </tr>
-    64: 
+    64:
     65: <!--     <% Musician.all.sort_by{ |x| x.name }.each do |musician| %>
     66:       <tr>
     67:         <td> <%= musician.name %> </td>
     68:         <td> <%= musician.primary_instrument %> </td>
-  
+
 app/views/musicians/index.html.erb:65:in `_app_views_musicians_index_html_erb__2727114039949046190_70342640273740'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -294,16 +294,16 @@ Processing by MusiciansController#show as HTML
 Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-    58: 
+    58:
     59:     <div>
     60:       <h1> <u>Musician Info </u> </h1>
     61:       <p> <u>Name:</u> <%= @musician.name %> </p>
     62:       <p> <u>Email:</u> <%= @musician.email %> </p>
     63:       <p> <u>Phone:</u> <%= @musician.phone_number %> </p>
     64:       <p> <u>Instrument:</u> <%= @musician.primary_instrument %> </p>
-  
+
 app/views/musicians/show.html.erb:61:in `_app_views_musicians_show_html_erb___1649010404417745345_70342676056680'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -321,16 +321,16 @@ Processing by MusiciansController#show as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-    58: 
+    58:
     59:     <div>
     60:       <h1> <u>Musician Info </u> </h1>
     61:       <p> <u>Name:</u> <%= @musician.name %> </p>
     62:       <p> <u>Email:</u> <%= @musician.email %> </p>
     63:       <p> <u>Phone:</u> <%= @musician.phone_number %> </p>
     64:       <p> <u>Instrument:</u> <%= @musician.primary_instrument %> </p>
-  
+
 app/views/musicians/show.html.erb:61:in `_app_views_musicians_show_html_erb___1649010404417745345_70342611194600'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -348,9 +348,9 @@ Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/sign_up" for 127.0.0.1 at 2017-07-16 19:33:02 -0400
-  
+
 LoadError (cannot load such file -- httpclient):
-  
+
 app/controllers/sign_up_controller.rb:3:in `<class:SignUpController>'
 app/controllers/sign_up_controller.rb:1:in `<top (required)>'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -362,9 +362,9 @@ app/controllers/sign_up_controller.rb:1:in `<top (required)>'
   Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
   Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.4ms)
 Started GET "/sign_up" for 127.0.0.1 at 2017-07-16 19:34:23 -0400
-  
+
 LoadError (cannot load such file -- httpclient):
-  
+
 app/controllers/sign_up_controller.rb:3:in `<class:SignUpController>'
 app/controllers/sign_up_controller.rb:1:in `<top (required)>'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -469,16 +469,16 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
-    86: 
+    86:
     87:     <p>
     88:       Select Calendars To Track (hold CTRL on PC or COMMAND on MAC to select multiple): <br>
     89:       <%= f.select :email %>
     90:     </p>
-    91: 
+    91:
     92:     <p>
-  
+
 app/views/sign_up/index.html.erb:89:in `block in _app_views_sign_up_index_html_erb__55716398877804169_70342682154460'
 app/views/sign_up/index.html.erb:82:in `_app_views_sign_up_index_html_erb__55716398877804169_70342682154460'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -496,16 +496,16 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
-    86: 
+    86:
     87:     <p>
     88:       Select Calendars To Track (hold CTRL on PC or COMMAND on MAC to select multiple): <br>
     89:       <%= f.select :calendar_ids %>
     90:     </p>
-    91: 
+    91:
     92:     <p>
-  
+
 app/views/sign_up/index.html.erb:89:in `block in _app_views_sign_up_index_html_erb__55716398877804169_70342674484800'
 app/views/sign_up/index.html.erb:82:in `_app_views_sign_up_index_html_erb__55716398877804169_70342674484800'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -523,16 +523,16 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (wrong number of arguments (given 4, expected 1..2)):
-    86: 
+    86:
     87:     <p>
     88:       Select Calendars To Track (hold CTRL on PC or COMMAND on MAC to select multiple): <br>
     89:       <%= f.select :calendar_ids, options_for_select(1,2,3,4) %>
     90:     </p>
-    91: 
+    91:
     92:     <p>
-  
+
 app/views/sign_up/index.html.erb:89:in `block in _app_views_sign_up_index_html_erb__55716398877804169_70342682153540'
 app/views/sign_up/index.html.erb:82:in `_app_views_sign_up_index_html_erb__55716398877804169_70342682153540'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -550,16 +550,16 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
      98:     </p>
-     99: 
+     99:
     100:     <p>
     101:       Primary Instrument: <%= f.select :primary_instrument %>
     102:     </p>
-    103: 
+    103:
     104:     <p>
-  
+
 app/views/sign_up/index.html.erb:101:in `block in _app_views_sign_up_index_html_erb__55716398877804169_70342607672380'
 app/views/sign_up/index.html.erb:82:in `_app_views_sign_up_index_html_erb__55716398877804169_70342607672380'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -577,11 +577,11 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:101: syntax error, unexpected tIDENTIFIER, expecting ')'
 ...y_instrument options_for_select([1,2,3,4]) );@output_buffer....
 ...                               ^):
-  
+
 app/views/sign_up/index.html.erb:101: syntax error, unexpected tIDENTIFIER, expecting ')'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -605,16 +605,16 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `merge' for "test":String):
-    81: 
+    81:
     82:   <%= form_for :musician do |f| %>
     83:     <p>
     84:       <%= f.text_field :email, "test" %>
     85:     </p>
-    86: 
+    86:
     87:     <p>
-  
+
 app/views/sign_up/index.html.erb:84:in `block in _app_views_sign_up_index_html_erb__55716398877804169_70342676119020'
 app/views/sign_up/index.html.erb:82:in `_app_views_sign_up_index_html_erb__55716398877804169_70342676119020'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -801,9 +801,9 @@ Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/sign-up" for 127.0.0.1 at 2017-07-16 20:11:53 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/sign-up"):
-  
+
 actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -839,9 +839,9 @@ puma (3.9.1) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
   Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
   Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (72.1ms)
 Started GET "/sign-up" for 127.0.0.1 at 2017-07-16 20:12:08 -0400
-  
+
 ArgumentError ('sign-up' is not a supported controller name. This can lead to potential routing problems. See http://guides.rubyonrails.org/routing.html#specifying-a-controller-to-use):
-  
+
 config/routes.rb:5:in `block in <top (required)>'
 config/routes.rb:1:in `<top (required)>'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -910,9 +910,9 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NameError (undefined local variable or method `get_access_tokens' for #<SignUpController:0x007ff3d63726d0>):
-  
+
 app/controllers/sign_up_controller.rb:41:in `index'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -928,9 +928,9 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NameError (uninitialized constant SignUpController::HTTPClient):
-  
+
 app/controllers/sign_up_controller.rb:48:in `get_access_tokens'
 app/controllers/sign_up_controller.rb:41:in `index'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -955,9 +955,9 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 923ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NameError (undefined local variable or method `get_user_email' for #<SignUpController:0x007fb526f5b558>):
-  
+
 app/controllers/sign_up_controller.rb:42:in `index'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -987,10 +987,10 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 98ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NameError (undefined local variable or method `http_client' for #<SignUpController:0x007fb529cc66a0>
 Did you mean?  @http_client):
-  
+
 app/controllers/sign_up_controller.rb:59:in `get_access_tokens'
 app/controllers/sign_up_controller.rb:45:in `index'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -1007,10 +1007,10 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 435ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NameError (undefined local variable or method `http_client' for #<SignUpController:0x007fb526398cc0>
 Did you mean?  @http_client):
-  
+
 app/controllers/sign_up_controller.rb:69:in `get_calendars'
 app/controllers/sign_up_controller.rb:44:in `index'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -1027,9 +1027,9 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 523ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `each' for nil:NilClass):
-  
+
 app/controllers/sign_up_controller.rb:72:in `get_calendars'
 app/controllers/sign_up_controller.rb:44:in `index'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -1099,11 +1099,11 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:85: syntax error, unexpected ':', expecting ')'
 ...er_email ? value: @user_email : nil );@output_buffer.safe_ap...
 ...                               ^):
-  
+
 app/views/sign_up/index.html.erb:85: syntax error, unexpected ':', expecting ')'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1148,9 +1148,9 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 530ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `each' for nil:NilClass):
-  
+
 app/controllers/sign_up_controller.rb:72:in `get_calendars'
 app/controllers/sign_up_controller.rb:44:in `index'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -1168,17 +1168,17 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `map' for nil:NilClass
 Did you mean?  tap):
     86:     <br>
-    87: 
+    87:
     88:     Select Calendars To Track (hold CTRL on PC or COMMAND on MAC to select multiple):
     89:     <%= f.select :calendar_ids, options_for_select(@calendars), {}, { multiple: true } %>
     90:     <br>
-    91: 
+    91:
     92:     Phone Number: <%= f.text_area :phone_number %>
-  
+
 app/views/sign_up/index.html.erb:89:in `block in _app_views_sign_up_index_html_erb__2990574344273162200_70207980310580'
 app/views/sign_up/index.html.erb:83:in `_app_views_sign_up_index_html_erb__2990574344273162200_70207980310580'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -1241,7 +1241,7 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:89: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
 ...ars.map { |x| x.id, x.summary } : [], {}, { multiple: true }...
 ...                               ^
@@ -1249,11 +1249,11 @@ SyntaxError (/Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html
 ... : [], {}, { multiple: true } );@output_buffer.safe_append='
 ...                               ^
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:103: syntax error, unexpected keyword_end, expecting '}'
-'.freeze;   end 
+'.freeze;   end
                ^
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:126: syntax error, unexpected keyword_ensure, expecting '}'
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:128: syntax error, unexpected keyword_end, expecting '}'):
-  
+
 app/views/sign_up/index.html.erb:89: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
 app/views/sign_up/index.html.erb:89: syntax error, unexpected ')', expecting '}'
 app/views/sign_up/index.html.erb:103: syntax error, unexpected keyword_end, expecting '}'
@@ -1274,7 +1274,7 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:89: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
 ...ars.map { |x| x.id, x.summary } || [], {}, { multiple: true ...
 ...                               ^
@@ -1282,11 +1282,11 @@ SyntaxError (/Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html
 ...|| [], {}, { multiple: true } );@output_buffer.safe_append='
 ...                               ^
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:103: syntax error, unexpected keyword_end, expecting '}'
-'.freeze;   end 
+'.freeze;   end
                ^
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:126: syntax error, unexpected keyword_ensure, expecting '}'
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:128: syntax error, unexpected keyword_end, expecting '}'):
-  
+
 app/views/sign_up/index.html.erb:89: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
 app/views/sign_up/index.html.erb:89: syntax error, unexpected ')', expecting '}'
 app/views/sign_up/index.html.erb:103: syntax error, unexpected keyword_end, expecting '}'
@@ -1314,7 +1314,7 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:90: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
 ...ars.map { |x| x.id, x.summary } || [], {}, { multiple: true ...
 ...                               ^
@@ -1322,11 +1322,11 @@ SyntaxError (/Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html
 ...|| [], {}, { multiple: true } );@output_buffer.safe_append='
 ...                               ^
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:104: syntax error, unexpected keyword_end, expecting '}'
-'.freeze;   end 
+'.freeze;   end
                ^
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:127: syntax error, unexpected keyword_ensure, expecting '}'
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:129: syntax error, unexpected keyword_end, expecting '}'):
-  
+
 app/views/sign_up/index.html.erb:90: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
 app/views/sign_up/index.html.erb:90: syntax error, unexpected ')', expecting '}'
 app/views/sign_up/index.html.erb:104: syntax error, unexpected keyword_end, expecting '}'
@@ -1368,7 +1368,7 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:89: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
 ...ars.map { |x| x.id, x.summary }, {}, { multiple: true } );@o...
 ...                               ^
@@ -1376,11 +1376,11 @@ SyntaxError (/Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html
 ...ary }, {}, { multiple: true } );@output_buffer.safe_append='
 ...                               ^
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:103: syntax error, unexpected keyword_end, expecting '}'
-'.freeze;   end 
+'.freeze;   end
                ^
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:126: syntax error, unexpected keyword_ensure, expecting '}'
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:128: syntax error, unexpected keyword_end, expecting '}'):
-  
+
 app/views/sign_up/index.html.erb:89: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
 app/views/sign_up/index.html.erb:89: syntax error, unexpected ')', expecting '}'
 app/views/sign_up/index.html.erb:103: syntax error, unexpected keyword_end, expecting '}'
@@ -1408,7 +1408,7 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:89: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
 ...ars.map { |x| x.id, x.summary }, {}, { multiple: true } );@o...
 ...                               ^
@@ -1416,11 +1416,11 @@ SyntaxError (/Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html
 ...ary }, {}, { multiple: true } );@output_buffer.safe_append='
 ...                               ^
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:103: syntax error, unexpected keyword_end, expecting '}'
-'.freeze;   end 
+'.freeze;   end
                ^
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:126: syntax error, unexpected keyword_ensure, expecting '}'
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:128: syntax error, unexpected keyword_end, expecting '}'):
-  
+
 app/views/sign_up/index.html.erb:89: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
 app/views/sign_up/index.html.erb:89: syntax error, unexpected ')', expecting '}'
 app/views/sign_up/index.html.erb:103: syntax error, unexpected keyword_end, expecting '}'
@@ -1441,7 +1441,7 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:89: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
 ...dars.map{ |x| x.id, x.summary }, {}, { multiple: true } );@o...
 ...                               ^
@@ -1449,11 +1449,11 @@ SyntaxError (/Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html
 ...ary }, {}, { multiple: true } );@output_buffer.safe_append='
 ...                               ^
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:103: syntax error, unexpected keyword_end, expecting '}'
-'.freeze;   end 
+'.freeze;   end
                ^
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:126: syntax error, unexpected keyword_ensure, expecting '}'
 /Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:128: syntax error, unexpected keyword_end, expecting '}'):
-  
+
 app/views/sign_up/index.html.erb:89: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
 app/views/sign_up/index.html.erb:89: syntax error, unexpected ')', expecting '}'
 app/views/sign_up/index.html.erb:103: syntax error, unexpected keyword_end, expecting '}'
@@ -1489,16 +1489,16 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 784ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `id' for #<Hash:0x007fb521871f08>):
     86:     <br>
-    87: 
+    87:
     88:     Select Calendars To Track (hold CTRL on PC or COMMAND on MAC to select multiple):
     89:     <%= f.select :calendar_ids, @calendars.nil? ? [] : @calendars.map { |x| [x.id, x.summary] }, {}, { multiple: true } %>
     90:     <br>
-    91: 
+    91:
     92:     Phone Number: <%= f.text_area :phone_number %>
-  
+
 app/views/sign_up/index.html.erb:89:in `block (2 levels) in _app_views_sign_up_index_html_erb__2990574344273162200_70207964058180'
 app/views/sign_up/index.html.erb:89:in `map'
 app/views/sign_up/index.html.erb:89:in `block in _app_views_sign_up_index_html_erb__2990574344273162200_70207964058180'
@@ -1730,9 +1730,9 @@ Processing by SignUpController#create as HTML
 Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
 
 
-  
+
 NoMethodError (undefined method `musician' for #<ActionController::Parameters:0x007fb5264ef8f8>):
-  
+
 app/controllers/sign_up_controller.rb:7:in `create'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1980,11 +1980,11 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/brandonsollins/Desktop/Dane App/app/views/sign_up/index.html.erb:98: syntax error, unexpected ')', expecting keyword_end
 ...|x| [ x["value"], x["id"] ]}) );@output_buffer.safe_append='
 ...                               ^):
-  
+
 app/views/sign_up/index.html.erb:98: syntax error, unexpected ')', expecting keyword_end
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2001,17 +2001,17 @@ Processing by SignUpController#index as HTML
 Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `map' for nil:NilClass
 Did you mean?  tap):
      95:     Name: <%= f.text_field :name %>
      96:     <br>
-     97: 
+     97:
      98:     Primary Instrument: <%= f.select :primary_instrument, @primary_instrument.map { |x| [x["value"], x["id"]] } %>
      99:     <br>
-    100: 
+    100:
     101:     <%= f.hidden_field :access_token, value: @access_token %>
-  
+
 app/views/sign_up/index.html.erb:98:in `block in _app_views_sign_up_index_html_erb__2990574344273162200_70208032290820'
 app/views/sign_up/index.html.erb:83:in `_app_views_sign_up_index_html_erb__2990574344273162200_70208032290820'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -2145,9 +2145,9 @@ Processing by SignUpController#create as HTML
 Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
 
 
-  
+
 ActiveRecord::StatementInvalid (SQLite3::SQLException: near ")": syntax error: SELECT COUNT(*) FROM "musicians" WHERE (email = )):
-  
+
 app/controllers/sign_up_controller.rb:9:in `create'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2178,9 +2178,9 @@ Processing by SignUpController#create as HTML
 Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.7ms)
 
 
-  
+
 ActiveRecord::StatementInvalid (SQLite3::SQLException: near ")": syntax error: SELECT COUNT(*) FROM "musicians" WHERE (email = )):
-  
+
 app/controllers/sign_up_controller.rb:9:in `create'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2527,16 +2527,16 @@ Processing by MusiciansController#show as HTML
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-    58: 
+    58:
     59:     <div>
     60:       <h1> <u>Musician Info </u> </h1>
     61:       <p> <u>Name:</u> <%= @musician.name %> </p>
     62:       <p> <u>Email:</u> <%= @musician.email %> </p>
     63:       <p> <u>Phone:</u> <%= @musician.phone_number %> </p>
     64:       <p> <u>Instrument:</u> <%= @musician.primary_instrument %> </p>
-  
+
 app/views/musicians/show.html.erb:61:in `_app_views_musicians_show_html_erb___70024458166237466_70208010035120'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2555,16 +2555,16 @@ Processing by MusiciansController#show as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `name' for nil:NilClass):
-    58: 
+    58:
     59:     <div>
     60:       <h1> <u>Musician Info </u> </h1>
     61:       <p> <u>Name:</u> <%= @musician.name %> </p>
     62:       <p> <u>Email:</u> <%= @musician.email %> </p>
     63:       <p> <u>Phone:</u> <%= @musician.phone_number %> </p>
     64:       <p> <u>Instrument:</u> <%= @musician.primary_instrument %> </p>
-  
+
 app/views/musicians/show.html.erb:61:in `_app_views_musicians_show_html_erb___70024458166237466_70208003929860'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2582,9 +2582,9 @@ Processing by MusiciansController#show as HTML
 Completed 500 Internal Server Error in 74ms (ActiveRecord: 1.3ms)
 
 
-  
+
 NoMethodError (undefined method `get_access_token' for #<MusiciansController:0x007fb525ae63e8>):
-  
+
 app/controllers/musicians_controller.rb:7:in `show'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2610,9 +2610,9 @@ Processing by MusiciansController#show as HTML
 Completed 500 Internal Server Error in 2319ms (ActiveRecord: 0.2ms)
 
 
-  
+
 NoMethodError (undefined method `keys' for nil:NilClass):
-  
+
 app/controllers/application_controller.rb:14:in `get_busy_times'
 app/controllers/musicians_controller.rb:9:in `show'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -2631,9 +2631,9 @@ Processing by MusiciansController#show as HTML
 Completed 500 Internal Server Error in 398ms (ActiveRecord: 0.3ms)
 
 
-  
+
 NoMethodError (undefined method `keys' for nil:NilClass):
-  
+
 app/controllers/application_controller.rb:14:in `get_busy_times'
 app/controllers/musicians_controller.rb:9:in `show'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -2652,9 +2652,9 @@ Processing by MusiciansController#show as HTML
 Completed 500 Internal Server Error in 287ms (ActiveRecord: 0.8ms)
 
 
-  
+
 NoMethodError (undefined method `keys' for nil:NilClass):
-  
+
 app/controllers/application_controller.rb:15:in `get_busy_times'
 app/controllers/musicians_controller.rb:9:in `show'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -2686,9 +2686,9 @@ Processing by MusiciansController#show as HTML
 Completed 500 Internal Server Error in 449ms (ActiveRecord: 0.4ms)
 
 
-  
+
 NoMethodError (undefined method `keys' for nil:NilClass):
-  
+
 app/controllers/application_controller.rb:15:in `get_busy_times'
 app/controllers/musicians_controller.rb:9:in `show'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -2702,9 +2702,9 @@ app/controllers/musicians_controller.rb:9:in `show'
 Completed 500 Internal Server Error in 742ms (ActiveRecord: 0.6ms)
 
 
-  
+
 NoMethodError (undefined method `keys' for nil:NilClass):
-  
+
 app/controllers/application_controller.rb:15:in `get_busy_times'
 app/controllers/musicians_controller.rb:9:in `show'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -2723,9 +2723,9 @@ Processing by MusiciansController#show as HTML
 Completed 500 Internal Server Error in 612ms (ActiveRecord: 0.8ms)
 
 
-  
+
 NoMethodError (undefined method `keys' for nil:NilClass):
-  
+
 app/controllers/application_controller.rb:15:in `get_busy_times'
 app/controllers/musicians_controller.rb:9:in `show'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -2746,16 +2746,16 @@ Processing by MusiciansController#show as HTML
 Completed 500 Internal Server Error in 413ms (ActiveRecord: 0.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
     104:             <th> More Info </th>
     105:           </tr>
-    106: 
+    106:
     107:           <% @bookings.each do |booking| %>
     108:             <tr>
     109:               <td> <%= booking.time %> </td>
     110:               <td> <a href="https://www.custom-tracks.com/workflow/bookings/<%= booking.id %>" > Click for more info </a>  </td>
-  
+
 app/views/musicians/show.html.erb:107:in `_app_views_musicians_show_html_erb___70024458166237466_70207999989140'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2775,16 +2775,16 @@ Processing by MusiciansController#show as HTML
 Completed 500 Internal Server Error in 226ms (ActiveRecord: 0.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
     104:             <th> More Info </th>
     105:           </tr>
-    106: 
+    106:
     107:           <% @bookings.each do |booking| %>
     108:             <tr>
     109:               <td> <%= booking.time %> </td>
     110:               <td> <a href="https://www.custom-tracks.com/workflow/bookings/<%= booking.id %>" > Click for more info </a>  </td>
-  
+
 app/views/musicians/show.html.erb:107:in `_app_views_musicians_show_html_erb___70024458166237466_70208005749280'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2804,16 +2804,16 @@ Processing by MusiciansController#show as HTML
 Completed 500 Internal Server Error in 853ms (ActiveRecord: 1.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
     104:             <th> More Info </th>
     105:           </tr>
-    106: 
+    106:
     107:           <% @bookings.each do |booking| %>
     108:             <tr>
     109:               <td> <%= booking.time %> </td>
     110:               <td> <a href="https://www.custom-tracks.com/workflow/bookings/<%= booking.id %>" > Click for more info </a>  </td>
-  
+
 app/views/musicians/show.html.erb:107:in `_app_views_musicians_show_html_erb___70024458166237466_70208008982980'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2900,9 +2900,9 @@ Completed 200 OK in 203ms (Views: 200.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/workflow/sign_up" for 127.0.0.1 at 2017-07-17 09:13:31 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/workflow/sign_up"):
-  
+
 actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -2972,13 +2972,13 @@ Started POST "/sign_up" for 127.0.0.1 at 2017-07-19 19:23:22 -0400
 Processing by SignUpController#create as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"BmBQxI7MLBadm0duqpiKX0wNKamdqAJJxYI0WOQw5sEWAIijnjjEE8KeSMwbv/ltXQ95Wia9g53V1Fw5J5ffrQ==", "musician"=>{"email"=>"", "calendar_ids"=>[""], "phone_number"=>"", "name"=>"", "primary_instrument"=>"bass", "access_token"=>"", "refresh_token"=>""}, "commit"=>"Save Musician"}
   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "musicians" WHERE (email = '')[0m
-Redirected to 
+Redirected to
 Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.6ms)
 
 
-  
+
 NoMethodError (undefined method `keys' for "Error validating email. Please try again.":String):
-  
+
 app/controllers/sign_up_controller.rb:26:in `create'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -2999,13 +2999,13 @@ Started POST "/sign_up" for 127.0.0.1 at 2017-07-19 19:24:44 -0400
 Processing by SignUpController#create as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"1ublQANcFUPAT7hlmcxL/esYzTuTW4m6FdClF87njaKaAt4e1cDzjh2t/UGC+L94Nr3/uNgelgNsGhp0eNMjyg==", "musician"=>{"email"=>"", "calendar_ids"=>[""], "phone_number"=>"", "name"=>"", "primary_instrument"=>"bass", "access_token"=>"", "refresh_token"=>""}, "commit"=>"Save Musician"}
   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "musicians" WHERE (email = '')[0m
-Redirected to 
+Redirected to
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.5ms)
 
 
-  
+
 NoMethodError (undefined method `keys' for "Error validating email. Please try again.":String):
-  
+
 app/controllers/sign_up_controller.rb:26:in `create'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3031,9 +3031,9 @@ Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
 
 
 Started GET "/workflow/sign_up" for 127.0.0.1 at 2017-07-19 19:26:07 -0400
-  
+
 ActionController::RoutingError (No route matches [GET] "/workflow/sign_up"):
-  
+
 actionpack (5.0.4) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.5.1) lib/web_console/middleware.rb:28:in `block in call'
@@ -3102,13 +3102,13 @@ Started POST "/sign_up" for 127.0.0.1 at 2017-07-19 19:26:53 -0400
 Processing by SignUpController#create as HTML
   Parameters: {"utf8"=>"✓", "authenticity_token"=>"iw2oMDQ+K4zYfVrPmZdAu8zhdYuIh+Z5FuOywvWR3OObbXBXJMrDiYd4VW0osDOJ3eMleDOSZ60GtdqjNjbljw==", "musician"=>{"email"=>"", "calendar_ids"=>[""], "phone_number"=>"", "name"=>"", "primary_instrument"=>"bass", "access_token"=>"", "refresh_token"=>""}, "commit"=>"Save Musician"}
   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "musicians" WHERE (email = '')[0m
-Redirected to 
+Redirected to
 Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.4ms)
 
 
-  
+
 NoMethodError (undefined method `keys' for "Error validating email. Please try again.":String):
-  
+
 app/controllers/sign_up_controller.rb:26:in `create'
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.3/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3170,11 +3170,3 @@ Migrating to CreateMusicians (20170717011730)
   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-Started GET "/" for 127.0.0.1 at 2017-08-07 19:27:00 -0400
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-Processing by SignUpController#index as HTML
-  Rendering sign_up/index.html.erb within layouts/application
-  Rendered sign_up/index.html.erb within layouts/application (176.9ms)
-Completed 200 OK in 233ms (Views: 220.9ms | ActiveRecord: 0.0ms)
-
-
