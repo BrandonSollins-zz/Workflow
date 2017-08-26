@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root "sign_up#index"
   resources :musicians
   resources :sign_up
+  post "songwriter/sign_up", to: "songwriter#create"
 end

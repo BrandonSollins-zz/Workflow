@@ -1,0 +1,2 @@
+class Songwriter < ApplicationRecord
+end

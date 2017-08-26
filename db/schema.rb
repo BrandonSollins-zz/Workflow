@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170717011730) do
+ActiveRecord::Schema.define(version: 20170826001047) do
 
   create_table "musicians", force: :cascade do |t|
     t.datetime "created_at",         null: false
@@ -22,6 +22,16 @@ ActiveRecord::Schema.define(version: 20170717011730) do
     t.string   "refresh_token"
     t.text     "phone_number"
     t.text     "calendar_ids"
+  end
+
+  create_table "songwriters", force: :cascade do |t|
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.string   "name"
+    t.string   "email"
+    t.string   "time_zone"
+    t.string   "available_times"
+    t.string   "ip_address"
   end
 
 end
