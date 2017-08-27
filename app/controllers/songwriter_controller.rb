@@ -9,9 +9,9 @@ class SongwriterController < ApplicationController
     songwriter.available_times = params['available_times']
     songwriter.ip_address = params['ip_address']
     location = Geocoder.address(params['ip_address'])
-    songwriter.city = location.split(',')[0]
-    songwriter.region = location.split(',')[1]
-    songwriter.country = location.split(',')[2]
+    songwriter.city = location.split(',')[0] rescue nil
+    songwriter.region = location.split(',')[1] rescue nil
+    songwriter.country = location.split(',')[2] rescue nil
     songwriter.save!
   end
 

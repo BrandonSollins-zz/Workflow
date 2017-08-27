@@ -2963,3 +2963,7 @@ D, [2017-07-19T20:08:36.875707 #14630] DEBUG -- :   [1m[35m (36.9ms)[0m  [1m
 D, [2017-07-19T20:08:36.909388 #14630] DEBUG -- :   [1m[35m (33.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('3506181730053852990')[0m
 D, [2017-07-19T20:08:47.969165 #14632] DEBUG -- :   [1m[36mMusician Load (44.1ms)[0m  [1m[34mSELECT  `musicians`.* FROM `musicians` ORDER BY `musicians`.`id` DESC LIMIT 1[0m
 D, [2017-07-19T20:08:51.076033 #14632] DEBUG -- :   [1m[36mMusician Load (35.9ms)[0m  [1m[34mSELECT  `musicians`.* FROM `musicians` ORDER BY `musicians`.`id` ASC LIMIT 1[0m
+D, [2017-08-27T15:37:05.039375 #3589] DEBUG -- :   [1m[35m (29.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `songwriters`[0m
+D, [2017-08-27T15:37:08.027481 #3589] DEBUG -- :   [1m[36mSongwriter Load (40.7ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` ORDER BY `songwriters`.`id` DESC LIMIT 1[0m
+D, [2017-08-27T15:38:04.773180 #3589] DEBUG -- :   [1m[36mSongwriter Load (35.6ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` ORDER BY `songwriters`.`id` DESC LIMIT 1[0m
+D, [2017-08-27T15:41:59.809212 #3839] DEBUG -- :   [1m[36mSongwriter Load (34.5ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` ORDER BY `songwriters`.`id` DESC LIMIT 1[0m
