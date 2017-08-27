@@ -11,6 +11,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'httpclient', '~> 2.5.2'
+gem 'geocoder'
 
 
 # gem 'redis', '~> 3.0'

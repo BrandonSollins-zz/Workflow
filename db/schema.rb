@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170826001047) do
+ActiveRecord::Schema.define(version: 20170827192639) do
 
   create_table "musicians", force: :cascade do |t|
     t.datetime "created_at",         null: false
@@ -32,6 +32,9 @@ ActiveRecord::Schema.define(version: 20170826001047) do
     t.string   "time_zone"
     t.string   "available_times"
     t.string   "ip_address"
+    t.string   "city"
+    t.string   "region"
+    t.string   "country"
   end
 
 end
