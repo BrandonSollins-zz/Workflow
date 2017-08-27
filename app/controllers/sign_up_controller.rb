@@ -39,7 +39,7 @@ class SignUpController < ApplicationController
       { id: "vocals", value: "Vocals" },
       { id: "other", value: "Other" },
     ]
-    @redirect_uri = "http://localhost:3000/sign_up"
+    @redirect_uri = "http://54.205.235.245.54.205.235.245.xip.io/workflow/sign_up"
     @client_id = "621760050683-as0aceoats9oouvtbqbsvk55aobu3gt6.apps.googleusercontent.com"
     @client_secret = "nPxCjK7KxzIUZGFojl4qiQkd"
     @base_url = request.params

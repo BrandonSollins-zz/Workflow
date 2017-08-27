@@ -2945,3 +2945,25 @@ Processing by SignUpController#index as HTML
 Completed 200 OK in 199ms (Views: 190.2ms | ActiveRecord: 0.0ms)
 
 
+D, [2017-07-19T20:01:37.198047 #13090] DEBUG -- :   [1m[36mMusician Load (0.2ms)[0m  [1m[34mSELECT  "musicians".* FROM "musicians" ORDER BY "musicians"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2017-07-19T20:08:36.047328 #14630] DEBUG -- :   [1m[35m (122.9ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+D, [2017-07-19T20:08:36.271331 #14630] DEBUG -- :   [1m[35m (120.1ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+D, [2017-07-19T20:08:36.304939 #14630] DEBUG -- :   [1m[35m (33.2ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+D, [2017-07-19T20:08:36.338586 #14630] DEBUG -- :   [1m[35m (33.3ms)[0m  [1m[34mSELECT GET_LOCK('3506181730053852990', 0);[0m
+D, [2017-07-19T20:08:36.415641 #14630] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Load (33.7ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+I, [2017-07-19T20:08:36.466258 #14630]  INFO -- : Migrating to CreateMusicians (20170717011730)
+D, [2017-07-19T20:08:36.522817 #14630] DEBUG -- :   [1m[35m (53.7ms)[0m  [1m[35mCREATE TABLE `musicians` (`id` int AUTO_INCREMENT PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL, `name` varchar(255), `email` varchar(255), `primary_instrument` varchar(255), `access_token` varchar(255), `refresh_token` varchar(255), `phone_number` text, `calendar_ids` text) ENGINE=InnoDB[0m
+D, [2017-07-19T20:08:36.590635 #14630] DEBUG -- :   [1m[35m (32.1ms)[0m  [1m[35mBEGIN[0m
+D, [2017-07-19T20:08:36.624815 #14630] DEBUG -- :   [1m[35mSQL (33.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20170717011730')[0m
+D, [2017-07-19T20:08:36.660802 #14630] DEBUG -- :   [1m[35m (35.6ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-07-19T20:08:36.729857 #14630] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (33.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+D, [2017-07-19T20:08:36.802994 #14630] DEBUG -- :   [1m[35m (33.7ms)[0m  [1m[35mBEGIN[0m
+D, [2017-07-19T20:08:36.838341 #14630] DEBUG -- :   [1m[35mSQL (33.6ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'production', '2017-07-20 00:08:36', '2017-07-20 00:08:36')[0m
+D, [2017-07-19T20:08:36.875707 #14630] DEBUG -- :   [1m[35m (36.9ms)[0m  [1m[35mCOMMIT[0m
+D, [2017-07-19T20:08:36.909388 #14630] DEBUG -- :   [1m[35m (33.3ms)[0m  [1m[34mSELECT RELEASE_LOCK('3506181730053852990')[0m
+D, [2017-07-19T20:08:47.969165 #14632] DEBUG -- :   [1m[36mMusician Load (44.1ms)[0m  [1m[34mSELECT  `musicians`.* FROM `musicians` ORDER BY `musicians`.`id` DESC LIMIT 1[0m
+D, [2017-07-19T20:08:51.076033 #14632] DEBUG -- :   [1m[36mMusician Load (35.9ms)[0m  [1m[34mSELECT  `musicians`.* FROM `musicians` ORDER BY `musicians`.`id` ASC LIMIT 1[0m
+D, [2017-08-27T15:37:05.039375 #3589] DEBUG -- :   [1m[35m (29.8ms)[0m  [1m[34mSELECT COUNT(*) FROM `songwriters`[0m
+D, [2017-08-27T15:37:08.027481 #3589] DEBUG -- :   [1m[36mSongwriter Load (40.7ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` ORDER BY `songwriters`.`id` DESC LIMIT 1[0m
+D, [2017-08-27T15:38:04.773180 #3589] DEBUG -- :   [1m[36mSongwriter Load (35.6ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` ORDER BY `songwriters`.`id` DESC LIMIT 1[0m
+D, [2017-08-27T15:41:59.809212 #3839] DEBUG -- :   [1m[36mSongwriter Load (34.5ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` ORDER BY `songwriters`.`id` DESC LIMIT 1[0m
