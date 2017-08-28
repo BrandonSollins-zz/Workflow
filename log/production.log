@@ -2967,3 +2967,20 @@ D, [2017-08-27T15:37:05.039375 #3589] DEBUG -- :   [1m[35m (29.8ms)[0m  [1m
 D, [2017-08-27T15:37:08.027481 #3589] DEBUG -- :   [1m[36mSongwriter Load (40.7ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` ORDER BY `songwriters`.`id` DESC LIMIT 1[0m
 D, [2017-08-27T15:38:04.773180 #3589] DEBUG -- :   [1m[36mSongwriter Load (35.6ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` ORDER BY `songwriters`.`id` DESC LIMIT 1[0m
 D, [2017-08-27T15:41:59.809212 #3839] DEBUG -- :   [1m[36mSongwriter Load (34.5ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` ORDER BY `songwriters`.`id` DESC LIMIT 1[0m
+D, [2017-08-27T23:19:31.958423 #31274] DEBUG -- :   [1m[36mSongwriter Load (35.7ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` ORDER BY `songwriters`.`id` DESC LIMIT 1[0m
+D, [2017-08-27T23:19:34.756416 #31274] DEBUG -- :   [1m[36mSongwriter Load (36.6ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` ORDER BY `songwriters`.`id` ASC LIMIT 1[0m
+D, [2017-08-27T23:19:40.774018 #31274] DEBUG -- :   [1m[36mSongwriter Load (34.2ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` WHERE `songwriters`.`id` = 2 LIMIT 1[0m
+D, [2017-08-27T23:19:46.036049 #31274] DEBUG -- :   [1m[36mSongwriter Load (36.6ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` WHERE `songwriters`.`id` = 6 LIMIT 1[0m
+D, [2017-08-27T23:19:48.667425 #31274] DEBUG -- :   [1m[36mSongwriter Load (36.1ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` WHERE `songwriters`.`id` = 7 LIMIT 1[0m
+D, [2017-08-27T23:19:50.645346 #31274] DEBUG -- :   [1m[36mSongwriter Load (37.9ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` WHERE `songwriters`.`id` = 8 LIMIT 1[0m
+D, [2017-08-27T23:19:52.479194 #31274] DEBUG -- :   [1m[36mSongwriter Load (40.0ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` WHERE `songwriters`.`id` = 9 LIMIT 1[0m
+D, [2017-08-27T23:19:54.685318 #31274] DEBUG -- :   [1m[36mSongwriter Load (46.3ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` WHERE `songwriters`.`id` = 10 LIMIT 1[0m
+D, [2017-08-27T23:19:56.170895 #31274] DEBUG -- :   [1m[36mSongwriter Load (67.9ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` WHERE `songwriters`.`id` = 11 LIMIT 1[0m
+D, [2017-08-27T23:19:58.050587 #31274] DEBUG -- :   [1m[36mSongwriter Load (35.5ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` WHERE `songwriters`.`id` = 12 LIMIT 1[0m
+D, [2017-08-27T23:20:26.668027 #31274] DEBUG -- :   [1m[36mSongwriter Load (37.3ms)[0m  [1m[34mSELECT `songwriters`.* FROM `songwriters` WHERE (city = 'Barcelona')[0m
+D, [2017-08-27T23:20:48.618865 #31274] DEBUG -- :   [1m[36mSongwriter Load (37.5ms)[0m  [1m[34mSELECT `songwriters`.* FROM `songwriters` WHERE (country = 'Spain')[0m
+D, [2017-08-27T23:20:52.624455 #31274] DEBUG -- :   [1m[35m (35.1ms)[0m  [1m[34mSELECT COUNT(*) FROM `songwriters`[0m
+D, [2017-08-27T23:20:56.369271 #31274] DEBUG -- :   [1m[36mSongwriter Load (36.0ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` ORDER BY `songwriters`.`id` ASC LIMIT 1[0m
+D, [2017-08-27T23:21:00.529578 #31274] DEBUG -- :   [1m[36mSongwriter Load (35.1ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` ORDER BY `songwriters`.`id` ASC LIMIT 1 OFFSET 1[0m
+D, [2017-08-27T23:21:03.505435 #31274] DEBUG -- :   [1m[36mSongwriter Load (35.8ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` ORDER BY `songwriters`.`id` ASC LIMIT 1 OFFSET 2[0m
+D, [2017-08-27T23:21:05.883021 #31274] DEBUG -- :   [1m[36mSongwriter Load (37.3ms)[0m  [1m[34mSELECT  `songwriters`.* FROM `songwriters` ORDER BY `songwriters`.`id` DESC LIMIT 1[0m

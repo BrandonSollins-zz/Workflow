@@ -6,6 +6,7 @@
     <option id='city'> City </option>
     <option id='region'> State/Region </option>
     <option id='country'> Country </option>
+    <option id='time_zone'> Time Zone </option>
   </select>
 
   <select id='additional_select' style='visibility:hidden'></select><br>
@@ -38,11 +39,11 @@ function build_data(main_select, additional_select) {
   data = <%= raw @data %>
   $('#data_view').empty()
   if (main_select == 'all_data') {
-    $("#current_data").html('All Songwriters')
     display_data(data['all_data'])
-  } else if (main_select == 'city') {
-    display_data(data['cities'][additional_select])
-    $("#current_data").html('City - ' + additional_select)
+    $("#current_data").html('All Songwriters')
+  } else if (main_select == 'time_zone') {
+    display_data(data['time_zones'][additional_select])
+    $("#current_data").html('Time Zone - ' + additional_select)
   } else if (main_select == 'region') {
     display_data(data['regions'][additional_select])
     $("#current_data").html('State/Region - ' + additional_select)
@@ -73,6 +74,10 @@ $('#data_select').on('change', function() {
     $('#additional_select').attr('style', 'visibility:visible')
     countries = <%= raw @countries.to_json %>
     build_select(countries)
+  } else if (selected == 'time_zone') {
+    $('#additional_select').attr('style', 'visibility:visible')
+    time_zones = <%= raw @time_zones.to_json %>
+    build_select(time_zones)
   } else {
     $('#additional_select').attr('style', 'visibility:hidden')
   }

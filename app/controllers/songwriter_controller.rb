@@ -21,6 +21,7 @@ class SongwriterController < ApplicationController
     @cities = Songwriter.uniq.pluck(:city)
     @regions = Songwriter.uniq.pluck(:region)
     @countries = Songwriter.uniq.pluck(:country)
+    @time_zones = Songwriter.uniq.pluck(:time_zone)
     @data = build_data.to_json
   end
 
@@ -33,6 +34,7 @@ class SongwriterController < ApplicationController
       cities: {},
       regions: {},
       countries: {},
+      time_zones: {},
       all_data: {}
 
     }
@@ -59,6 +61,13 @@ class SongwriterController < ApplicationController
       possible_days.each do |day|
         td = Songwriter.where("country = '#{country}' AND lower(available_times) like '%#{day}%'")
         all_data[:countries][country][day] = {count: td.count(), emails: td.map{ |x| x.email }}
+      end
+    end
+    @time_zones.each do |tz|
+      all_data[:time_zones][tz] = {}
+      possible_days.each do |day|
+        td = Songwriter.where("time_zone = '#{tz}' AND lower(available_times) like '%#{day}%'")
+        all_data[:time_zones][tz][day] = {count: td.count(), emails: td.map{ |x| x.email }}
       end
     end
     all_data
