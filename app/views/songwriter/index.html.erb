@@ -44,6 +44,9 @@ function build_data(main_select, additional_select) {
   } else if (main_select == 'time_zone') {
     display_data(data['time_zones'][additional_select])
     $("#current_data").html('Time Zone - ' + additional_select)
+  } else if (main_select == 'city') {
+    display_data(data['cities'][additional_select])
+    $("#current_data").html('City - ' + additional_select)
   } else if (main_select == 'region') {
     display_data(data['regions'][additional_select])
     $("#current_data").html('State/Region - ' + additional_select)

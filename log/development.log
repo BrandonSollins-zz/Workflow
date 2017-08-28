@@ -9318,3 +9318,650 @@ Completed 200 OK in 84ms (Views: 13.1ms | ActiveRecord: 18.8ms)
   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters"[0m
   [1m[36mSongwriter Load (0.6ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters"[0m
   [1m[36mSongwriter Load (0.3ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country like '%Spain%')[0m
+Started GET "/" for 127.0.0.1 at 2017-08-27 23:49:57 -0400
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-08-27 23:50:01 -0400
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/songwriter" for 127.0.0.1 at 2017-08-27 23:50:01 -0400
+Processing by SongwriterController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "songwriters"."city" FROM "songwriters"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "songwriters"."region" FROM "songwriters"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "songwriters"."country" FROM "songwriters"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "songwriters"."time_zone" FROM "songwriters"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Sundays%')[0m
+  Rendering songwriter/index.html.erb within layouts/application
+  Rendered songwriter/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 77ms (Views: 13.9ms | ActiveRecord: 17.1ms)
+
+
+Started GET "/songwriter" for 127.0.0.1 at 2017-08-27 23:50:01 -0400
+Processing by SongwriterController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT "songwriters"."city" FROM "songwriters"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "songwriters"."region" FROM "songwriters"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "songwriters"."country" FROM "songwriters"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "songwriters"."time_zone" FROM "songwriters"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.2ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.2ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Sundays%')[0m
+  Rendering songwriter/index.html.erb within layouts/application
+  Rendered songwriter/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 82ms (Views: 13.5ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/songwriter" for 127.0.0.1 at 2017-08-27 23:51:46 -0400
+Processing by SongwriterController#index as HTML
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT DISTINCT "songwriters"."city" FROM "songwriters"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "songwriters"."region" FROM "songwriters"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "songwriters"."country" FROM "songwriters"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DISTINCT "songwriters"."time_zone" FROM "songwriters"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Barcelona' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.2ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Winter Park' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (city = 'Brea' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CT ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' FL ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.2ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (region = ' CA ' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' Spain' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (country = ' United States' AND lower(available_times) like '%Sundays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Weekday Evenings%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Any Time%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Any Time%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Weekends%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Weekends%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Mondays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Mondays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Tuesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Wednesdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Thursdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Fridays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Fridays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Saturdays%')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Sundays%')[0m
+  [1m[36mSongwriter Load (0.1ms)[0m  [1m[34mSELECT "songwriters".* FROM "songwriters" WHERE (time_zone = '035	Eastern Standard Time	(GMT-05:00) Eastern Time (US and Canada)' AND lower(available_times) like '%Sundays%')[0m
+  Rendering songwriter/index.html.erb within layouts/application
+  Rendered songwriter/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 85ms (Views: 14.1ms | ActiveRecord: 19.0ms)
+
+
