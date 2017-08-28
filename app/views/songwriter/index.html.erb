@@ -42,13 +42,13 @@ function build_data(main_select, additional_select) {
     display_data(data['all_data'])
   } else if (main_select == 'city') {
     display_data(data['cities'][additional_select])
-    $("#current_data").html('City: ' + additional_select)
+    $("#current_data").html('City - ' + additional_select)
   } else if (main_select == 'region') {
     display_data(data['regions'][additional_select])
-    $("#current_data").html('State/Region: ' + additional_select)
+    $("#current_data").html('State/Region - ' + additional_select)
   } else if (main_select == 'country') {
     display_data(data['countries'][additional_select])
-    $("#current_data").html('Country: ' + additional_select)
+    $("#current_data").html('Country - ' + additional_select)
   }
 }
 
