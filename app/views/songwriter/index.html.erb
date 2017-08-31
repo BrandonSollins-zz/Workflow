@@ -29,9 +29,33 @@ function build_select(options) {
   })
 }
 
+function show_list(list) {
+  element = $('#' + list)
+  if (element.attr('style') == 'display:none') {
+    element.attr('style', 'display:block')
+    $('#show_list_' + list).html('<u>Hide Emails</u>')
+  } else {
+    element.attr('style', 'display:none')
+    $('#show_list_' + list).html('<u>Show Emails</u>')
+  }
+}
+
 function display_data(data) {
   Object.keys(data).forEach(function(x) {
-    $('#data_view').append(x + ' - Total: ' + data[x]['count'] + ', Emails: ' + data[x]['emails'] + '<br>')
+    x_id = x.replace(' ', '')
+    if (data[x]['count'] > 0) {
+      button = '<p id="show_list_' + x_id + '" onclick="show_list(\'' + x_id + '\')"> <u>Show Emails</u> </p>'
+      list = '<ul id="' + x_id + '" style="display:none">'
+      for (email in data[x]['emails']) {
+        list += '<li>' + data[x]['emails'][email] + '</li>'
+      }
+      list += '</ul>'
+    } else {
+      button = ''
+      list = ''
+    }
+    html = '<p> <b>' +  x + '</b> - Total: ' + data[x]['count'] + ' ' + button + list + '</p><br>'
+    $('#data_view').append(html)
   })
 }
 

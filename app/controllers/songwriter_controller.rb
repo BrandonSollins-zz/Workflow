@@ -39,27 +39,29 @@ class SongwriterController < ApplicationController
 
     }
     possible_days.each do |day|
-      td = Songwriter.where("lower(available_times) like '%#{day}%'")
+      td = Songwriter.where("available_times like '%#{day}%'")
       all_data[:all_data][day] = {count: td.count(), emails: td.map{ |x| x.email }}
     end
+    td = Songwriter.where("available_times = ''")
+    all_data[:all_data]["N/A"] = {count: td.count(), emails: td.map{ |x| x.email }}
     @cities.each do |city|
       all_data[:cities][city] = {}
       possible_days.each do |day|
-        td = Songwriter.where("city = '#{city}' AND lower(available_times) like '%#{day}%'")
+        td = Songwriter.where("city = '#{city}' AND available_times like '%#{day}%'")
         all_data[:cities][city][day] = {count: td.count(), emails: td.map{ |x| x.email }}
       end
     end
     @regions.each do |region|
       all_data[:regions][region] = {}
       possible_days.each do |day|
-        td = Songwriter.where("region = '#{region}' AND lower(available_times) like '%#{day}%'")
+        td = Songwriter.where("region = '#{region}' AND available_times like '%#{day}%'")
         all_data[:regions][region][day] = {count: td.count(), emails: td.map{ |x| x.email }}
       end
     end
     @countries.each do |country|
       all_data[:countries][country] = {}
       possible_days.each do |day|
-        td = Songwriter.where("country = '#{country}' AND lower(available_times) like '%#{day}%'")
+        td = Songwriter.where("country = '#{country}' AND available_times like '%#{day}%'")
         all_data[:countries][country][day] = {count: td.count(), emails: td.map{ |x| x.email }}
       end
     end
