@@ -73,7 +73,7 @@ class SongwriterController < ApplicationController
     end
     @time_zones.each do |tz|
       all_data[:time_zones][tz] = {}
-      td = Songwriter.where("time_zone = '#{time_zone}' AND available_times = ''")
+      td = Songwriter.where("time_zone = '#{tz}' AND available_times = ''")
       all_data[:time_zones][tz]["Not Specified"] = {count: td.count(), emails: td.map{ |x| x.email }}
       possible_days.each do |day|
         td = Songwriter.where("time_zone = '#{tz}' AND lower(available_times) like '%#{day}%'")
