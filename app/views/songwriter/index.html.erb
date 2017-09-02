@@ -7,6 +7,7 @@
     <option id='region'> State/Region </option>
     <option id='country'> Country </option>
     <option id='time_zone'> Time Zone </option>
+    <option id='custom_list'> Custom List </option>
   </select>
 
   <select id='additional_select' style='visibility:hidden'></select><br>
@@ -77,6 +78,8 @@ function build_data(main_select, additional_select) {
   } else if (main_select == 'country') {
     display_data(data['countries'][additional_select])
     $("#current_data").html('Country - ' + additional_select)
+  } else if (main_select == 'custom_list') {
+    $("#current_data").html('Custom List - ' + additional_select)
   }
 }
 
@@ -105,6 +108,10 @@ $('#data_select').on('change', function() {
     $('#additional_select').attr('style', 'visibility:visible')
     time_zones = <%= raw @time_zones.to_json %>
     build_select(time_zones)
+  } else if (selected == 'custom_list') {
+    $('#additional_select').attr('style', 'visibility:hidden')
+    //time_zones = <%= raw @time_zones.to_json %>
+    //build_select(time_zones)
   } else {
     $('#additional_select').attr('style', 'visibility:hidden')
   }
