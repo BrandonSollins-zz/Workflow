@@ -1,2 +1,6 @@
 tmp/*
 log/*
+*.log
+*.sqlite
+*.DS_Store
+
