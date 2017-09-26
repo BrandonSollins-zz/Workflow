@@ -70,11 +70,59 @@ class SongwriterController < ApplicationController
   end
 
   def build_interests(time_zone, available_times, interest_ids)
-    return {} if time_zone.blank?
+    return {"#{interest_ids['not_specified']}": true} if time_zone.blank? or available_times.blank?
     hour_difference = (time_zone.split('(GMT')[1].split(')')[0].to_i + 5)
     interests = {}
-    interests[interest_ids['monday']] = true
-    interests[interest_ids['any_time']] = true
+    if available_times.include?('Any Time')
+      interests[interest_ids['any_time']] = true
+      return interests
+    end
+    if available_times.include?('Mondays')
+      interests[interest_ids['monday']] = true
+      hour_difference >= 8 ? interests[interest_ids['tuesday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['sunday']] = true : nil
+    end
+    if available_times.include?('Tuesdays')
+      interests[interest_ids['tuesday']] = true
+      hour_difference >= 8 ? interests[interest_ids['wednesday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['monday']] = true : nil
+    end
+    if available_times.include?('Wednesdays')
+      interests[interest_ids['wednesday']] = true
+      hour_difference >= 8 ? interests[interest_ids['thursday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['tuesday']] = true : nil
+    end
+    if available_times.include?('Thursdays')
+      interests[interest_ids['thursday']] = true
+      hour_difference >= 8 ? interests[interest_ids['friday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['wednesday']] = true : nil
+    end
+    if available_times.include?('Fridays')
+      interests[interest_ids['friday']] = true
+      hour_difference >= 8 ? interests[interest_ids['saturday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['thursday']] = true : nil
+    end
+    if available_times.include?('Saturdays')
+      interests[interest_ids['saturday']] = true
+      hour_difference >= 8 ? interests[interest_ids['sunday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['friday']] = true : nil
+    end
+    if available_times.include?('Sundays')
+      interests[interest_ids['sunday']] = true
+      hour_difference >= 8 ? interests[interest_ids['monday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['saturday']] = true : nil
+    end
+    if available_times.include?('Weekends')
+      interests[interest_ids['friday']] = true
+      interests[interest_ids['saturday']] = true
+      interests[interest_ids['sunday']] = true
+      hour_difference >= 8 ? interests[interest_ids['thursday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['monday']] = true : nil
+    end
+    if available_times.include?('Weekday Evenings')
+      interests[interest_ids['weekday_evenings']] = true
+      # Could be weekday mornings???
+    end
     interests
   end
 
