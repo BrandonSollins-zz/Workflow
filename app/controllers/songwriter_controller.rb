@@ -2,6 +2,40 @@ class SongwriterController < ApplicationController
 
   skip_before_action :verify_authenticity_token
 
+  LIST_IDS = {
+    'development': '9f55092cd1',
+    'production': 'ab1e1140c8'
+  }.with_indifferent_access
+
+  INTEREST_IDS = {
+    'development': {
+      'not_specified': '04a1e1cccd',
+      'weekday_evenings': '37e29bd16e',
+      'any_time': '504ea18484',
+      'weekends': '6821c2dda2',
+      'monday': '6b8825f41b',
+      'tuesday': '9a716e531f',
+      'wednesday': 'b7b130cd80',
+      'thursday': 'ca629fec7b',
+      'friday': 'f011a465b5',
+      'saturday': 'f7186060a0',
+      'sunday': 'fca10c5c78'
+    },
+    'production': {
+      'not_specified': '037828068b',
+      'weekday_evenings': '3cab084097',
+      'any_time': '61f2967448',
+      'weekends': '24a8351b7c',
+      'monday': 'bc97ef97cc',
+      'tuesday': 'ad0d2cf90a',
+      'wednesday': 'ca7ddcf226',
+      'thursday': '1f66bab918',
+      'friday': '5b060b8628',
+      'saturday': 'b1539ffa03',
+      'sunday': '489ce75e11'
+    }
+  }.with_indifferent_access
+
   def create
     return unless Songwriter.where("lower(email) like '#{params['email']}'").blank?
     songwriter = Songwriter.new
@@ -15,6 +49,81 @@ class SongwriterController < ApplicationController
     songwriter.region = location.split(',')[1] rescue nil
     songwriter.country = location.split(',')[2] rescue nil
     songwriter.save!
+    add_to_mailchimp(params['name'], params['email'], params['time_zone'], params['available_times'])
+  end
+
+  def add_to_mailchimp(name, email, time_zone, available_times)
+    list_id = LIST_IDS[Rails.env]
+    interests = build_interests(time_zone, available_times, INTEREST_IDS[Rails.env])
+    url = "https://us14.api.mailchimp.com/3.0/lists/#{list_id}/members"
+    headers = {
+      'Authorization': 'apikey 0cdadcf56a8ca64012e9638d858a8200-us14'
+    }
+    body = {
+      'email_address': email,
+      'status': 'subscribed',
+      'merge_fields': { 'NAME': name },
+      'interests': interests
+    }.to_json
+    http_client = HTTPClient.new
+    http_client.post(url, body, headers)
+  end
+
+  def build_interests(time_zone, available_times, interest_ids)
+    return {"#{interest_ids['not_specified']}": true} if time_zone.blank? or available_times.blank?
+    hour_difference = (time_zone.split('(GMT')[1].split(')')[0].to_i + 5)
+    interests = {}
+    if available_times.include?('Any Time')
+      interests[interest_ids['any_time']] = true
+      return interests
+    end
+    if available_times.include?('Mondays')
+      interests[interest_ids['monday']] = true
+      hour_difference >= 8 ? interests[interest_ids['tuesday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['sunday']] = true : nil
+    end
+    if available_times.include?('Tuesdays')
+      interests[interest_ids['tuesday']] = true
+      hour_difference >= 8 ? interests[interest_ids['wednesday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['monday']] = true : nil
+    end
+    if available_times.include?('Wednesdays')
+      interests[interest_ids['wednesday']] = true
+      hour_difference >= 8 ? interests[interest_ids['thursday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['tuesday']] = true : nil
+    end
+    if available_times.include?('Thursdays')
+      interests[interest_ids['thursday']] = true
+      hour_difference >= 8 ? interests[interest_ids['friday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['wednesday']] = true : nil
+    end
+    if available_times.include?('Fridays')
+      interests[interest_ids['friday']] = true
+      hour_difference >= 8 ? interests[interest_ids['saturday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['thursday']] = true : nil
+    end
+    if available_times.include?('Saturdays')
+      interests[interest_ids['saturday']] = true
+      hour_difference >= 8 ? interests[interest_ids['sunday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['friday']] = true : nil
+    end
+    if available_times.include?('Sundays')
+      interests[interest_ids['sunday']] = true
+      hour_difference >= 8 ? interests[interest_ids['monday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['saturday']] = true : nil
+    end
+    if available_times.include?('Weekends')
+      interests[interest_ids['friday']] = true
+      interests[interest_ids['saturday']] = true
+      interests[interest_ids['sunday']] = true
+      hour_difference >= 8 ? interests[interest_ids['thursday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['monday']] = true : nil
+    end
+    if available_times.include?('Weekday Evenings')
+      interests[interest_ids['weekday_evenings']] = true
+      # Could be weekday mornings???
+    end
+    interests
   end
 
   def index
