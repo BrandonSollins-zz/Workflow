@@ -2,18 +2,38 @@ class SongwriterController < ApplicationController
 
   skip_before_action :verify_authenticity_token
 
+  LIST_IDS = {
+    'development': '9f55092cd1',
+    'production': 'ab1e1140c8'
+  }.with_indifferent_access
+
   INTEREST_IDS = {
-    'not_specified': '037828068b',
-    'weekday_evenings': '3cab084097',
-    'any_time': '61f2967448',
-    'weekends': '24a8351b7c',
-    'monday': 'bc97ef97cc',
-    'tuesday': 'ad0d2cf90a',
-    'wednesday': 'ca7ddcf226',
-    'thursday': '1f66bab918',
-    'friday': '5b060b8628',
-    'saturday': 'b1539ffa03',
-    'sunday': '489ce75e11'
+    'development': {
+      'not_specified': '04a1e1cccd',
+      'weekday_evenings': '37e29bd16e',
+      'any_time': '504ea18484',
+      'weekends': '6821c2dda2',
+      'monday': '6b8825f41b',
+      'tuesday': '9a716e531f',
+      'wednesday': 'b7b130cd80',
+      'thursday': 'ca629fec7b',
+      'friday': 'f011a465b5',
+      'saturday': 'f7186060a0',
+      'sunday': 'fca10c5c78'
+    },
+    'production': {
+      'not_specified': '037828068b',
+      'weekday_evenings': '3cab084097',
+      'any_time': '61f2967448',
+      'weekends': '24a8351b7c',
+      'monday': 'bc97ef97cc',
+      'tuesday': 'ad0d2cf90a',
+      'wednesday': 'ca7ddcf226',
+      'thursday': '1f66bab918',
+      'friday': '5b060b8628',
+      'saturday': 'b1539ffa03',
+      'sunday': '489ce75e11'
+    }
   }.with_indifferent_access
 
   def create
@@ -33,8 +53,9 @@ class SongwriterController < ApplicationController
   end
 
   def add_to_mailchimp(name, email, time_zone, available_times)
-    interests = build_interests(time_zone, available_times, INTEREST_IDS)
-    url = "https://us14.api.mailchimp.com/3.0/lists/ab1e1140c8/members"
+    list_id = LIST_IDS[Rails.env]
+    interests = build_interests(time_zone, available_times, INTEREST_IDS[Rails.env])
+    url = "https://us14.api.mailchimp.com/3.0/lists/#{list_id}/members"
     headers = {
       'Authorization': 'apikey 0cdadcf56a8ca64012e9638d858a8200-us14'
     }
