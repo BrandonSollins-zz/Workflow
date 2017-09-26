@@ -116,8 +116,8 @@ class SongwriterController < ApplicationController
       interests[interest_ids['friday']] = true
       interests[interest_ids['saturday']] = true
       interests[interest_ids['sunday']] = true
-      hour_difference >= 8 ? interests[interest_ids['thursday']] = true : nil
-      hour_difference <= -6 ? interests[interest_ids['monday']] = true : nil
+      hour_difference >= 8 ? interests[interest_ids['monday']] = true : nil
+      hour_difference <= -6 ? interests[interest_ids['thursday']] = true : nil
     end
     if available_times.include?('Weekday Evenings')
       interests[interest_ids['weekday_evenings']] = true
