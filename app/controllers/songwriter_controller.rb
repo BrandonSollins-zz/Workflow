@@ -9,30 +9,52 @@ class SongwriterController < ApplicationController
 
   INTEREST_IDS = {
     'development': {
-      'not_specified': '04a1e1cccd',
-      'weekday_evenings': '37e29bd16e',
-      'any_time': '504ea18484',
-      'weekends': '6821c2dda2',
-      'monday': '6b8825f41b',
-      'tuesday': '9a716e531f',
-      'wednesday': 'b7b130cd80',
-      'thursday': 'ca629fec7b',
-      'friday': 'f011a465b5',
-      'saturday': 'f7186060a0',
-      'sunday': 'fca10c5c78'
+      'friday_early': '37e29bd16e',
+      'friday_late': '1e0133be67',
+      'friday_middle': 'a76330467e',
+      'monday_early': 'ca629fec7b',
+      'monday_late': 'ad8eabbafc',
+      'monday_middle': '84fedc5d38',
+      'not_specified': 'f011a465b5',
+      'saturday_early': '04a1e1cccd',
+      'saturday_late': 'c8db15fa67',
+      'saturday_middle': '75578b451b',
+      'sunday_early': 'fca10c5c78',
+      'sunday_late': '39dd34b33c',
+      'sunday_middle': '03c295bfa8',
+      'thursday_early': '02eb29093e',
+      'thursday_late': 'f7f4c12f35',
+      'thursday_middle': '6821c2dda2',
+      'tuesday_early': '9a716e531f',
+      'tuesday_late': 'a70a062e13',
+      'tuesday_middle': '373c9dfaa1',
+      'wednesday_early': 'b25c3eb6c0',
+      'wednesday_late': '3071d35c95',
+      'wednesday_middle': 'f7186060a0'
     },
     'production': {
-      'not_specified': '037828068b',
-      'weekday_evenings': '3cab084097',
-      'any_time': '61f2967448',
-      'weekends': '24a8351b7c',
-      'monday': 'bc97ef97cc',
-      'tuesday': 'ad0d2cf90a',
-      'wednesday': 'ca7ddcf226',
-      'thursday': '1f66bab918',
-      'friday': '5b060b8628',
-      'saturday': 'b1539ffa03',
-      'sunday': '489ce75e11'
+      'friday_early': '34a85af63b',
+      'friday_late': '8437a1704e',
+      'friday_middle': '1d661ec538',
+      'monday_early': 'f61d0895c0',
+      'monday_late': 'c9c95822fb',
+      'monday_middle': '58b6f7ca34',
+      'not_specified': '8995b3da87',
+      'saturday_early': '8995864e3a',
+      'saturday_late': 'cd113c5f8d',
+      'saturday_middle': '7ff68457a2',
+      'sunday_early': '8ec811957d',
+      'sunday_late': '681768f015',
+      'sunday_middle': '1f18ac7cfb',
+      'thursday_early': '8c3f03dce9',
+      'thursday_late': '51bf7b28d2',
+      'thursday_middle': '495ca50464',
+      'tuesday_early': '9a7b351ee0',
+      'tuesday_late': 'a1c31f6e23',
+      'tuesday_middle': '30a1fec7d7',
+      'wednesday_early': '825669d68d',
+      'wednesday_late': '0ac325ca8b',
+      'wednesday_middle': '691c1abc71'
     }
   }.with_indifferent_access
 
@@ -71,57 +93,158 @@ class SongwriterController < ApplicationController
 
   def build_interests(time_zone, available_times, interest_ids)
     return {"#{interest_ids['not_specified']}": true} if time_zone.blank? or available_times.blank?
+    early = (9..16).to_a
+    late = (17..22).to_a
+    middle = (23..32).to_a
+    day_period = (9..22).to_a
+    evening_period = (17..22).to_a
     hour_difference = (time_zone.split('(GMT')[1].split(')')[0].to_i + 5)
     interests = {}
-    if available_times.include?('Any Time')
-      interests[interest_ids['any_time']] = true
-      return interests
-    end
     if available_times.include?('Mondays')
-      interests[interest_ids['monday']] = true
-      hour_difference >= 8 ? interests[interest_ids['tuesday']] = true : nil
-      hour_difference <= -6 ? interests[interest_ids['sunday']] = true : nil
+      time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
+      (early & time_range).any? ? interests[interest_ids['monday_early']] = true : nil
+      (late & time_range).any? ? interests[interest_ids['monday_late']] = true : nil
+      (middle & time_range).any? ? interests[interest_ids['monday_middle']] = true : nil
+      time_range.first < 9 ? interests[interest_ids['sunday_middle']] = true : nil
+      time_range.last > 32 ? interests[interest_ids['tuesday_early']] = true : nil
     end
     if available_times.include?('Tuesdays')
-      interests[interest_ids['tuesday']] = true
-      hour_difference >= 8 ? interests[interest_ids['wednesday']] = true : nil
-      hour_difference <= -6 ? interests[interest_ids['monday']] = true : nil
+      time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
+      (early & time_range).any? ? interests[interest_ids['tuesday_early']] = true : nil
+      (late & time_range).any? ? interests[interest_ids['tuesday_late']] = true : nil
+      (middle & time_range).any? ? interests[interest_ids['tuesday_middle']] = true : nil
+      time_range.first < 9 ? interests[interest_ids['monday_middle']] = true : nil
+      time_range.last > 32 ? interests[interest_ids['wednesday_early']] = true : nil
     end
     if available_times.include?('Wednesdays')
-      interests[interest_ids['wednesday']] = true
-      hour_difference >= 8 ? interests[interest_ids['thursday']] = true : nil
-      hour_difference <= -6 ? interests[interest_ids['tuesday']] = true : nil
+      time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
+      (early & time_range).any? ? interests[interest_ids['wednesday_early']] = true : nil
+      (late & time_range).any? ? interests[interest_ids['wednesday_late']] = true : nil
+      (middle & time_range).any? ? interests[interest_ids['wednesday_middle']] = true : nil
+      time_range.first < 9 ? interests[interest_ids['tuesday_middle']] = true : nil
+      time_range.last > 32 ? interests[interest_ids['thursday_early']] = true : nil
     end
     if available_times.include?('Thursdays')
-      interests[interest_ids['thursday']] = true
-      hour_difference >= 8 ? interests[interest_ids['friday']] = true : nil
-      hour_difference <= -6 ? interests[interest_ids['wednesday']] = true : nil
+      time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
+      (early & time_range).any? ? interests[interest_ids['thursday_early']] = true : nil
+      (late & time_range).any? ? interests[interest_ids['thursday_late']] = true : nil
+      (middle & time_range).any? ? interests[interest_ids['thursday_middle']] = true : nil
+      time_range.first < 9 ? interests[interest_ids['wednesday_middle']] = true : nil
+      time_range.last > 32 ? interests[interest_ids['friday_early']] = true : nil
     end
     if available_times.include?('Fridays')
-      interests[interest_ids['friday']] = true
-      hour_difference >= 8 ? interests[interest_ids['saturday']] = true : nil
-      hour_difference <= -6 ? interests[interest_ids['thursday']] = true : nil
+      time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
+      (early & time_range).any? ? interests[interest_ids['friday_early']] = true : nil
+      (late & time_range).any? ? interests[interest_ids['friday_late']] = true : nil
+      (middle & time_range).any? ? interests[interest_ids['friday_middle']] = true : nil
+      time_range.first < 9 ? interests[interest_ids['thursday_middle']] = true : nil
+      time_range.last > 32 ? interests[interest_ids['saturday_early']] = true : nil
     end
     if available_times.include?('Saturdays')
-      interests[interest_ids['saturday']] = true
-      hour_difference >= 8 ? interests[interest_ids['sunday']] = true : nil
-      hour_difference <= -6 ? interests[interest_ids['friday']] = true : nil
+      time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
+      (early & time_range).any? ? interests[interest_ids['saturday_early']] = true : nil
+      (late & time_range).any? ? interests[interest_ids['saturday_late']] = true : nil
+      (middle & time_range).any? ? interests[interest_ids['saturday_middle']] = true : nil
+      time_range.first < 9 ? interests[interest_ids['friday_middle']] = true : nil
+      time_range.last > 32 ? interests[interest_ids['sunday_early']] = true : nil
     end
     if available_times.include?('Sundays')
-      interests[interest_ids['sunday']] = true
-      hour_difference >= 8 ? interests[interest_ids['monday']] = true : nil
-      hour_difference <= -6 ? interests[interest_ids['saturday']] = true : nil
+      time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
+      (early & time_range).any? ? interests[interest_ids['sunday_early']] = true : nil
+      (late & time_range).any? ? interests[interest_ids['sunday_late']] = true : nil
+      (middle & time_range).any? ? interests[interest_ids['sunday_middle']] = true : nil
+      time_range.first < 9 ? interests[interest_ids['saturday_middle']] = true : nil
+      time_range.last > 32 ? interests[interest_ids['monday_early']] = true : nil
     end
     if available_times.include?('Weekends')
-      interests[interest_ids['friday']] = true
-      interests[interest_ids['saturday']] = true
-      interests[interest_ids['sunday']] = true
-      hour_difference >= 8 ? interests[interest_ids['monday']] = true : nil
-      hour_difference <= -6 ? interests[interest_ids['thursday']] = true : nil
+      time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
+      if (early & time_range).any?
+        interests[interest_ids['saturday_early']] = true
+        interests[interest_ids['sunday_early']] = true
+      end
+      if (late & time_range).any?
+        interests[interest_ids['friday_late']] = true
+        interests[interest_ids['saturday_late']] = true
+        interests[interest_ids['sunday_late']] = true
+      end
+      if (middle & time_range).any?
+        interests[interest_ids['friday_middle']] = true
+        interests[interest_ids['saturday_middle']] = true
+        interests[interest_ids['sunday_middle']] = true
+      end
+      hour_difference < 0 ? interests[interest_ids['friday_early']] = true : nil
+      hour_difference > 0 ? interests[interest_ids['sunday_middle']] = true : nil
+      hour_difference > 10 ? interests[interest_ids['monday_early']] = true : nil
     end
     if available_times.include?('Weekday Evenings')
-      interests[interest_ids['weekday_evenings']] = true
-      # Could be weekday mornings???
+      time_range = ((evening_period.first + hour_difference)..(evening_period.last + hour_difference)).to_a
+      if (early & time_range).any?
+        interests[interest_ids['monday_early']] = true
+        interests[interest_ids['tuesday_early']] = true
+        interests[interest_ids['wednesday_early']] = true
+        interests[interest_ids['thursday_early']] = true
+        interests[interest_ids['friday_early']] = true
+      end
+      if (late & time_range).any?
+        interests[interest_ids['monday_late']] = true
+        interests[interest_ids['tuesday_late']] = true
+        interests[interest_ids['wednesday_late']] = true
+        interests[interest_ids['thursday_late']] = true
+        interests[interest_ids['friday_late']] = true
+      end
+      if (middle & time_range).any?
+        interests[interest_ids['monday_middle']] = true
+        interests[interest_ids['tuesday_middle']] = true
+        interests[interest_ids['wednesday_middle']] = true
+        interests[interest_ids['thursday_middle']] = true
+        interests[interest_ids['friday_middle']] = true
+      end
+      if time_range.last > 32
+        interests[interest_ids['tuesday_early']] = true
+        interests[interest_ids['wednesday_early']] = true
+        interests[interest_ids['thursday_early']] = true
+        interests[interest_ids['friday_early']] = true
+        interests[interest_ids['saturday_early']] = true
+      end
+    end
+    if available_times.include?('Any Time')
+      time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
+      if (early & time_range).any?
+        interests[interest_ids['monday_early']] = true
+        interests[interest_ids['tuesday_early']] = true
+        interests[interest_ids['wednesday_early']] = true
+        interests[interest_ids['thursday_early']] = true
+        interests[interest_ids['friday_early']] = true
+        interests[interest_ids['saturday_early']] = true
+        interests[interest_ids['sunday_early']] = true
+      end
+      if (late & time_range).any?
+        interests[interest_ids['monday_late']] = true
+        interests[interest_ids['tuesday_late']] = true
+        interests[interest_ids['wednesday_late']] = true
+        interests[interest_ids['thursday_late']] = true
+        interests[interest_ids['friday_late']] = true
+        interests[interest_ids['saturday_late']] = true
+        interests[interest_ids['sunday_late']] = true
+      end
+      if (middle & time_range).any?
+        interests[interest_ids['monday_middle']] = true
+        interests[interest_ids['tuesday_middle']] = true
+        interests[interest_ids['wednesday_middle']] = true
+        interests[interest_ids['thursday_middle']] = true
+        interests[interest_ids['friday_middle']] = true
+        interests[interest_ids['saturday_middle']] = true
+        interests[interest_ids['sunday_middle']] = true
+      end
+      if time_range.last > 32
+        interests[interest_ids['tuesday_early']] = true
+        interests[interest_ids['wednesday_early']] = true
+        interests[interest_ids['thursday_early']] = true
+        interests[interest_ids['friday_early']] = true
+        interests[interest_ids['saturday_early']] = true
+        interests[interest_ids['sunday_early']] = true
+        interests[interest_ids['monday_early']] = true
+      end
     end
     interests
   end
