@@ -175,6 +175,14 @@ class SongwriterController < ApplicationController
         interests[interest_ids['saturday_middle']] = true
         interests[interest_ids['sunday_middle']] = true
       end
+      if (day_before_middle & time_range).any?
+        interests[interest_ids['friday_middle']] = true
+        interests[interest_ids['sunday_middle']] = true
+      end
+      if (day_before_late & time_range).any?
+        interests[interest_ids['friday_late']] = true
+        interests[interest_ids['saturday_late']] = true
+      end
       hour_difference < 0 ? interests[interest_ids['friday_early']] = true : nil
       hour_difference < -9 ? interests[interest_ids['thursday_middle']] = true : nil
     end
