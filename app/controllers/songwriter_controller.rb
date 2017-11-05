@@ -96,69 +96,72 @@ class SongwriterController < ApplicationController
     early = (9..16).to_a
     late = (17..22).to_a
     middle = (23..32).to_a
+    day_before_middle = (-1..8).to_a
+    day_before_late = (-8..-2).to_a
     day_period = (9..22).to_a
     evening_period = (17..22).to_a
-    hour_difference = (time_zone.split('(GMT')[1].split(')')[0].to_i + 5)
+    hour_difference = -(time_zone.split('(GMT')[1].split(')')[0].to_i + 5)
     interests = {}
     if available_times.include?('Mondays')
       time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
       (early & time_range).any? ? interests[interest_ids['monday_early']] = true : nil
       (late & time_range).any? ? interests[interest_ids['monday_late']] = true : nil
       (middle & time_range).any? ? interests[interest_ids['monday_middle']] = true : nil
-      time_range.first < 9 ? interests[interest_ids['sunday_middle']] = true : nil
-      time_range.last > 32 ? interests[interest_ids['tuesday_early']] = true : nil
+      (day_before_middle & time_range).any? ? interests[interest_ids['sunday_middle']] = true : nil
+      (day_before_late & time_range).any? ? interests[interest_ids['sunday_late']] = true : nil
     end
     if available_times.include?('Tuesdays')
       time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
       (early & time_range).any? ? interests[interest_ids['tuesday_early']] = true : nil
       (late & time_range).any? ? interests[interest_ids['tuesday_late']] = true : nil
       (middle & time_range).any? ? interests[interest_ids['tuesday_middle']] = true : nil
-      time_range.first < 9 ? interests[interest_ids['monday_middle']] = true : nil
-      time_range.last > 32 ? interests[interest_ids['wednesday_early']] = true : nil
+      (day_before_middle & time_range).any? ? interests[interest_ids['monday_middle']] = true : nil
+      (day_before_late & time_range).any? ? interests[interest_ids['monday_late']] = true : nil
     end
     if available_times.include?('Wednesdays')
       time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
       (early & time_range).any? ? interests[interest_ids['wednesday_early']] = true : nil
       (late & time_range).any? ? interests[interest_ids['wednesday_late']] = true : nil
       (middle & time_range).any? ? interests[interest_ids['wednesday_middle']] = true : nil
-      time_range.first < 9 ? interests[interest_ids['tuesday_middle']] = true : nil
-      time_range.last > 32 ? interests[interest_ids['thursday_early']] = true : nil
+      (day_before_middle & time_range).any? ? interests[interest_ids['tuesday_middle']] = true : nil
+      (day_before_late & time_range).any? ? interests[interest_ids['tuesday_late']] = true : nil
     end
     if available_times.include?('Thursdays')
       time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
       (early & time_range).any? ? interests[interest_ids['thursday_early']] = true : nil
       (late & time_range).any? ? interests[interest_ids['thursday_late']] = true : nil
       (middle & time_range).any? ? interests[interest_ids['thursday_middle']] = true : nil
-      time_range.first < 9 ? interests[interest_ids['wednesday_middle']] = true : nil
-      time_range.last > 32 ? interests[interest_ids['friday_early']] = true : nil
+      (day_before_middle & time_range).any? ? interests[interest_ids['wednesday_middle']] = true : nil
+      (day_before_late & time_range).any? ? interests[interest_ids['wednesday_late']] = true : nil
     end
     if available_times.include?('Fridays')
       time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
       (early & time_range).any? ? interests[interest_ids['friday_early']] = true : nil
       (late & time_range).any? ? interests[interest_ids['friday_late']] = true : nil
       (middle & time_range).any? ? interests[interest_ids['friday_middle']] = true : nil
-      time_range.first < 9 ? interests[interest_ids['thursday_middle']] = true : nil
-      time_range.last > 32 ? interests[interest_ids['saturday_early']] = true : nil
+      (day_before_middle & time_range).any? ? interests[interest_ids['thursday_middle']] = true : nil
+      (day_before_late & time_range).any? ? interests[interest_ids['thursday_late']] = true : nil
     end
     if available_times.include?('Saturdays')
       time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
       (early & time_range).any? ? interests[interest_ids['saturday_early']] = true : nil
       (late & time_range).any? ? interests[interest_ids['saturday_late']] = true : nil
       (middle & time_range).any? ? interests[interest_ids['saturday_middle']] = true : nil
-      time_range.first < 9 ? interests[interest_ids['friday_middle']] = true : nil
-      time_range.last > 32 ? interests[interest_ids['sunday_early']] = true : nil
+      (day_before_middle & time_range).any? ? interests[interest_ids['friday_middle']] = true : nil
+      (day_before_late & time_range).any? ? interests[interest_ids['friday_late']] = true : nil
     end
     if available_times.include?('Sundays')
       time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
       (early & time_range).any? ? interests[interest_ids['sunday_early']] = true : nil
       (late & time_range).any? ? interests[interest_ids['sunday_late']] = true : nil
       (middle & time_range).any? ? interests[interest_ids['sunday_middle']] = true : nil
-      time_range.first < 9 ? interests[interest_ids['saturday_middle']] = true : nil
-      time_range.last > 32 ? interests[interest_ids['monday_early']] = true : nil
+      (day_before_middle & time_range).any? ? interests[interest_ids['saturday_middle']] = true : nil
+      (day_before_late & time_range).any? ? interests[interest_ids['saturday_late']] = true : nil
     end
     if available_times.include?('Weekends')
       time_range = ((day_period.first + hour_difference)..(day_period.last + hour_difference)).to_a
       if (early & time_range).any?
+        interests[interest_ids['friday_early']] = true
         interests[interest_ids['saturday_early']] = true
         interests[interest_ids['sunday_early']] = true
       end
@@ -172,9 +175,16 @@ class SongwriterController < ApplicationController
         interests[interest_ids['saturday_middle']] = true
         interests[interest_ids['sunday_middle']] = true
       end
+      if (day_before_middle & time_range).any?
+        interests[interest_ids['friday_middle']] = true
+        interests[interest_ids['sunday_middle']] = true
+      end
+      if (day_before_late & time_range).any?
+        interests[interest_ids['friday_late']] = true
+        interests[interest_ids['saturday_late']] = true
+      end
       hour_difference < 0 ? interests[interest_ids['friday_early']] = true : nil
-      hour_difference > 0 ? interests[interest_ids['sunday_middle']] = true : nil
-      hour_difference > 10 ? interests[interest_ids['monday_early']] = true : nil
+      hour_difference < -9 ? interests[interest_ids['thursday_middle']] = true : nil
     end
     if available_times.include?('Weekday Evenings')
       time_range = ((evening_period.first + hour_difference)..(evening_period.last + hour_difference)).to_a
@@ -199,12 +209,12 @@ class SongwriterController < ApplicationController
         interests[interest_ids['thursday_middle']] = true
         interests[interest_ids['friday_middle']] = true
       end
-      if time_range.last > 32
-        interests[interest_ids['tuesday_early']] = true
-        interests[interest_ids['wednesday_early']] = true
-        interests[interest_ids['thursday_early']] = true
-        interests[interest_ids['friday_early']] = true
-        interests[interest_ids['saturday_early']] = true
+      if (day_before_middle & time_range).any?
+        interests[interest_ids['sunday_middle']] = true
+        interests[interest_ids['monday_middle']] = true
+        interests[interest_ids['tuesday_middle']] = true
+        interests[interest_ids['wednesday_middle']] = true
+        interests[interest_ids['thursday_middle']] = true
       end
     end
     if available_times.include?('Any Time')
@@ -236,14 +246,23 @@ class SongwriterController < ApplicationController
         interests[interest_ids['saturday_middle']] = true
         interests[interest_ids['sunday_middle']] = true
       end
-      if time_range.last > 32
-        interests[interest_ids['tuesday_early']] = true
-        interests[interest_ids['wednesday_early']] = true
-        interests[interest_ids['thursday_early']] = true
-        interests[interest_ids['friday_early']] = true
-        interests[interest_ids['saturday_early']] = true
-        interests[interest_ids['sunday_early']] = true
-        interests[interest_ids['monday_early']] = true
+      if (day_before_middle & time_range).any?
+        interests[interest_ids['sunday_middle']] = true
+        interests[interest_ids['monday_middle']] = true
+        interests[interest_ids['tuesday_middle']] = true
+        interests[interest_ids['wednesday_middle']] = true
+        interests[interest_ids['thursday_middle']] = true
+        interests[interest_ids['friday_middle']] = true
+        interests[interest_ids['saturday_middle']] = true
+      end
+      if (day_before_late & time_range).any?
+        interests[interest_ids['sunday_late']] = true
+        interests[interest_ids['monday_late']] = true
+        interests[interest_ids['tuesday_late']] = true
+        interests[interest_ids['wednesday_late']] = true
+        interests[interest_ids['thursday_late']] = true
+        interests[interest_ids['friday_late']] = true
+        interests[interest_ids['saturday_late']] = true
       end
     end
     interests
@@ -270,36 +289,46 @@ class SongwriterController < ApplicationController
       all_data: {}
 
     }
+    td = Songwriter.where("available_times = ''").order([:time_zone, :name])
+    all_data[:all_data]["Not Specified"] = {count: td.count(), emails: td.map{ |x| "#{x.name} - #{x.email} - #{x.time_zone}" }}
     possible_days.each do |day|
-      td = Songwriter.where("lower(available_times) like '%#{day}%'")
-      all_data[:all_data][day] = {count: td.count(), emails: td.map{ |x| x.email }}
+      td = Songwriter.where("available_times like '%#{day}%'").order([:time_zone, :name])
+      all_data[:all_data][day] = {count: td.count(), emails: td.map{ |x| "#{x.name} - #{x.email} - #{x.time_zone}" }}
     end
     @cities.each do |city|
       all_data[:cities][city] = {}
+      td = Songwriter.where("city = '#{city}' AND available_times = ''").order([:time_zone, :name])
+      all_data[:cities][city]["Not Specified"] = {count: td.count(), emails: td.map{ |x| "#{x.name} - #{x.email} - #{x.time_zone}" }}
       possible_days.each do |day|
-        td = Songwriter.where("city = '#{city}' AND lower(available_times) like '%#{day}%'")
-        all_data[:cities][city][day] = {count: td.count(), emails: td.map{ |x| x.email }}
+        td = Songwriter.where("city = '#{city}' AND available_times like '%#{day}%'").order([:time_zone, :name])
+        all_data[:cities][city][day] = {count: td.count(), emails: td.map{ |x| "#{x.name} - #{x.email} - #{x.time_zone}" }}
       end
     end
     @regions.each do |region|
       all_data[:regions][region] = {}
+      td = Songwriter.where("region = '#{region}' AND available_times = ''").order([:time_zone, :name])
+      all_data[:regions][region]["Not Specified"] = {count: td.count(), emails: td.map{ |x| "#{x.name} - #{x.email} - #{x.time_zone}" }}
       possible_days.each do |day|
-        td = Songwriter.where("region = '#{region}' AND lower(available_times) like '%#{day}%'")
-        all_data[:regions][region][day] = {count: td.count(), emails: td.map{ |x| x.email }}
+        td = Songwriter.where("region = '#{region}' AND available_times like '%#{day}%'").order([:time_zone, :name])
+        all_data[:regions][region][day] = {count: td.count(), emails: td.map{ |x| "#{x.name} - #{x.email} - #{x.time_zone}" }}
       end
     end
     @countries.each do |country|
       all_data[:countries][country] = {}
+      td = Songwriter.where("country = '#{country}' AND available_times = ''").order([:time_zone, :name])
+      all_data[:countries][country]["Not Specified"] = {count: td.count(), emails: td.map{ |x| "#{x.name} - #{x.email} - #{x.time_zone}" }}
       possible_days.each do |day|
-        td = Songwriter.where("country = '#{country}' AND lower(available_times) like '%#{day}%'")
-        all_data[:countries][country][day] = {count: td.count(), emails: td.map{ |x| x.email }}
+        td = Songwriter.where("country = '#{country}' AND available_times like '%#{day}%'").order([:time_zone, :name])
+        all_data[:countries][country][day] = {count: td.count(), emails: td.map{ |x| "#{x.name} - #{x.email} - #{x.time_zone}" }}
       end
     end
     @time_zones.each do |tz|
       all_data[:time_zones][tz] = {}
+      td = Songwriter.where("time_zone = '#{tz}' AND available_times = ''").order([:time_zone, :name])
+      all_data[:time_zones][tz]["Not Specified"] = {count: td.count(), emails: td.map{ |x| "#{x.name} - #{x.email} - #{x.time_zone}" }}
       possible_days.each do |day|
-        td = Songwriter.where("time_zone = '#{tz}' AND lower(available_times) like '%#{day}%'")
-        all_data[:time_zones][tz][day] = {count: td.count(), emails: td.map{ |x| x.email }}
+        td = Songwriter.where("time_zone = '#{tz}' AND lower(available_times) like '%#{day}%'").order([:time_zone, :name])
+        all_data[:time_zones][tz][day] = {count: td.count(), emails: td.map{ |x| "#{x.name} - #{x.email} - #{x.time_zone}" }}
       end
     end
     all_data
