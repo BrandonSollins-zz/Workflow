@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   resources :musicians
   resources :sign_up
   resources :songwriter
+  resources :bookings
   post "songwriter/sign_up", to: "songwriter#create"
 end
