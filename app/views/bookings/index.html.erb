@@ -38,6 +38,10 @@
 
   <h2> Past Bookings </h2>
 
+  <% Booking.all.each do |x| %>
+    <%= "#{x.created_at.to_s} - localhost:3000/bookings/#{x.id}" %> <br>
+  <% end %>
+
 
 <script>
 function addDate() {

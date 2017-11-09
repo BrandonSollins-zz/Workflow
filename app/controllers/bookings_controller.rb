@@ -18,7 +18,7 @@ class BookingsController < ApplicationController
   ]
 
   INSTRUMENT_LIST = [
-    "guitar", "bass", "drums"
+    "guitar", "bass", "drum"
   ]
 
   def show
@@ -32,6 +32,7 @@ class BookingsController < ApplicationController
     booking_params = params[:booking]
     instruments = booking_params[:instruments].select { |x| !x.blank? }
     statuses = {}
+    statuses[:studio_reconfirmed] = "Incomplete"
     statuses[:studio_times] = {}
     statuses[:musicians] = {}
     statuses[:instruments] = {}
@@ -84,13 +85,40 @@ class BookingsController < ApplicationController
     end
   end
 
-  def message_musicians(booking, instrument = nil)
-    puts "message_musicians"
+  def build_musician_message(booking, instrument)
     # Find musicians to message (MUSICIAN_LIST[instrument] - messaged_musicians)
       # If instrument is nil, check for all instruments that are in self.instruments
       # If instrument is not nil, only check for the instrument listed (this applied to when a musician rejects, or the clock job is ran)
     # Add the musicians to status
     # Send the message to the musicians!
+    time_to_message = booking.statuses[:studio_times].keys[-1]
+    musician_list = eval("#{instrument}_list".upcase)
+    available_musicians = musician_list.map { |musician| musician[:name] }
+    contacted_musicians = booking.statuses[:musicians][instrument.to_sym].map { |musician| musician[:name] }
+    musician_to_message = (available_musicians - contacted_musicians)[0]
+    if musician_to_message.blank?
+      message_dane("No more musicians available to message (#{instrument})")
+    end
+    phone_number = musician_list.select{ |musician| musician[:name] == musician_to_message }[0][:phone_number]
+    message = "New Custom-Tracks.com order! " \
+      "Are you available #{time_to_message}? " \
+      "If yes, click here: " \
+      "If no, click here: " \
+      "Thanks!"
+    send_message(message, phone_number)
+    booking.statuses[:musicians][instrument.to_sym].push( { "name": musician_to_message, "status": "Message Sent" } )
+    booking.save!
+  end
+
+  def message_musicians(booking, instrument = nil)
+    puts "message_musicians"
+    if instrument.blank?
+      booking.instruments.each do |instrument|
+        build_musician_message(booking, instrument)
+      end
+    else
+      build_musician_message(booking, instrument)
+    end
   end
 
   def studio_reject
@@ -114,6 +142,12 @@ class BookingsController < ApplicationController
   def musician_reject
     # Add rejected musician to status
     # Trigger message_musicians(instrument to check for)
+    booking = Booking.find(params[:id])
+    instrument = params[:instrument]
+    musician = params[:name]
+    booking.statuses[:musicians][instrument.to_sym].select{ |m| m[:name] == musician }[0][:status] = "Rejected"
+    booking.save!
+    message_musicians(booking, instrument)
   end
 
   def musician_confirm
@@ -121,9 +155,30 @@ class BookingsController < ApplicationController
     # Change status of instrument in status
       # If all instruments are now confirmed, trigger reconfirm with studio
       # If not, do nothing
+    booking = Booking.find(params[:id])
+    instrument = params[:instrument]
+    musician = params[:name]
+    instrument_status = booking.statuses[:instruments][instrument.to_sym]
+    musician_status = booking.statuses[:musicians][instrument.to_sym].select{ |m| m[:name] == musician }[0][:status]
+    if (instrument_status == "Confirmed") & (musician_status != "Confirmed")
+      booking.statuses[:musicians][instrument.to_sym].select{ |m| m[:name] == musician }[0][:status] = "Late response"
+      booking.save!
+    else
+      booking.statuses[:musicians][instrument.to_sym].select{ |m| m[:name] == musician }[0][:status] = "Confirmed"
+      booking.statuses[:instruments][instrument.to_sym] = "Confirmed"
+      booking.save!
+    end
+    if booking.statuses[:instruments].values.all? { |x| x == "Confirmed" }
+      reconfirm_musicians(booking)
+      reconfirm_studio(booking)
+    end
   end
 
-  def reconfirm_studio
+  def reconfirm_musicians(booking)
+  end
+
+  def reconfirm_studio(booking)
+    puts "reconfirm_studio"
   end
 
   def send_message(message, phone_number)
