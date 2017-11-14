@@ -36,10 +36,16 @@
     <br> <br>
   <% end %>
 
+  <h2> Active Bookings </h2>
+
+  <% Booking.where("booking_status = 'Active'").order("created_at desc").each do |x| %>
+    <%= link_to "Booking #{x.id} - #{x.created_at.to_date} - #{x.instruments.join('/')}", controller: "bookings", action: "show_status", id: x.id %> <br>
+  <% end %>
+
   <h2> Past Bookings </h2>
 
-  <% Booking.all.each do |x| %>
-    <%= "#{x.created_at.to_s} - localhost:3000/bookings/#{x.id}" %> <br>
+  <% Booking.where("booking_status != 'Active'").order("created_at desc").each do |x| %>
+    <%= link_to "Booking #{x.id} - #{x.created_at.to_date} - #{x.instruments.join('/')}", controller: "bookings", action: "show_status", id: x.id %> <br>
   <% end %>
 
 

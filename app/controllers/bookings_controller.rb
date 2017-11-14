@@ -24,6 +24,10 @@ class BookingsController < ApplicationController
   def show
   end
 
+  def show_status
+    @booking = Booking.find(params[:id])
+  end
+
   def index
     @instruments = INSTRUMENT_LIST
   end
@@ -79,7 +83,7 @@ class BookingsController < ApplicationController
           "If no, click here: " \
           "Thanks!"
         send_message(message, STUDIO_NUMBER)
-        booking.statuses[:studio_times][time_to_message] = "Message Sent"
+        booking.statuses[:studio_times][time_to_message] = "Message Sent (#{Time.now})"
         booking.save!
       end
     end
@@ -98,6 +102,7 @@ class BookingsController < ApplicationController
     musician_to_message = (available_musicians - contacted_musicians)[0]
     if musician_to_message.blank?
       message_dane("No more musicians available to message (#{instrument})")
+      return
     end
     phone_number = musician_list.select{ |musician| musician[:name] == musician_to_message }[0][:phone_number]
     message = "New Custom-Tracks.com order! " \
@@ -106,7 +111,7 @@ class BookingsController < ApplicationController
       "If no, click here: " \
       "Thanks!"
     send_message(message, phone_number)
-    booking.statuses[:musicians][instrument.to_sym].push( { "name": musician_to_message, "status": "Message Sent" } )
+    booking.statuses[:musicians][instrument.to_sym].push( { "name": musician_to_message, "status": "Message Sent (#{Time.now})" } )
     booking.save!
   end
 
@@ -125,7 +130,7 @@ class BookingsController < ApplicationController
     # Add rejected time to status
     # Message studio again
     booking = Booking.find(params[:id])
-    booking.statuses[:studio_times][booking[:statuses][:studio_times].keys[-1]] = "Rejected"
+    booking.statuses[:studio_times][booking[:statuses][:studio_times].keys[-1]] = "Rejected (#{Time.now})"
     booking.save!
     message_studio(booking)
   end
@@ -134,7 +139,7 @@ class BookingsController < ApplicationController
     # Add confirmed time to status
     # Trigger message_musicians
     booking = Booking.find(params[:id])
-    booking.statuses[:studio_times][booking[:statuses][:studio_times].keys[-1]] = "Confirmed"
+    booking.statuses[:studio_times][booking[:statuses][:studio_times].keys[-1]] = "Confirmed (#{Time.now})"
     booking.save!
     message_musicians(booking)
   end
@@ -145,7 +150,7 @@ class BookingsController < ApplicationController
     booking = Booking.find(params[:id])
     instrument = params[:instrument]
     musician = params[:name]
-    booking.statuses[:musicians][instrument.to_sym].select{ |m| m[:name] == musician }[0][:status] = "Rejected"
+    booking.statuses[:musicians][instrument.to_sym].select{ |m| m[:name] == musician }[0][:status] = "Rejected (#{Time.now})"
     booking.save!
     message_musicians(booking, instrument)
   end
@@ -160,11 +165,11 @@ class BookingsController < ApplicationController
     musician = params[:name]
     instrument_status = booking.statuses[:instruments][instrument.to_sym]
     musician_status = booking.statuses[:musicians][instrument.to_sym].select{ |m| m[:name] == musician }[0][:status]
-    if (instrument_status == "Confirmed") & (musician_status != "Confirmed")
-      booking.statuses[:musicians][instrument.to_sym].select{ |m| m[:name] == musician }[0][:status] = "Late response"
+    if (instrument_status == "Confirmed") & (!musician_status.include?("Confirmed"))
+      booking.statuses[:musicians][instrument.to_sym].select{ |m| m[:name] == musician }[0][:status] = "Late response (#{Time.now})"
       booking.save!
     else
-      booking.statuses[:musicians][instrument.to_sym].select{ |m| m[:name] == musician }[0][:status] = "Confirmed"
+      booking.statuses[:musicians][instrument.to_sym].select{ |m| m[:name] == musician }[0][:status] = "Confirmed (#{Time.now})"
       booking.statuses[:instruments][instrument.to_sym] = "Confirmed"
       booking.save!
     end
@@ -187,6 +192,7 @@ class BookingsController < ApplicationController
 
   def message_dane(message)
     puts "message_dane - #{message}"
+    # Update booking status to "Messaged Dane"
   end
 
 end

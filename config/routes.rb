@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :songwriter
   resources :bookings
   post "songwriter/sign_up", to: "songwriter#create"
+  get "bookings/:id", to: "bookings#show"
+  get "bookings/status/:id", to: "bookings#show_status"
   get "bookings/:id/studio_reject", to: "bookings#studio_reject"
   get "bookings/:id/studio_confirm", to: "bookings#studio_confirm"
   get "bookings/:id/musician_reject", to: "bookings#musician_reject"
