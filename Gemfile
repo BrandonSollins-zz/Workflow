@@ -12,6 +12,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'httpclient', '~> 2.5.2'
 gem 'geocoder'
+gem 'twilio-ruby'
+gem "clockwork", require: false
 
 
 # gem 'redis', '~> 3.0'

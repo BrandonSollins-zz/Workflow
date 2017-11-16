@@ -19,7 +19,8 @@
         <%= "Instrument: #{instrument[0]} - Status: #{instrument[1]}" %>
         <% @booking.statuses[:musicians][instrument[0]].each do |musician| %>
           <p style="margin-left:30px">
-            <%= "Musician: #{musician[:name]} - Status: #{musician[:status]}" %>
+            <% musician_list = eval("@#{instrument[0]}_list") %>
+            <%= "Musician: #{musician_list[musician[0]][:name]} - Status: #{musician[1]}" %>
           </p>
         <% end %>
       </div>
