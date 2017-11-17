@@ -17,9 +17,11 @@ class BookingsController < ApplicationController
     2 => { "name": "drum2", "phone_number": "+17726313753" },
   }
 
-  INSTRUMENT_LIST = [
-    "guitar", "bass", "drum"
-  ]
+  INSTRUMENT_LIST = {
+    "guitar" => 1,
+    "bass" => 2,
+    "drum" => 3
+  }
 
   account_sid = "AC74728af5c70f944cbeac429666fb7e4b"
   token = "fc8582f0efcba31c6d19798312cb4121"
@@ -37,7 +39,7 @@ class BookingsController < ApplicationController
   end
 
   def index
-    @instruments = INSTRUMENT_LIST
+    @instruments = INSTRUMENT_LIST.keys
   end
 
   def create
@@ -92,8 +94,8 @@ class BookingsController < ApplicationController
         message = "New Custom-Tracks.com order! \n\n" \
           "Is #{studio} available #{time_to_message}? \n\n" \
           "Instruments: #{required_instruments} \n\n" \
-          "If yes, click here: app.custom-tracks.com/bookings/#{booking.id}/studio_confirm?reconfirm=false \n\n" \
-          "If no, click here: app.custom-tracks.com/bookings/#{booking.id}/studio_reject?reconfirm=false \n\n" \
+          "If yes, click here: app.custom-tracks.com/b/#{booking.id}/sc?r=0 \n\n" \
+          "If no, click here: app.custom-tracks.com/b/#{booking.id}/sr?r=0 \n\n" \
           "Thanks!"
         send_message(message, STUDIO_NUMBER)
         booking.statuses[:studio_times][time_to_message] = "Message Sent (#{Time.now})"
@@ -122,8 +124,8 @@ class BookingsController < ApplicationController
     phone_number = musician_list[musician_to_message][:phone_number]
     message = "New Custom-Tracks.com order! \n\n" \
       "Are you available #{time_to_message}? \n\n" \
-      "If yes, click here: app.custom-tracks.com/bookings/#{booking.id}/musician_confirm?inst=#{instrument}&n=#{musician_to_message} \n\n" \
-      "If no, click here: app.custom-tracks.com/bookings/#{booking.id}/musician_reject?inst=#{instrument}&n=#{musician_to_message} \n\n" \
+      "If yes, click here: app.custom-tracks.com/b/#{booking.id}/mc?i=#{INSTRUMENT_LIST[instrument]}&n=#{musician_to_message} \n\n" \
+      "If no, click here: app.custom-tracks.com/b/#{booking.id}/mr?i=#{INSTRUMENT_LIST[instrument]}&n=#{musician_to_message} \n\n" \
       "Thanks!"
     send_message(message, phone_number)
     booking.statuses[:musicians][instrument.to_sym][musician_to_message] = "Message Sent (#{Time.now})"
@@ -145,7 +147,7 @@ class BookingsController < ApplicationController
     # Add rejected time to status
     # Message studio again
     booking = Booking.find(params[:id])
-    reconfirm = eval(params[:reconfirm])
+    reconfirm = params[:r].to_i == 0 ? false : true
     if reconfirm
       booking.statuses[:studio_reconfirmed] = "Rejected (#{Time.now})"
       booking.booking_status = "Failed - Messaged Dane (#{Time.now})"
@@ -162,7 +164,7 @@ class BookingsController < ApplicationController
     # Add confirmed time to status
     # Trigger message_musicians
     booking = Booking.find(params[:id])
-    reconfirm = eval(params[:reconfirm])
+    reconfirm = params[:r].to_i == 0 ? false : true
     if reconfirm
       booking.statuses[:studio_reconfirmed] = "Confirmed (#{Time.now})"
       booking.booking_status = "Completed (#{Time.now})"
@@ -179,7 +181,7 @@ class BookingsController < ApplicationController
     # Add rejected musician to status
     # Trigger message_musicians(instrument to check for)
     booking = Booking.find(params[:id])
-    instrument = params[:inst]
+    instrument = INSTRUMENT_LIST.rassoc(params[:i].to_i)[0]
     musician = params[:n].to_i
     booking.statuses[:musicians][instrument.to_sym][musician] = "Rejected (#{Time.now})"
     booking.save!
@@ -192,7 +194,7 @@ class BookingsController < ApplicationController
       # If all instruments are now confirmed, trigger reconfirm with studio
       # If not, do nothing
     booking = Booking.find(params[:id])
-    instrument = params[:inst].to_sym
+    instrument = INSTRUMENT_LIST.rassoc(params[:i].to_i)[0].to_sym
     musician = params[:n].to_i
     instrument_status = booking.statuses[:instruments][instrument]
     musician_status = booking.statuses[:musicians][instrument][musician]
@@ -216,7 +218,15 @@ class BookingsController < ApplicationController
   def reconfirm_studio(booking)
     puts "reconfirm_studio"
 
-    message = "Musicians are booked! Please reconfirm to finalize booking"
+    time = booking.statuses[:studio_times].keys[-1]
+    instruments = booking.instruments.join(', ')
+    message = "Musicians are confirmed for: \n\n" \
+      "Studio -  #{booking.studio} \n\n" \
+      "Time -  #{time} \n\n" \
+      "Instruments - #{instruments} \n\n" \
+      "To reconfirm, click here: app.custom-tracks.com/b/#{booking.id}/sc?r=1 \n\n" \
+      "If things have changes, click here: app.custom-tracks.com/b/#{booking.id}/sr?r=1 \n\n" \
+      "Thanks!"
     send_message(message, STUDIO_NUMBER)
     booking.statuses[:studio_reconfirmed] = "Message Sent (#{Time.now})"
     booking.save!
@@ -224,20 +234,35 @@ class BookingsController < ApplicationController
 
   def send_message(message, phone_number)
     puts "send_message - #{message}, #{phone_number}"
-    message = TWILIO_CLIENT.messages.create(
-        body: message,
-        to: "+17726313753",
-        from: "+17727424854"
-    )
+    # message = TWILIO_CLIENT.messages.create(
+    #     body: message,
+    #     to: "+17726313753",
+    #     from: "+17727424854"
+    # )
   end
 
   def message_dane(message)
     puts "message_dane - #{message}"
-    message = TWILIO_CLIENT.messages.create(
-        body: message,
-        to: "+17726313753",
-        from: "+17727424854"
-    )
+    # message = TWILIO_CLIENT.messages.create(
+    #     body: message,
+    #     to: "+17726313753",
+    #     from: "+17727424854"
+    # )
+  end
+
+  def check_messaged_musicians
+    Booking.where("booking_status = 'Active'").each do |booking|
+      booking.instruments.each do |instrument|
+        last_message = booking.statuses[:musicians][instrument.to_sym].values[-1]
+        return if last_message.blank?
+        status = last_message.split(' (')[0]
+        time = last_message.split(' (')[1].to_time
+        time_difference = ((Time.now - time)/60)
+        if status == 'Message Sent' and time_difference > 5
+          message_musicians(booking, instrument)
+        end
+      end
+    end
   end
 
 end

@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   post "songwriter/sign_up", to: "songwriter#create"
   get "bookings/:id", to: "bookings#show"
   get "bookings/status/:id", to: "bookings#show_status"
-  get "bookings/:id/studio_reject", to: "bookings#studio_reject"
-  get "bookings/:id/studio_confirm", to: "bookings#studio_confirm"
-  get "bookings/:id/musician_reject", to: "bookings#musician_reject"
-  get "bookings/:id/musician_confirm", to: "bookings#musician_confirm"
+  get "b/:id/sr", to: "bookings#studio_reject"
+  get "b/:id/sc", to: "bookings#studio_confirm"
+  get "b/:id/mr", to: "bookings#musician_reject"
+  get "b/:id/mc", to: "bookings#musician_confirm"
 end
