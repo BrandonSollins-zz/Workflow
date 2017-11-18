@@ -18778,3 +18778,1111 @@ Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.2ms)
 
   [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" ORDER BY "bookings"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
   [1m[35mSQL (2.8ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = ?[0m  [["id", 43]]
+Started GET "/" for 127.0.0.1 at 2017-11-17 22:34:55 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (195.3ms)
+Completed 200 OK in 261ms (Views: 249.1ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mBooking Load (1.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/" for 127.0.0.1 at 2017-11-17 22:36:20 -0500
+Processing by SignUpController#index as HTML
+  Rendering sign_up/index.html.erb within layouts/application
+  Rendered sign_up/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/bookings" for 127.0.0.1 at 2017-11-17 22:36:20 -0500
+Processing by BookingsController#index as HTML
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active') ORDER BY created_at desc[0m
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status != 'Active') ORDER BY created_at desc[0m
+  Rendered bookings/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 22ms (Views: 19.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bookings" for 127.0.0.1 at 2017-11-17 22:36:21 -0500
+Processing by BookingsController#index as HTML
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active') ORDER BY created_at desc[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status != 'Active') ORDER BY created_at desc[0m
+  Rendered bookings/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings" for 127.0.0.1 at 2017-11-17 22:37:13 -0500
+Processing by BookingsController#index as HTML
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active') ORDER BY created_at desc[0m
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status != 'Active') ORDER BY created_at desc[0m
+  Rendered bookings/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started POST "/bookings" for 127.0.0.1 at 2017-11-17 22:37:42 -0500
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cEDGBmu5RvXIX8jPWn9rE1M1QFpJiuH77E3d1+lojtOI+QvvGE/O/ejhzKFkfdlGOJo4HuCGIgOCMHeMVgv9Qg==", "booking"=>{"instruments"=>["", "acoustic_guitar", "drums", "electric_bass", "electric_guitar", "keyboard", "live_piano", "tenor_sax", "trumpet", "upright_bass", "violin"], "dates"=>"1 1/1 at 1\r\n1 1/1 at 5\r\n", "mp3_links"=>"", "video_links"=>"", "extra_links"=>"", "notes"=>"", "studio"=>"Studio A"}, "commit"=>"Save Booking"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at", "instruments", "possible_times", "notes", "studio", "statuses", "booking_status") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-11-18 03:37:42.121952"], ["updated_at", "2017-11-18 03:37:42.121952"], ["instruments", "---\n- acoustic_guitar\n- drums\n- electric_bass\n- electric_guitar\n- keyboard\n- live_piano\n- tenor_sax\n- trumpet\n- upright_bass\n- violin\n"], ["possible_times", "---\n- 1 1/1 at 1\n- 1 1/1 at 5\n"], ["notes", ""], ["studio", "Studio A"], ["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times: {}\n:musicians:\n  :acoustic_guitar: {}\n  :drums: {}\n  :electric_bass: {}\n  :electric_guitar: {}\n  :keyboard: {}\n  :live_piano: {}\n  :tenor_sax: {}\n  :trumpet: {}\n  :upright_bass: {}\n  :violin: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["booking_status", "Active"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "updated_at" = ?, "statuses" = ? WHERE "bookings"."id" = ?[0m  [["updated_at", "2017-11-18 03:37:42.130290"], ["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Message Sent (2017-11-17 22:37:42 -0500)\n:musicians:\n  :acoustic_guitar: {}\n  :drums: {}\n  :electric_bass: {}\n  :electric_guitar: {}\n  :keyboard: {}\n  :live_piano: {}\n  :tenor_sax: {}\n  :trumpet: {}\n  :upright_bass: {}\n  :violin: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["id", 44]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  Rendering bookings/create.html.erb within layouts/application
+  Rendered bookings/create.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 37ms (Views: 14.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/bookings" for 127.0.0.1 at 2017-11-17 22:37:44 -0500
+Processing by BookingsController#index as HTML
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active') ORDER BY created_at desc[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status != 'Active') ORDER BY created_at desc[0m
+  Rendered bookings/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/bookings" for 127.0.0.1 at 2017-11-17 22:37:45 -0500
+Processing by BookingsController#index as HTML
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active') ORDER BY created_at desc[0m
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status != 'Active') ORDER BY created_at desc[0m
+  Rendered bookings/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" ORDER BY "bookings"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" ORDER BY "bookings"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" ORDER BY "bookings"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" ORDER BY "bookings"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 22:39:23 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 1.2ms)
+
+
+  
+NameError (uninitialized constant BookingsController::GUITAR_LIST):
+  
+app/controllers/bookings_controller.rb:88:in `show_status'
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.1ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.2ms)
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings" for 127.0.0.1 at 2017-11-17 22:39:32 -0500
+Processing by BookingsController#index as HTML
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active') ORDER BY created_at desc[0m
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status != 'Active') ORDER BY created_at desc[0m
+  Rendered bookings/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 23ms (Views: 20.8ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings" for 127.0.0.1 at 2017-11-17 22:40:36 -0500
+Processing by BookingsController#index as HTML
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active') ORDER BY created_at desc[0m
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status != 'Active') ORDER BY created_at desc[0m
+  Rendered bookings/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 22:40:38 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 18.0ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 22:41:27 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 22:41:34 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 14.8ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 22:42:48 -0500
+  
+SyntaxError (/Users/brandonsollins/Desktop/Other/workflow/app/controllers/bookings_controller.rb:89: syntax error, unexpected '=', expecting keyword_end
+      eval("@#{key}_list") = eval("#{key}_list".upcase)
+                            ^):
+  
+app/controllers/bookings_controller.rb:89: syntax error, unexpected '=', expecting keyword_end
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.1ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.6ms)
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings" for 127.0.0.1 at 2017-11-17 22:43:31 -0500
+  
+SyntaxError (/Users/brandonsollins/Desktop/Other/workflow/app/controllers/bookings_controller.rb:89: syntax error, unexpected '=', expecting keyword_end
+      eval("@#{key}_list") = eval("#{key}_list".upcase)
+                            ^):
+  
+app/controllers/bookings_controller.rb:89: syntax error, unexpected '=', expecting keyword_end
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.5ms)
+Started GET "/bookings" for 127.0.0.1 at 2017-11-17 22:43:31 -0500
+  
+SyntaxError (/Users/brandonsollins/Desktop/Other/workflow/app/controllers/bookings_controller.rb:89: syntax error, unexpected '=', expecting keyword_end
+      eval("@#{key}_list") = eval("#{key}_list".upcase)
+                            ^):
+  
+app/controllers/bookings_controller.rb:89: syntax error, unexpected '=', expecting keyword_end
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.7ms)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 22:48:45 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 26ms (Views: 12.9ms | ActiveRecord: 1.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 22:49:02 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 18ms (Views: 15.5ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 22:50:45 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 12.6ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" ORDER BY "bookings"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" ORDER BY "bookings"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" ORDER BY "bookings"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" ORDER BY "bookings"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" ORDER BY "bookings"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" ORDER BY "bookings"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/44/sr?r=0" for 127.0.0.1 at 2017-11-17 22:54:41 -0500
+Processing by BookingsController#studio_reject as */*
+  Parameters: {"r"=>"0", "id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n:musicians:\n  :acoustic_guitar: {}\n  :drums: {}\n  :electric_bass: {}\n  :electric_guitar: {}\n  :keyboard: {}\n  :live_piano: {}\n  :tenor_sax: {}\n  :trumpet: {}\n  :upright_bass: {}\n  :violin: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:54:41.281119"], ["id", 44]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Message Sent (2017-11-17 22:54:41 -0500)\n:musicians:\n  :acoustic_guitar: {}\n  :drums: {}\n  :electric_bass: {}\n  :electric_guitar: {}\n  :keyboard: {}\n  :live_piano: {}\n  :tenor_sax: {}\n  :trumpet: {}\n  :upright_bass: {}\n  :violin: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:54:41.287692"], ["id", 44]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#studio_reject, rendering head :no_content
+Completed 204 No Content in 79ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 22:54:42 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/44/sc?r=0" for 127.0.0.1 at 2017-11-17 22:55:08 -0500
+Processing by BookingsController#studio_confirm as */*
+  Parameters: {"r"=>"0", "id"=>"44"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar: {}\n  :drums: {}\n  :electric_bass: {}\n  :electric_guitar: {}\n  :keyboard: {}\n  :live_piano: {}\n  :tenor_sax: {}\n  :trumpet: {}\n  :upright_bass: {}\n  :violin: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:55:08.039563"], ["id", 44]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :drums: {}\n  :electric_bass: {}\n  :electric_guitar: {}\n  :keyboard: {}\n  :live_piano: {}\n  :tenor_sax: {}\n  :trumpet: {}\n  :upright_bass: {}\n  :violin: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:55:08.045998"], ["id", 44]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :drums:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_bass: {}\n  :electric_guitar: {}\n  :keyboard: {}\n  :live_piano: {}\n  :tenor_sax: {}\n  :trumpet: {}\n  :upright_bass: {}\n  :violin: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:55:08.051392"], ["id", 44]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :drums:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_guitar: {}\n  :keyboard: {}\n  :live_piano: {}\n  :tenor_sax: {}\n  :trumpet: {}\n  :upright_bass: {}\n  :violin: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:55:08.057379"], ["id", 44]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :drums:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :keyboard: {}\n  :live_piano: {}\n  :tenor_sax: {}\n  :trumpet: {}\n  :upright_bass: {}\n  :violin: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:55:08.062868"], ["id", 44]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :drums:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :keyboard:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :live_piano: {}\n  :tenor_sax: {}\n  :trumpet: {}\n  :upright_bass: {}\n  :violin: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:55:08.068662"], ["id", 44]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :drums:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :keyboard:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :live_piano:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :tenor_sax: {}\n  :trumpet: {}\n  :upright_bass: {}\n  :violin: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:55:08.082223"], ["id", 44]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :drums:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :keyboard:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :live_piano:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :tenor_sax:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :trumpet: {}\n  :upright_bass: {}\n  :violin: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:55:08.089378"], ["id", 44]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :drums:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :keyboard:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :live_piano:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :tenor_sax:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :upright_bass: {}\n  :violin: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:55:08.097599"], ["id", 44]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :drums:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :keyboard:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :live_piano:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :tenor_sax:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :violin: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:55:08.104328"], ["id", 44]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :drums:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :keyboard:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :live_piano:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :tenor_sax:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:55:08.111506"], ["id", 44]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#studio_confirm, rendering head :no_content
+Completed 204 No Content in 139ms (ActiveRecord: 8.4ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 22:55:09 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 17ms (Views: 14.3ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/43/mc?i=1&n=1" for 127.0.0.1 at 2017-11-17 22:55:35 -0500
+Processing by BookingsController#musician_confirm as */*
+  Parameters: {"i"=>"1", "n"=>"1", "id"=>"43"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 43], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Booking with 'id'=43):
+  
+app/controllers/bookings_controller.rb:237:in `musician_confirm'
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.0ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/brandonsollins/.rvm/gems/ruby-2.3.5/gems/actionpack-5.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (52.2ms)
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/44/mc?i=1&n=1" for 127.0.0.1 at 2017-11-17 22:55:42 -0500
+Processing by BookingsController#musician_confirm as */*
+  Parameters: {"i"=>"1", "n"=>"1", "id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :keyboard:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :live_piano:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :tenor_sax:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Incomplete\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:55:42.990001"], ["id", 44]]
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_confirm, rendering head :no_content
+Completed 204 No Content in 69ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 22:55:45 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/44/mc?i=2&n=1" for 127.0.0.1 at 2017-11-17 22:55:55 -0500
+Processing by BookingsController#musician_confirm as */*
+  Parameters: {"i"=>"2", "n"=>"1", "id"=>"44"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :electric_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :keyboard:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :live_piano:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :tenor_sax:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Incomplete\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:55:55.166389"], ["id", 44]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_confirm, rendering head :no_content
+Completed 204 No Content in 65ms (ActiveRecord: 1.0ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/44/mc?i=3&n=1" for 127.0.0.1 at 2017-11-17 22:55:58 -0500
+Processing by BookingsController#musician_confirm as */*
+  Parameters: {"i"=>"3", "n"=>"1", "id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :keyboard:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :live_piano:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :tenor_sax:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Incomplete\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:55:58.943789"], ["id", 44]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_confirm, rendering head :no_content
+Completed 204 No Content in 64ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/b/44/mc?i=4&n=1" for 127.0.0.1 at 2017-11-17 22:56:01 -0500
+Processing by BookingsController#musician_confirm as */*
+  Parameters: {"i"=>"4", "n"=>"1", "id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :live_piano:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :tenor_sax:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Incomplete\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:56:01.621371"], ["id", 44]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_confirm, rendering head :no_content
+Completed 204 No Content in 65ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/b/44/mc?i=5&n=1" for 127.0.0.1 at 2017-11-17 22:56:04 -0500
+Processing by BookingsController#musician_confirm as */*
+  Parameters: {"i"=>"5", "n"=>"1", "id"=>"44"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :tenor_sax:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:56:04.577267"], ["id", 44]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_confirm, rendering head :no_content
+Completed 204 No Content in 67ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 22:56:05 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/44/mr?i=6&n=1" for 127.0.0.1 at 2017-11-17 22:56:12 -0500
+Processing by BookingsController#musician_reject as */*
+  Parameters: {"i"=>"6", "n"=>"1", "id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n  :tenor_sax:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:56:12.508446"], ["id", 44]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n    2: Message Sent (2017-11-17 22:56:12 -0500)\n  :tenor_sax:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Incomplete\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:56:12.516026"], ["id", 44]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_reject, rendering head :no_content
+Completed 204 No Content in 71ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 22:56:13 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/44/mc?i=6&n=2" for 127.0.0.1 at 2017-11-17 22:56:33 -0500
+Processing by BookingsController#musician_confirm as */*
+  Parameters: {"i"=>"6", "n"=>"2", "id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n    2: Confirmed (2017-11-17 22:56:33 -0500)\n  :tenor_sax:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Confirmed\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:56:33.185074"], ["id", 44]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_confirm, rendering head :no_content
+Completed 204 No Content in 68ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 22:56:34 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 12.7ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/44/mr?i=7&n=1" for 127.0.0.1 at 2017-11-17 22:56:43 -0500
+Processing by BookingsController#musician_reject as */*
+  Parameters: {"i"=>"7", "n"=>"1", "id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n    2: Confirmed (2017-11-17 22:56:33 -0500)\n  :tenor_sax:\n    1: Rejected (2017-11-17 22:56:43 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Confirmed\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:56:43.470849"], ["id", 44]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n    2: Confirmed (2017-11-17 22:56:33 -0500)\n  :tenor_sax:\n    1: Rejected (2017-11-17 22:56:43 -0500)\n    2: Message Sent (2017-11-17 22:56:43 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Confirmed\n  :tenor_sax: Incomplete\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:56:43.479902"], ["id", 44]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_reject, rendering head :no_content
+Completed 204 No Content in 70ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 22:56:44 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/44/mc?i=7&n=1" for 127.0.0.1 at 2017-11-17 22:56:56 -0500
+Processing by BookingsController#musician_confirm as */*
+  Parameters: {"i"=>"7", "n"=>"1", "id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n    2: Confirmed (2017-11-17 22:56:33 -0500)\n  :tenor_sax:\n    1: Confirmed (2017-11-17 22:56:56 -0500)\n    2: Message Sent (2017-11-17 22:56:43 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Confirmed\n  :tenor_sax: Confirmed\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 03:56:56.859946"], ["id", 44]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_confirm, rendering head :no_content
+Completed 204 No Content in 65ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 22:56:59 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (1.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (1.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n    2: Confirmed (2017-11-17 22:56:33 -0500)\n  :tenor_sax:\n    1: Confirmed (2017-11-17 22:56:56 -0500)\n    2: Message Sent (2017-11-17 22:56:43 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n    2: Message Sent (2017-11-17 23:00:13 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Confirmed\n  :tenor_sax: Confirmed\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 04:00:13.007742"], ["id", 44]]
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n    2: Confirmed (2017-11-17 22:56:33 -0500)\n  :tenor_sax:\n    1: Confirmed (2017-11-17 22:56:56 -0500)\n    2: Message Sent (2017-11-17 22:56:43 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n    2: Message Sent (2017-11-17 23:00:13 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n    2: Message Sent (2017-11-17 23:00:13 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Confirmed\n  :tenor_sax: Confirmed\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 04:00:13.025281"], ["id", 44]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n    2: Confirmed (2017-11-17 22:56:33 -0500)\n  :tenor_sax:\n    1: Confirmed (2017-11-17 22:56:56 -0500)\n    2: Message Sent (2017-11-17 22:56:43 -0500)\n  :trumpet:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n    2: Message Sent (2017-11-17 23:00:13 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n    2: Message Sent (2017-11-17 23:00:13 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n    2: Message Sent (2017-11-17 23:00:13 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Confirmed\n  :tenor_sax: Confirmed\n  :trumpet: Incomplete\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 04:00:13.039033"], ["id", 44]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 23:00:29 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 22ms (Views: 12.5ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/44/mc?i=8&n=1" for 127.0.0.1 at 2017-11-17 23:00:48 -0500
+Processing by BookingsController#musician_confirm as */*
+  Parameters: {"i"=>"8", "n"=>"1", "id"=>"44"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n    2: Confirmed (2017-11-17 22:56:33 -0500)\n  :tenor_sax:\n    1: Confirmed (2017-11-17 22:56:56 -0500)\n    2: Message Sent (2017-11-17 22:56:43 -0500)\n  :trumpet:\n    1: Confirmed (2017-11-17 23:00:48 -0500)\n    2: Message Sent (2017-11-17 23:00:13 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n    2: Message Sent (2017-11-17 23:00:13 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n    2: Message Sent (2017-11-17 23:00:13 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Confirmed\n  :tenor_sax: Confirmed\n  :trumpet: Confirmed\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 04:00:48.897276"], ["id", 44]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_confirm, rendering head :no_content
+Completed 204 No Content in 65ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 23:00:51 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/44/mc?i=8&n=2" for 127.0.0.1 at 2017-11-17 23:00:56 -0500
+Processing by BookingsController#musician_confirm as */*
+  Parameters: {"i"=>"8", "n"=>"2", "id"=>"44"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n    2: Confirmed (2017-11-17 22:56:33 -0500)\n  :tenor_sax:\n    1: Confirmed (2017-11-17 22:56:56 -0500)\n    2: Message Sent (2017-11-17 22:56:43 -0500)\n  :trumpet:\n    1: Confirmed (2017-11-17 23:00:48 -0500)\n    2: Late response (2017-11-17 23:00:56 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n    2: Message Sent (2017-11-17 23:00:13 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n    2: Message Sent (2017-11-17 23:00:13 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Confirmed\n  :tenor_sax: Confirmed\n  :trumpet: Confirmed\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 04:00:56.793317"], ["id", 44]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_confirm, rendering head :no_content
+Completed 204 No Content in 68ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 23:00:58 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/44/mc?i=7&n=2" for 127.0.0.1 at 2017-11-17 23:01:05 -0500
+Processing by BookingsController#musician_confirm as */*
+  Parameters: {"i"=>"7", "n"=>"2", "id"=>"44"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n    2: Confirmed (2017-11-17 22:56:33 -0500)\n  :tenor_sax:\n    1: Confirmed (2017-11-17 22:56:56 -0500)\n    2: Late response (2017-11-17 23:01:05 -0500)\n  :trumpet:\n    1: Confirmed (2017-11-17 23:00:48 -0500)\n    2: Late response (2017-11-17 23:00:56 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n    2: Message Sent (2017-11-17 23:00:13 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n    2: Message Sent (2017-11-17 23:00:13 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Confirmed\n  :tenor_sax: Confirmed\n  :trumpet: Confirmed\n  :upright_bass: Incomplete\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 04:01:05.894731"], ["id", 44]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_confirm, rendering head :no_content
+Completed 204 No Content in 70ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 23:01:07 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/44/mc?i=9&n=2" for 127.0.0.1 at 2017-11-17 23:01:18 -0500
+Processing by BookingsController#musician_confirm as */*
+  Parameters: {"i"=>"9", "n"=>"2", "id"=>"44"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n    2: Confirmed (2017-11-17 22:56:33 -0500)\n  :tenor_sax:\n    1: Confirmed (2017-11-17 22:56:56 -0500)\n    2: Late response (2017-11-17 23:01:05 -0500)\n  :trumpet:\n    1: Confirmed (2017-11-17 23:00:48 -0500)\n    2: Late response (2017-11-17 23:00:56 -0500)\n  :upright_bass:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n    2: Confirmed (2017-11-17 23:01:18 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n    2: Message Sent (2017-11-17 23:00:13 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Confirmed\n  :tenor_sax: Confirmed\n  :trumpet: Confirmed\n  :upright_bass: Confirmed\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 04:01:18.057548"], ["id", 44]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_confirm, rendering head :no_content
+Completed 204 No Content in 66ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 23:01:19 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/44/mc?i=9&n=1" for 127.0.0.1 at 2017-11-17 23:01:37 -0500
+Processing by BookingsController#musician_confirm as */*
+  Parameters: {"i"=>"9", "n"=>"1", "id"=>"44"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n    2: Confirmed (2017-11-17 22:56:33 -0500)\n  :tenor_sax:\n    1: Confirmed (2017-11-17 22:56:56 -0500)\n    2: Late response (2017-11-17 23:01:05 -0500)\n  :trumpet:\n    1: Confirmed (2017-11-17 23:00:48 -0500)\n    2: Late response (2017-11-17 23:00:56 -0500)\n  :upright_bass:\n    1: Late response (2017-11-17 23:01:37 -0500)\n    2: Confirmed (2017-11-17 23:01:18 -0500)\n  :violin:\n    1: Message Sent (2017-11-17 22:55:08 -0500)\n    2: Message Sent (2017-11-17 23:00:13 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Confirmed\n  :tenor_sax: Confirmed\n  :trumpet: Confirmed\n  :upright_bass: Confirmed\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 04:01:37.816992"], ["id", 44]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_confirm, rendering head :no_content
+Completed 204 No Content in 73ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 23:01:38 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 20ms (Views: 17.9ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/44/mr?i=10&n=1" for 127.0.0.1 at 2017-11-17 23:01:53 -0500
+Processing by BookingsController#musician_reject as */*
+  Parameters: {"i"=>"10", "n"=>"1", "id"=>"44"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n    2: Confirmed (2017-11-17 22:56:33 -0500)\n  :tenor_sax:\n    1: Confirmed (2017-11-17 22:56:56 -0500)\n    2: Late response (2017-11-17 23:01:05 -0500)\n  :trumpet:\n    1: Confirmed (2017-11-17 23:00:48 -0500)\n    2: Late response (2017-11-17 23:00:56 -0500)\n  :upright_bass:\n    1: Late response (2017-11-17 23:01:37 -0500)\n    2: Confirmed (2017-11-17 23:01:18 -0500)\n  :violin:\n    1: Rejected (2017-11-17 23:01:53 -0500)\n    2: Message Sent (2017-11-17 23:00:13 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Confirmed\n  :tenor_sax: Confirmed\n  :trumpet: Confirmed\n  :upright_bass: Confirmed\n  :violin: Incomplete\n"], ["updated_at", "2017-11-18 04:01:53.577746"], ["id", 44]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "updated_at" = ?, "booking_status" = ? WHERE "bookings"."id" = ?[0m  [["updated_at", "2017-11-18 04:01:53.586616"], ["booking_status", "Failed - Messaged Dane (2017-11-17 23:01:53 -0500)"], ["id", 44]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_reject, rendering head :no_content
+Completed 204 No Content in 77ms (ActiveRecord: 3.1ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 23:02:01 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/44/mc?i=10&n=2" for 127.0.0.1 at 2017-11-17 23:02:37 -0500
+Processing by BookingsController#musician_confirm as */*
+  Parameters: {"i"=>"10", "n"=>"2", "id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n    2: Confirmed (2017-11-17 22:56:33 -0500)\n  :tenor_sax:\n    1: Confirmed (2017-11-17 22:56:56 -0500)\n    2: Late response (2017-11-17 23:01:05 -0500)\n  :trumpet:\n    1: Confirmed (2017-11-17 23:00:48 -0500)\n    2: Late response (2017-11-17 23:00:56 -0500)\n  :upright_bass:\n    1: Late response (2017-11-17 23:01:37 -0500)\n    2: Confirmed (2017-11-17 23:01:18 -0500)\n  :violin:\n    1: Rejected (2017-11-17 23:01:53 -0500)\n    2: Confirmed (2017-11-17 23:02:37 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Confirmed\n  :tenor_sax: Confirmed\n  :trumpet: Confirmed\n  :upright_bass: Confirmed\n  :violin: Confirmed\n"], ["updated_at", "2017-11-18 04:02:37.121596"], ["id", 44]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Message Sent (2017-11-17 23:02:37 -0500)\n:studio_times:\n  1 1/1 at 1: Rejected (2017-11-17 22:54:41 -0500)\n  1 1/1 at 5: Confirmed (2017-11-17 22:55:08 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Confirmed (2017-11-17 22:55:42 -0500)\n  :drums:\n    1: Confirmed (2017-11-17 22:55:55 -0500)\n  :electric_bass:\n    1: Confirmed (2017-11-17 22:55:58 -0500)\n  :electric_guitar:\n    1: Confirmed (2017-11-17 22:56:01 -0500)\n  :keyboard:\n    1: Confirmed (2017-11-17 22:56:04 -0500)\n  :live_piano:\n    1: Rejected (2017-11-17 22:56:12 -0500)\n    2: Confirmed (2017-11-17 22:56:33 -0500)\n  :tenor_sax:\n    1: Confirmed (2017-11-17 22:56:56 -0500)\n    2: Late response (2017-11-17 23:01:05 -0500)\n  :trumpet:\n    1: Confirmed (2017-11-17 23:00:48 -0500)\n    2: Late response (2017-11-17 23:00:56 -0500)\n  :upright_bass:\n    1: Late response (2017-11-17 23:01:37 -0500)\n    2: Confirmed (2017-11-17 23:01:18 -0500)\n  :violin:\n    1: Rejected (2017-11-17 23:01:53 -0500)\n    2: Confirmed (2017-11-17 23:02:37 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n  :electric_bass: Confirmed\n  :electric_guitar: Confirmed\n  :keyboard: Confirmed\n  :live_piano: Confirmed\n  :tenor_sax: Confirmed\n  :trumpet: Confirmed\n  :upright_bass: Confirmed\n  :violin: Confirmed\n"], ["updated_at", "2017-11-18 04:02:37.132233"], ["id", 44]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_confirm, rendering head :no_content
+Completed 204 No Content in 76ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/bookings/status/44" for 127.0.0.1 at 2017-11-17 23:02:37 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" ORDER BY "bookings"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35mSQL (2.9ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = ?[0m  [["id", 44]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings" for 127.0.0.1 at 2017-11-17 23:03:35 -0500
+Processing by BookingsController#index as HTML
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active') ORDER BY created_at desc[0m
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status != 'Active') ORDER BY created_at desc[0m
+  Rendered bookings/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/bookings" for 127.0.0.1 at 2017-11-17 23:03:35 -0500
+Processing by BookingsController#index as HTML
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active') ORDER BY created_at desc[0m
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status != 'Active') ORDER BY created_at desc[0m
+  Rendered bookings/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 18ms (Views: 16.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/bookings" for 127.0.0.1 at 2017-11-17 23:03:42 -0500
+Processing by BookingsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"60B64h3ublwFlIDlyrn/4EYV004iDC0TvTl63SYW2p8T+bcLbhjmVCUqhIv0u021LbqrCosA7uvTRNCGmXWpDg==", "booking"=>{"instruments"=>["", "acoustic_guitar", "drums"], "dates"=>"1 1/1 at 1\r\n", "mp3_links"=>"", "video_links"=>"", "extra_links"=>"", "notes"=>"", "studio"=>"Studio A"}, "commit"=>"Save Booking"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "bookings" ("created_at", "updated_at", "instruments", "possible_times", "notes", "studio", "statuses", "booking_status") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", "2017-11-18 04:03:42.291869"], ["updated_at", "2017-11-18 04:03:42.291869"], ["instruments", "---\n- acoustic_guitar\n- drums\n"], ["possible_times", "---\n- 1 1/1 at 1\n"], ["notes", ""], ["studio", "Studio A"], ["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times: {}\n:musicians:\n  :acoustic_guitar: {}\n  :drums: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n"], ["booking_status", "Active"]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bookings" SET "updated_at" = ?, "statuses" = ? WHERE "bookings"."id" = ?[0m  [["updated_at", "2017-11-18 04:03:42.297967"], ["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Message Sent (2017-11-17 23:03:42 -0500)\n:musicians:\n  :acoustic_guitar: {}\n  :drums: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n"], ["id", 45]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  Rendering bookings/create.html.erb within layouts/application
+  Rendered bookings/create.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 29ms (Views: 16.2ms | ActiveRecord: 3.4ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings" for 127.0.0.1 at 2017-11-17 23:03:44 -0500
+Processing by BookingsController#index as HTML
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active') ORDER BY created_at desc[0m
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status != 'Active') ORDER BY created_at desc[0m
+  Rendered bookings/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookings" for 127.0.0.1 at 2017-11-17 23:03:44 -0500
+Processing by BookingsController#index as HTML
+  Rendering bookings/index.html.erb within layouts/application
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active') ORDER BY created_at desc[0m
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status != 'Active') ORDER BY created_at desc[0m
+  Rendered bookings/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/bookings/status/45" for 127.0.0.1 at 2017-11-17 23:03:45 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/45/sc?r=0" for 127.0.0.1 at 2017-11-17 23:04:48 -0500
+Processing by BookingsController#studio_confirm as */*
+  Parameters: {"r"=>"0", "id"=>"45"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Confirmed (2017-11-17 23:04:48 -0500)\n:musicians:\n  :acoustic_guitar: {}\n  :drums: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n"], ["updated_at", "2017-11-18 04:04:48.904647"], ["id", 45]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Confirmed (2017-11-17 23:04:48 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Message Sent (2017-11-17 23:04:48 -0500)\n  :drums: {}\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n"], ["updated_at", "2017-11-18 04:04:48.910112"], ["id", 45]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Confirmed (2017-11-17 23:04:48 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Message Sent (2017-11-17 23:04:48 -0500)\n  :drums:\n    1: Message Sent (2017-11-17 23:04:48 -0500)\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n"], ["updated_at", "2017-11-18 04:04:48.913833"], ["id", 45]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#studio_confirm, rendering head :no_content
+Completed 204 No Content in 70ms (ActiveRecord: 3.9ms)
+
+
+Started GET "/bookings/status/45" for 127.0.0.1 at 2017-11-17 23:04:49 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 12.3ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" ORDER BY "bookings"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" ORDER BY "bookings"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings/status/45" for 127.0.0.1 at 2017-11-17 23:08:16 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 12.6ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mBooking Load (1.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings/status/45" for 127.0.0.1 at 2017-11-17 23:09:02 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 0.4ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/45/mr?i=1&n=1" for 127.0.0.1 at 2017-11-17 23:09:34 -0500
+Processing by BookingsController#musician_reject as */*
+  Parameters: {"i"=>"1", "n"=>"1", "id"=>"45"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Confirmed (2017-11-17 23:04:48 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Rejected (2017-11-17 23:09:34 -0500)\n  :drums:\n    1: Message Sent (2017-11-17 23:04:48 -0500)\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n"], ["updated_at", "2017-11-18 04:09:34.151962"], ["id", 45]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Confirmed (2017-11-17 23:04:48 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Rejected (2017-11-17 23:09:34 -0500)\n    2: Message Sent (2017-11-17 23:09:34 -0500)\n  :drums:\n    1: Message Sent (2017-11-17 23:04:48 -0500)\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n"], ["updated_at", "2017-11-18 04:09:34.157798"], ["id", 45]]
+  [1m[35m (0.4ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_reject, rendering head :no_content
+Completed 204 No Content in 69ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/bookings/status/45" for 127.0.0.1 at 2017-11-17 23:09:39 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Confirmed (2017-11-17 23:04:48 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Rejected (2017-11-17 23:09:34 -0500)\n    2: Message Sent (2017-11-17 23:09:34 -0500)\n  :drums:\n    1: Message Sent (2017-11-17 23:04:48 -0500)\n    2: Message Sent (2017-11-17 23:09:53 -0500)\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n"], ["updated_at", "2017-11-18 04:09:53.010788"], ["id", 45]]
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings/status/45" for 127.0.0.1 at 2017-11-17 23:10:03 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/45/mr?i=2&n=1" for 127.0.0.1 at 2017-11-17 23:10:14 -0500
+Processing by BookingsController#musician_reject as */*
+  Parameters: {"i"=>"2", "n"=>"1", "id"=>"45"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Confirmed (2017-11-17 23:04:48 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Rejected (2017-11-17 23:09:34 -0500)\n    2: Message Sent (2017-11-17 23:09:34 -0500)\n  :drums:\n    1: Rejected (2017-11-17 23:10:14 -0500)\n    2: Message Sent (2017-11-17 23:09:53 -0500)\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Incomplete\n"], ["updated_at", "2017-11-18 04:10:14.168645"], ["id", 45]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_reject, rendering head :no_content
+Completed 204 No Content in 64ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/bookings/status/45" for 127.0.0.1 at 2017-11-17 23:10:16 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 20ms (Views: 17.5ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/45/mc?i=2&n=2" for 127.0.0.1 at 2017-11-17 23:10:32 -0500
+Processing by BookingsController#musician_confirm as */*
+  Parameters: {"i"=>"2", "n"=>"2", "id"=>"45"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Confirmed (2017-11-17 23:04:48 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Rejected (2017-11-17 23:09:34 -0500)\n    2: Message Sent (2017-11-17 23:09:34 -0500)\n  :drums:\n    1: Rejected (2017-11-17 23:10:14 -0500)\n    2: Confirmed (2017-11-17 23:10:32 -0500)\n:instruments:\n  :acoustic_guitar: Incomplete\n  :drums: Confirmed\n"], ["updated_at", "2017-11-18 04:10:32.138617"], ["id", 45]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_confirm, rendering head :no_content
+Completed 204 No Content in 65ms (ActiveRecord: 2.5ms)
+
+
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings/status/45" for 127.0.0.1 at 2017-11-17 23:10:33 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/b/45/mc?i=1&n=2" for 127.0.0.1 at 2017-11-17 23:10:42 -0500
+Processing by BookingsController#musician_confirm as */*
+  Parameters: {"i"=>"1", "n"=>"2", "id"=>"45"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Incomplete\n:studio_times:\n  1 1/1 at 1: Confirmed (2017-11-17 23:04:48 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Rejected (2017-11-17 23:09:34 -0500)\n    2: Confirmed (2017-11-17 23:10:42 -0500)\n  :drums:\n    1: Rejected (2017-11-17 23:10:14 -0500)\n    2: Confirmed (2017-11-17 23:10:32 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n"], ["updated_at", "2017-11-18 04:10:42.935781"], ["id", 45]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Message Sent (2017-11-17 23:10:42 -0500)\n:studio_times:\n  1 1/1 at 1: Confirmed (2017-11-17 23:04:48 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Rejected (2017-11-17 23:09:34 -0500)\n    2: Confirmed (2017-11-17 23:10:42 -0500)\n  :drums:\n    1: Rejected (2017-11-17 23:10:14 -0500)\n    2: Confirmed (2017-11-17 23:10:32 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n"], ["updated_at", "2017-11-18 04:10:42.942212"], ["id", 45]]
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#musician_confirm, rendering head :no_content
+Completed 204 No Content in 70ms (ActiveRecord: 3.9ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings/status/45" for 127.0.0.1 at 2017-11-17 23:10:43 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/b/45/sc?r=1" for 127.0.0.1 at 2017-11-17 23:11:06 -0500
+Processing by BookingsController#studio_confirm as */*
+  Parameters: {"r"=>"1", "id"=>"45"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "bookings" SET "statuses" = ?, "booking_status" = ?, "updated_at" = ? WHERE "bookings"."id" = ?[0m  [["statuses", "---\n:studio_reconfirmed: Confirmed (2017-11-17 23:11:06 -0500)\n:studio_times:\n  1 1/1 at 1: Confirmed (2017-11-17 23:04:48 -0500)\n:musicians:\n  :acoustic_guitar:\n    1: Rejected (2017-11-17 23:09:34 -0500)\n    2: Confirmed (2017-11-17 23:10:42 -0500)\n  :drums:\n    1: Rejected (2017-11-17 23:10:14 -0500)\n    2: Confirmed (2017-11-17 23:10:32 -0500)\n:instruments:\n  :acoustic_guitar: Confirmed\n  :drums: Confirmed\n"], ["booking_status", "Completed (2017-11-17 23:11:06 -0500)"], ["updated_at", "2017-11-18 04:11:06.413513"], ["id", 45]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+No template found for BookingsController#studio_confirm, rendering head :no_content
+Completed 204 No Content in 68ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/bookings/status/45" for 127.0.0.1 at 2017-11-17 23:11:10 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings/45" for 127.0.0.1 at 2017-11-17 23:11:35 -0500
+Processing by BookingsController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mBooking Load (0.1ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering bookings/show.html.erb within layouts/application
+  Rendered bookings/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 0.1ms)
+
+
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings/45" for 127.0.0.1 at 2017-11-17 23:11:57 -0500
+Processing by BookingsController#show as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering bookings/show.html.erb within layouts/application
+  Rendered bookings/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+Started GET "/bookings/status/45" for 127.0.0.1 at 2017-11-17 23:12:06 -0500
+Processing by BookingsController#show_status as HTML
+  Parameters: {"id"=>"45"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT  "bookings".* FROM "bookings" WHERE "bookings"."id" = ? LIMIT ?[0m  [["id", 45], ["LIMIT", 1]]
+  Rendering bookings/show_status.html.erb within layouts/application
+  Rendered bookings/show_status.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE (booking_status = 'Active')[0m

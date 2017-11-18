@@ -2,25 +2,77 @@ class BookingsController < ApplicationController
 
   STUDIO_NUMBER = "+17726313753"
 
-  GUITAR_LIST = {
-    1 => { "name": "guitar1", "phone_number": "+17726313753" },
-    2 => { "name": "guitar2", "phone_number": "+17726313753" },
+  ACOUSTIC_GUITAR_LIST = {
+    1 => { "name": "acoustic_guitar1", "phone_number": "+17726313753" },
+    2 => { "name": "acoustic_guitar2", "phone_number": "+17726313753" },
+    #1 => { "name": "Tommy Calton", "phone_number": "+14075799405" },
+    #2 => { "name": "Andrew Williams", "phone_number": "+13213162569" }
   }
-
-  BASS_LIST = {
-    1 => { "name": "bass1", "phone_number": "+17726313753" },
-    2 => { "name": "bass2", "phone_number": "+17726313753" },
+  DRUMS_LIST = {
+    1 => { "name": "drums1", "phone_number": "+17726313753" },
+    2 => { "name": "drums2", "phone_number": "+17726313753" },
+    #1 => { "name": "Gerald Law", "phone_number": "+19413741741" },
+    #2 => { "name": "Jay Dolpus", "phone_number": "+14075086481" },
+    #3 => { "name": "Luis Rivera", "phone_number": "+13525301263" },
+    #4 => { "name": "Jerome Martin", "phone_number": "+19548267940" },
   }
-
-  DRUM_LIST = {
-    1 => { "name": "drum1", "phone_number": "+17726313753" },
-    2 => { "name": "drum2", "phone_number": "+17726313753" },
+  ELECTRIC_BASS_LIST = {
+    1 => { "name": "electric_bass1", "phone_number": "+17726313753" },
+    2 => { "name": "electric_bass2", "phone_number": "+17726313753" },
+    #1 => { "name": "Brandon Miller", "phone_number": "+14077492730" },
+    #2 => { "name": "Dex Wilborn", "phone_number": "+13213423779" },
+    #3 => { "name": "Al Castor", "phone_number": "+14076687256" },
+  }
+  ELECTRIC_GUITAR_LIST = {
+    1 => { "name": "electric_guitar1", "phone_number": "+17726313753" },
+    2 => { "name": "electric_guitar2", "phone_number": "+17726313753" },
+    #1 => { "name": "Andrew Williams", "phone_number": "+13213162569" },
+    #2 => { "name": "Brandon Wilson", "phone_number": "+14049184694" },
+    #3 => { "name": "Daniel Howard", "phone_number": nil }
+  }
+  KEYBOARD_LIST = {
+    1 => { "name": "keyboard1", "phone_number": "+17726313753" },
+    2 => { "name": "keyboard2", "phone_number": "+17726313753" },
+    #1 => { "name": "Assel Jean-Pierre Jr", "phone_number": "+14076708790" },
+    #2 => { "name": "Jeremy James", "phone_number": "+13522725820" },
+  }
+  LIVE_PIANO_LIST = {
+    1 => { "name": "live_piano1", "phone_number": "+17726313753" },
+    2 => { "name": "live_piano2", "phone_number": "+17726313753" },
+    #1 => { "name": "Assel Jean-Pierre Jr", "phone_number": "+14076708790" },
+  }
+  TENOR_SAX_LIST = {
+    1 => { "name": "tenor_sax1", "phone_number": "+17726313753" },
+    2 => { "name": "tenor_sax2", "phone_number": "+17726313753" },
+    #1 => { "name": "Dex Wilborn", "phone_number": "+13213423779" },
+  }
+  TRUMPET_LIST = {
+    1 => { "name": "trumpet1", "phone_number": "+17726313753" },
+    2 => { "name": "trumpet2", "phone_number": "+17726313753" },
+    #1 => { "name": "Matthew Mill", "phone_number": "+13216267502" },
+  }
+  UPRIGHT_BASS_LIST = {
+    1 => { "name": "upright_bass1", "phone_number": "+17726313753" },
+    2 => { "name": "upright_bass2", "phone_number": "+17726313753" },
+    #1 => { "name": "Brandon Miller", "phone_number": "+14077492730" },
+  }
+  VIOLIN_LIST = {
+    1 => { "name": "violin1", "phone_number": "+17726313753" },
+    2 => { "name": "violin2", "phone_number": "+17726313753" },
+    #1 => { "name": "Jared Burnett", "phone_number": "+14073103204" },
   }
 
   INSTRUMENT_LIST = {
-    "guitar" => 1,
-    "bass" => 2,
-    "drum" => 3
+    "acoustic_guitar" => 1,
+    "drums" => 2,
+    "electric_bass" => 3,
+    "electric_guitar" => 4,
+    "keyboard" => 5,
+    "live_piano" => 6,
+    "tenor_sax" => 7,
+    "trumpet" => 8,
+    "upright_bass" => 9,
+    "violin" => 10
   }
 
   account_sid = "AC74728af5c70f944cbeac429666fb7e4b"
@@ -33,9 +85,16 @@ class BookingsController < ApplicationController
 
   def show_status
     @booking = Booking.find(params[:id])
-    @guitar_list = GUITAR_LIST
-    @bass_list = BASS_LIST
-    @drum_list = DRUM_LIST
+    @acoustic_guitar_list = ACOUSTIC_GUITAR_LIST
+    @drums_list = DRUMS_LIST
+    @electric_bass_list = ELECTRIC_BASS_LIST
+    @electric_guitar_list = ELECTRIC_GUITAR_LIST
+    @keyboard_list = KEYBOARD_LIST
+    @live_piano_list = LIVE_PIANO_LIST
+    @tenor_sax_list = TENOR_SAX_LIST
+    @trumpet_list = TRUMPET_LIST
+    @upright_bass_list = UPRIGHT_BASS_LIST
+    @violin_list = VIOLIN_LIST
   end
 
   def index
@@ -72,9 +131,6 @@ class BookingsController < ApplicationController
 
   def message_studio(booking)
     puts "message_studio"
-    # check if studio needs to be messaged
-      # if it does, find the next time to message, add it to the booking status, and send the message!
-      # if it does not, trigger message_musicians
     if booking.studio == 'WHP'
       booking.statuses[:studio_times][booking.possible_times[0]] = "Confirmed (#{Time.now})"
       booking.save!
@@ -90,7 +146,7 @@ class BookingsController < ApplicationController
         return
       else
         studio = booking.studio
-        required_instruments = booking.instruments.join(', ')
+        required_instruments = booking.instruments.join(', ').gsub('_', ' ')
         message = "New Custom-Tracks.com order! \n\n" \
           "Is #{studio} available #{time_to_message}? \n\n" \
           "Instruments: #{required_instruments} \n\n" \
@@ -105,11 +161,6 @@ class BookingsController < ApplicationController
   end
 
   def build_musician_message(booking, instrument)
-    # Find musicians to message (MUSICIAN_LIST[instrument] - messaged_musicians)
-      # If instrument is nil, check for all instruments that are in self.instruments
-      # If instrument is not nil, only check for the instrument listed (this applied to when a musician rejects, or the clock job is ran)
-    # Add the musicians to status
-    # Send the message to the musicians!
     time_to_message = booking.statuses[:studio_times].keys[-1]
     musician_list = eval("#{instrument}_list".upcase)
     available_musicians = musician_list.keys
@@ -144,8 +195,6 @@ class BookingsController < ApplicationController
   end
 
   def studio_reject
-    # Add rejected time to status
-    # Message studio again
     booking = Booking.find(params[:id])
     reconfirm = params[:r].to_i == 0 ? false : true
     if reconfirm
@@ -161,8 +210,6 @@ class BookingsController < ApplicationController
   end
 
   def studio_confirm
-    # Add confirmed time to status
-    # Trigger message_musicians
     booking = Booking.find(params[:id])
     reconfirm = params[:r].to_i == 0 ? false : true
     if reconfirm
@@ -178,21 +225,18 @@ class BookingsController < ApplicationController
   end
 
   def musician_reject
-    # Add rejected musician to status
-    # Trigger message_musicians(instrument to check for)
     booking = Booking.find(params[:id])
     instrument = INSTRUMENT_LIST.rassoc(params[:i].to_i)[0]
     musician = params[:n].to_i
     booking.statuses[:musicians][instrument.to_sym][musician] = "Rejected (#{Time.now})"
     booking.save!
-    message_musicians(booking, instrument)
+    last_musician_messaged = booking.statuses[:musicians][instrument.to_sym].keys[-1]
+    if musician == last_musician_messaged
+      message_musicians(booking, instrument)
+    end
   end
 
   def musician_confirm
-    # Add confimed musician to status
-    # Change status of instrument in status
-      # If all instruments are now confirmed, trigger reconfirm with studio
-      # If not, do nothing
     booking = Booking.find(params[:id])
     instrument = INSTRUMENT_LIST.rassoc(params[:i].to_i)[0].to_sym
     musician = params[:n].to_i
@@ -255,10 +299,11 @@ class BookingsController < ApplicationController
       booking.instruments.each do |instrument|
         last_message = booking.statuses[:musicians][instrument.to_sym].values[-1]
         return if last_message.blank?
+        instrument_status = booking.statuses[:instruments][instrument.to_sym]
         status = last_message.split(' (')[0]
         time = last_message.split(' (')[1].to_time
         time_difference = ((Time.now - time)/60)
-        if status == 'Message Sent' and time_difference > 5
+        if instrument_status == 'Incomplete' and status == 'Message Sent' and time_difference > 5
           message_musicians(booking, instrument)
         end
       end

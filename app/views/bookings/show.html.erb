@@ -6,7 +6,7 @@
 
   <p> Date: <%= @booking.statuses[:studio_times].keys[-1] %> </p>
 
-  <p> Instruments: <%= @booking.instruments.join(', ') %> </p>
+  <p> Instruments: <%= @booking.instruments.join(', ').gsub('_', ' ') %> </p>
 
   <p> MP3 Links: <br>
     <% @booking.mp3_links.each do |link| %>
