@@ -5,7 +5,7 @@ require "rails"
 
 module Clockwork
   configure do |config|
-    log_path = Rails.env == "production" ? "/var/www/html/workflow/Workflow/log/clockwork.log" : STDOUT
+    log_path = Rails.env == "production" ? "/var/www/html/workflow/log/clockwork.log" : STDOUT
     config[:logger] = Logger.new(log_path)
   end
 
