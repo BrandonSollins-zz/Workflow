@@ -14,6 +14,7 @@ gem 'httpclient', '~> 2.5.2'
 gem 'geocoder'
 gem 'twilio-ruby'
 gem "clockwork", require: false
+gem "daemons"
 
 
 # gem 'redis', '~> 3.0'
