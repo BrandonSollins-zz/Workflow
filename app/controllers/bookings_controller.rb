@@ -278,20 +278,20 @@ class BookingsController < ApplicationController
 
   def send_message(message, phone_number)
     puts "send_message - #{message}, #{phone_number}"
-    # message = TWILIO_CLIENT.messages.create(
-    #     body: message,
-    #     to: "+17726313753",
-    #     from: "+17727424854"
-    # )
+    message = TWILIO_CLIENT.messages.create(
+        body: message,
+        to: phone_number,
+        from: "+17727424854"
+    )
   end
 
   def message_dane(message)
     puts "message_dane - #{message}"
-    # message = TWILIO_CLIENT.messages.create(
-    #     body: message,
-    #     to: "+17726313753",
-    #     from: "+17727424854"
-    # )
+    message = TWILIO_CLIENT.messages.create(
+        body: message,
+        to: "+17726313753",
+        from: "+17727424854"
+    )
   end
 
   def check_messaged_musicians
