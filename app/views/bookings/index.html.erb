@@ -10,7 +10,6 @@
 
     Dates:
     <%= f.text_area :dates %> <br>
-    <input id="dow" placeholder="Day of Week" size=12></input>
     <input id="month" placeholder="Month" size=5></input>
     <input id="day" placeholder="Day" size=5></input>
     <input id="time" placeholder="Time"></input>
@@ -51,12 +50,11 @@
 
 <script>
 function addDate() {
-  dow = document.getElementById("dow").value
   month = document.getElementById("month").value
   day = document.getElementById("day").value
   time = document.getElementById("time").value
   dates = document.getElementById("booking_dates")
-  dates.value += dow + " " +  month + "/" + day + " at " + time + "\n"
+  dates.value += month + "/" + day + " at " + time + "\n"
 }
 </script>
 
