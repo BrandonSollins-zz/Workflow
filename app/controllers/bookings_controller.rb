@@ -144,9 +144,9 @@ class BookingsController < ApplicationController
       message = "New Custom-Tracks.com order! \n\n" \
         "Instruments: #{required_instruments} \n\n" \
         "Studio: #{studio} \n\n" \
-        "Please click the link next to the time that would work best for the studio. \n\n"
+        "Please click the link below the time that would work best for the studio. \n\n"
       booking.possible_times.each_with_index do |time, index|
-        message += "#{time} - app.custom-tracks.com/b/#{booking.id}/sc?r=0&t=#{index} \n\n" \
+        message += "#{time} \n app.custom-tracks.com/b/#{booking.id}/sc?r=0&t=#{index} \n\n" \
       end
       message += "If no days/times work, click here: app.custom-tracks.com/b/#{booking.id}/sr?r=0 \n\n"
       message += "Thanks!"
