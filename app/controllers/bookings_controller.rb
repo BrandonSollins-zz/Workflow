@@ -1,73 +1,73 @@
 class BookingsController < ApplicationController
 
-  STUDIO_NUMBER = "+17726313753"
-  #STUDIO_NUMBER = "+14079528945"
+  #STUDIO_NUMBER = "+17726313753"
+  STUDIO_NUMBER = "+14079528945"
 
-  DANE_NUMBER = "+17726313753"
-  #DANE_NUMBER = "+13522294867"
+  #DANE_NUMBER = "+17726313753"
+  DANE_NUMBER = "+13522294867"
 
   #TWILIO_NUMBER = "+17727424854"
   TWILIO_NUMBER = "+13523507838"
 
   ACOUSTIC_GUITAR_LIST = {
-    1 => { "name": "acoustic_guitar1", "phone_number": "+17726313753" },
-    2 => { "name": "acoustic_guitar2", "phone_number": "+17726313753" },
-    #1 => { "name": "Tommy Calton", "phone_number": "+14075799405" },
-    #2 => { "name": "Andrew Williams", "phone_number": "+13213162569" }
+    #1 => { "name": "acoustic_guitar1", "phone_number": "+17726313753" },
+    #2 => { "name": "acoustic_guitar2", "phone_number": "+17726313753" },
+    1 => { "name": "Tommy Calton", "phone_number": "+14075799405" },
+    2 => { "name": "Andrew Williams", "phone_number": "+13213162569" }
   }
   DRUMS_LIST = {
-    1 => { "name": "drums1", "phone_number": "+17726313753" },
-    2 => { "name": "drums2", "phone_number": "+17726313753" },
-    #1 => { "name": "Gerald Law", "phone_number": "+19413741741" },
-    #2 => { "name": "Jay Dolpus", "phone_number": "+14075086481" },
-    #3 => { "name": "Luis Rivera", "phone_number": "+13525301263" },
-    #4 => { "name": "Jerome Martin", "phone_number": "+19548267940" },
+    #1 => { "name": "drums1", "phone_number": "+17726313753" },
+    #2 => { "name": "drums2", "phone_number": "+17726313753" },
+    1 => { "name": "Gerald Law", "phone_number": "+19413741741" },
+    2 => { "name": "Jay Dolpus", "phone_number": "+14075086481" },
+    3 => { "name": "Luis Rivera", "phone_number": "+13525301263" },
+    4 => { "name": "Jerome Martin", "phone_number": "+19548267940" }
   }
   ELECTRIC_BASS_LIST = {
-    1 => { "name": "electric_bass1", "phone_number": "+17726313753" },
-    2 => { "name": "electric_bass2", "phone_number": "+17726313753" },
-    #1 => { "name": "Brandon Miller", "phone_number": "+14077492730" },
-    #2 => { "name": "Dex Wilborn", "phone_number": "+13213423779" },
-    #3 => { "name": "Al Castor", "phone_number": "+14076687256" },
+    #1 => { "name": "electric_bass1", "phone_number": "+17726313753" },
+    #2 => { "name": "electric_bass2", "phone_number": "+17726313753" },
+    1 => { "name": "Brandon Miller", "phone_number": "+14077492730" },
+    2 => { "name": "Dex Wilborn", "phone_number": "+13213423779" },
+    3 => { "name": "Al Castor", "phone_number": "+14076687256" }
   }
   ELECTRIC_GUITAR_LIST = {
-    1 => { "name": "electric_guitar1", "phone_number": "+17726313753" },
-    2 => { "name": "electric_guitar2", "phone_number": "+17726313753" },
-    #1 => { "name": "Andrew Williams", "phone_number": "+13213162569" },
-    #2 => { "name": "Brandon Wilson", "phone_number": "+14049184694" },
-    #3 => { "name": "Daniel Howard", "phone_number": "+13216628961" }
-    #4 => { "name": "Brandon Sollins", "phone_number": "+17726313753" }
+    #1 => { "name": "electric_guitar1", "phone_number": "+17726313753" },
+    #2 => { "name": "electric_guitar2", "phone_number": "+17726313753" },
+    1 => { "name": "Andrew Williams", "phone_number": "+13213162569" },
+    2 => { "name": "Brandon Wilson", "phone_number": "+14049184694" },
+    3 => { "name": "Daniel Howard", "phone_number": "+13216628961" },
+    4 => { "name": "Brandon Sollins", "phone_number": "+17726313753" }
   }
   KEYBOARD_LIST = {
-    1 => { "name": "keyboard1", "phone_number": "+17726313753" },
-    2 => { "name": "keyboard2", "phone_number": "+17726313753" },
-    #1 => { "name": "Assel Jean-Pierre Jr", "phone_number": "+14076708790" },
-    #2 => { "name": "Jeremy James", "phone_number": "+13522725820" },
+    #1 => { "name": "keyboard1", "phone_number": "+17726313753" },
+    #2 => { "name": "keyboard2", "phone_number": "+17726313753" },
+    1 => { "name": "Assel Jean-Pierre Jr", "phone_number": "+14076708790" },
+    2 => { "name": "Jeremy James", "phone_number": "+13522725820" }
   }
   LIVE_PIANO_LIST = {
-    1 => { "name": "live_piano1", "phone_number": "+17726313753" },
-    2 => { "name": "live_piano2", "phone_number": "+17726313753" },
-    #1 => { "name": "Assel Jean-Pierre Jr", "phone_number": "+14076708790" },
+    #1 => { "name": "live_piano1", "phone_number": "+17726313753" },
+    #2 => { "name": "live_piano2", "phone_number": "+17726313753" },
+    1 => { "name": "Assel Jean-Pierre Jr", "phone_number": "+14076708790" }
   }
   TENOR_SAX_LIST = {
-    1 => { "name": "tenor_sax1", "phone_number": "+17726313753" },
-    2 => { "name": "tenor_sax2", "phone_number": "+17726313753" },
-    #1 => { "name": "Dex Wilborn", "phone_number": "+13213423779" },
+    #1 => { "name": "tenor_sax1", "phone_number": "+17726313753" },
+    #2 => { "name": "tenor_sax2", "phone_number": "+17726313753" },
+    1 => { "name": "Dex Wilborn", "phone_number": "+13213423779" }
   }
   TRUMPET_LIST = {
-    1 => { "name": "trumpet1", "phone_number": "+17726313753" },
-    2 => { "name": "trumpet2", "phone_number": "+17726313753" },
-    #1 => { "name": "Matthew Mill", "phone_number": "+13216267502" },
+    #1 => { "name": "trumpet1", "phone_number": "+17726313753" },
+    #2 => { "name": "trumpet2", "phone_number": "+17726313753" },
+    1 => { "name": "Matthew Mill", "phone_number": "+13216267502" }
   }
   UPRIGHT_BASS_LIST = {
-    1 => { "name": "upright_bass1", "phone_number": "+17726313753" },
-    2 => { "name": "upright_bass2", "phone_number": "+17726313753" },
-    #1 => { "name": "Brandon Miller", "phone_number": "+14077492730" },
+    #1 => { "name": "upright_bass1", "phone_number": "+17726313753" },
+    #2 => { "name": "upright_bass2", "phone_number": "+17726313753" },
+    1 => { "name": "Brandon Miller", "phone_number": "+14077492730" }
   }
   VIOLIN_LIST = {
-    1 => { "name": "violin1", "phone_number": "+17726313753" },
-    2 => { "name": "violin2", "phone_number": "+17726313753" },
-    #1 => { "name": "Jared Burnett", "phone_number": "+14073103204" },
+    #1 => { "name": "violin1", "phone_number": "+17726313753" },
+    #2 => { "name": "violin2", "phone_number": "+17726313753" },
+    1 => { "name": "Jared Burnett", "phone_number": "+14073103204" }
   }
 
   INSTRUMENT_LIST = {
@@ -82,6 +82,10 @@ class BookingsController < ApplicationController
     "upright_bass" => 9,
     "violin" => 10
   }
+
+  account_sid = Key.where("platform = 'twilio'")[0].keys[:account_sid]
+  token = Key.where("platform = 'twilio'")[0].keys[:token]
+  TWILIO_CLIENT = Twilio::REST::Client.new(account_sid, token)
 
   def show
     @booking = Booking.find(params[:id])
@@ -144,9 +148,9 @@ class BookingsController < ApplicationController
       message = "New Custom-Tracks.com order! \n\n" \
         "Instruments: #{required_instruments} \n\n" \
         "Studio: #{studio} \n\n" \
-        "Please click the link below the time that would work best for the studio. \n\n"
+        "Please click the link next to the time that would work best for the studio. \n\n"
       booking.possible_times.each_with_index do |time, index|
-        message += "#{time} \n app.custom-tracks.com/b/#{booking.id}/sc?r=0&t=#{index} \n\n" \
+        message += "#{time} - app.custom-tracks.com/b/#{booking.id}/sc?r=0&t=#{index} \n\n" \
       end
       message += "If no days/times work, click here: app.custom-tracks.com/b/#{booking.id}/sr?r=0 \n\n"
       message += "Thanks!"
@@ -296,15 +300,9 @@ class BookingsController < ApplicationController
     booking.save!
   end
 
-  def twilio_client
-    account_sid = Key.where("platform = 'twilio'")[0].keys[:account_sid]
-    token = Key.where("platform = 'twilio'")[0].keys[:token]
-    Twilio::REST::Client.new(account_sid, token)
-  end
-
   def send_message(message, phone_number)
     #puts "send_message - #{message}, #{phone_number}"
-    message = twilio_client.messages.create(
+    message = TWILIO_CLIENT.messages.create(
         body: message,
         to: phone_number,
         from: TWILIO_NUMBER
@@ -313,7 +311,7 @@ class BookingsController < ApplicationController
 
   def message_dane(message)
     #puts "message_dane - #{message}"
-    message = twilio_client.messages.create(
+    message = TWILIO_CLIENT.messages.create(
         body: message,
         to: DANE_NUMBER,
         from: TWILIO_NUMBER

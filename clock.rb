@@ -9,7 +9,7 @@ module Clockwork
     config[:logger] = Logger.new(log_path)
   end
 
-  every(10.seconds, "check_messaged_musicians") do
+  every(15.minutes, "check_messaged_musicians") do
     BookingsController.new.check_messaged_musicians
   end
 
