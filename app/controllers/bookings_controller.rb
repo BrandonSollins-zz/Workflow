@@ -77,8 +77,8 @@ class BookingsController < ApplicationController
     "violin" => 10
   }
 
-  account_sid = "AC74728af5c70f944cbeac429666fb7e4b"
-  token = "fc8582f0efcba31c6d19798312cb4121"
+  account_sid = Key.where("platform = 'twilio'")[0].keys[:account_sid]
+  token = Key.where("platform = 'twilio'")[0].keys[:token]
   TWILIO_CLIENT = Twilio::REST::Client.new(account_sid, token)
 
   def show
@@ -142,11 +142,11 @@ class BookingsController < ApplicationController
       message = "New Custom-Tracks.com order! \n\n" \
         "Instruments: #{required_instruments} \n\n" \
         "Studio: #{studio} \n\n" \
-        "Please click the link next to the time that the studio is best available. \n\n" \
-        "If no times are available, click here: app.custom-tracks.com/b/#{booking.id}/sr?r=0 \n\n"
+        "Please click the link next to the time that would work best for the studio. \n\n"
       booking.possible_times.each_with_index do |time, index|
         message += "#{time} - app.custom-tracks.com/b/#{booking.id}/sc?r=0&t=#{index} \n\n" \
       end
+      message += "If no days/times work, click here: app.custom-tracks.com/b/#{booking.id}/sr?r=0 \n\n"
       message += "Thanks!"
       send_message(message, STUDIO_NUMBER)
       booking.statuses[:studio_times]["Initial contact"] = "Message Sent (#{Time.now})"
@@ -167,8 +167,8 @@ class BookingsController < ApplicationController
       return
     end
     phone_number = musician_list[musician_to_message][:phone_number]
-    message = "New Custom-Tracks.com order! \n\n" \
-      "Are you available #{time_to_message}? \n\n" \
+    message = "New Custom-Tracks.com session! \n\n" \
+      "Are you available #{time_to_message} for a session at #{booking.studio}? \n\n" \
       "If yes, click here: app.custom-tracks.com/b/#{booking.id}/mc?i=#{INSTRUMENT_LIST[instrument]}&n=#{musician_to_message} \n\n" \
       "If no, click here: app.custom-tracks.com/b/#{booking.id}/mr?i=#{INSTRUMENT_LIST[instrument]}&n=#{musician_to_message} \n\n" \
       "Thanks!"
@@ -195,6 +195,9 @@ class BookingsController < ApplicationController
       booking.booking_status = "Failed - Messaged Dane (#{Time.now})"
       booking.save!
       message_dane("Studio rejected reconfirm")
+    elsif !booking.statuses[:studio_times].values[-1].include?("Message Sent")
+      @double_click = true
+      return
     else
       booking.statuses[:studio_times][booking[:statuses][:studio_times].keys[-1]] = "Rejected (#{Time.now})"
       booking.booking_status = "Failed - Messaged Dane (#{Time.now})"
@@ -212,6 +215,9 @@ class BookingsController < ApplicationController
       booking.booking_status = "Completed (#{Time.now})"
       booking.save!
       reconfirm_musicians(booking)
+    elsif !booking.statuses[:studio_times].values[-1].include?("Message Sent")
+      @double_click = true
+      return
     else
       booking.statuses[:studio_times][booking.possible_times[time]] = "Confirmed (#{Time.now})"
       booking.save!
@@ -223,6 +229,10 @@ class BookingsController < ApplicationController
     booking = Booking.find(params[:id])
     instrument = INSTRUMENT_LIST.rassoc(params[:i].to_i)[0]
     musician = params[:n].to_i
+    if !booking.statuses[:musicians][instrument.to_sym][musician].include?("Message Sent")
+      @double_click = true
+      return
+    end
     booking.statuses[:musicians][instrument.to_sym][musician] = "Rejected (#{Time.now})"
     booking.save!
     last_musician_messaged = booking.statuses[:musicians][instrument.to_sym].keys[-1]
@@ -237,41 +247,46 @@ class BookingsController < ApplicationController
     musician = params[:n].to_i
     instrument_status = booking.statuses[:instruments][instrument]
     musician_status = booking.statuses[:musicians][instrument][musician]
-    @late_response = false
+    if !booking.statuses[:musicians][instrument.to_sym][musician].include?("Message Sent")
+      @double_click = true
+      return
+    end
     if (instrument_status == "Confirmed") & (!musician_status.include?("Confirmed"))
       booking.statuses[:musicians][instrument.to_sym][musician] = "Late response (#{Time.now})"
       booking.save!
       @late_response = true
       return
-    else
-      booking.statuses[:musicians][instrument.to_sym][musician] = "Confirmed (#{Time.now})"
-      booking.statuses[:instruments][instrument] = "Confirmed"
-      booking.save!
     end
+    booking.statuses[:musicians][instrument.to_sym][musician] = "Confirmed (#{Time.now})"
+    booking.statuses[:instruments][instrument] = "Confirmed"
+    booking.save!
     if booking.statuses[:instruments].values.all? { |x| x == "Confirmed" }
       reconfirm_studio(booking)
     end
   end
 
   def reconfirm_musicians(booking)
+    booking_time = booking.statuses[:studio_times].keys[-1]
     booking.statuses[:instruments].keys.each do |instrument|
       confirmed_musician = booking.statuses[:musicians][instrument].select{ |k,v| v.include?("Confirmed") }
       phone_number = eval("#{instrument}_list".upcase)[confirmed_musician.keys[0]]
-      message = "Custom-Tracks booking is fully confirmed! \n\n" \
-        "Click below to see all the details of the booking \n\n" \
+      message = "We have a booking! \n\n" \
+        "See you at #{booking.studio} at #{booking_time} for recording #{instrument}. \n\n" \
+        "Click below to see the song and session info: \n\n" \
         "app.custom-tracks.com/bookings/#{booking.id}"
       send_message(message, phone_number)
     end
+    message_dane("Booking ##{booking.id} has been fully booked!")
   end
 
   def reconfirm_studio(booking)
     time = booking.statuses[:studio_times].keys[-1]
     instruments = booking.instruments.join(', ').gsub('_', ' ')
-    message = "Musicians are confirmed for: \n\n" \
+    message = "Musicians are all set for: \n\n" \
       "Studio -  #{booking.studio} \n\n" \
       "Time -  #{time} \n\n" \
       "Instruments - #{instruments} \n\n" \
-      "To reconfirm, click here: app.custom-tracks.com/b/#{booking.id}/sc?r=1 \n\n" \
+      "To confirm the booking, click here: app.custom-tracks.com/b/#{booking.id}/sc?r=1 \n\n" \
       "If things have changed, click here: app.custom-tracks.com/b/#{booking.id}/sr?r=1 \n\n" \
       "Thanks!"
     send_message(message, STUDIO_NUMBER)
@@ -306,7 +321,7 @@ class BookingsController < ApplicationController
         status = last_message.split(' (')[0]
         time = last_message.split(' (')[1].to_time
         time_difference = ((Time.now - time)/60)
-        if instrument_status == 'Incomplete' and status == 'Message Sent' and time_difference > 5
+        if instrument_status == 'Incomplete' and status == 'Message Sent' and time_difference > 30
           message_musicians(booking, instrument)
         end
       end

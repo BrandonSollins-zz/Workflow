@@ -1,7 +1,11 @@
 <html>
 
-  <p> Thank you for confirming! </p>
-  <p> We'll be in contact soon to confirm all of the details of the booking. </p>
-  <p> Be on the lookout for an upcoming text! </p>
+  <% if @double_click %>
+    <p> A response has already been received for this message </p>
+  <% else %>
+    <p> Thanks! </p>
+    <p> We'll check with the musician(s) and confirm with you if they're available </p>
+    <p> Be on the lookout for an upcoming text! </p>
+  <% end %>
 
 </html>
