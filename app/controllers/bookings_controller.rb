@@ -83,10 +83,6 @@ class BookingsController < ApplicationController
     "violin" => 10
   }
 
-  account_sid = Key.where("platform = 'twilio'")[0].keys[:account_sid]
-  token = Key.where("platform = 'twilio'")[0].keys[:token]
-  TWILIO_CLIENT = Twilio::REST::Client.new(account_sid, token)
-
   def show
     @booking = Booking.find(params[:id])
   end
@@ -300,9 +296,15 @@ class BookingsController < ApplicationController
     booking.save!
   end
 
+  def twilio_client
+    account_sid = Key.where("platform = 'twilio'")[0].keys[:account_sid]
+    token = Key.where("platform = 'twilio'")[0].keys[:token]
+    Twilio::REST::Client.new(account_sid, token)
+  end
+
   def send_message(message, phone_number)
     #puts "send_message - #{message}, #{phone_number}"
-    message = TWILIO_CLIENT.messages.create(
+    message = twilio_client.messages.create(
         body: message,
         to: phone_number,
         from: TWILIO_NUMBER
@@ -311,7 +313,7 @@ class BookingsController < ApplicationController
 
   def message_dane(message)
     #puts "message_dane - #{message}"
-    message = TWILIO_CLIENT.messages.create(
+    message = twilio_client.messages.create(
         body: message,
         to: DANE_NUMBER,
         from: TWILIO_NUMBER
