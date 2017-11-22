@@ -3,6 +3,12 @@ class BookingsController < ApplicationController
   STUDIO_NUMBER = "+17726313753"
   #STUDIO_NUMBER = "+14079528945"
 
+  DANE_NUMBER = "+17726313753"
+  #DANE_NUMBER = "+13522294867"
+
+  #TWILIO_NUMBER = "+17727424854"
+  TWILIO_NUMBER = "+13523507838"
+
   ACOUSTIC_GUITAR_LIST = {
     1 => { "name": "acoustic_guitar1", "phone_number": "+17726313753" },
     2 => { "name": "acoustic_guitar2", "phone_number": "+17726313753" },
@@ -295,21 +301,21 @@ class BookingsController < ApplicationController
   end
 
   def send_message(message, phone_number)
-    puts "send_message - #{message}, #{phone_number}"
-    # message = TWILIO_CLIENT.messages.create(
-    #     body: message,
-    #     to: phone_number,
-    #     from: "+17727424854"
-    # )
+    #puts "send_message - #{message}, #{phone_number}"
+    message = TWILIO_CLIENT.messages.create(
+        body: message,
+        to: phone_number,
+        from: TWILIO_NUMBER
+    )
   end
 
   def message_dane(message)
-    puts "message_dane - #{message}"
-    # message = TWILIO_CLIENT.messages.create(
-    #     body: message,
-    #     to: "+17726313753",
-    #     from: "+17727424854"
-    # )
+    #puts "message_dane - #{message}"
+    message = TWILIO_CLIENT.messages.create(
+        body: message,
+        to: DANE_NUMBER,
+        from: TWILIO_NUMBER
+    )
   end
 
   def check_messaged_musicians
