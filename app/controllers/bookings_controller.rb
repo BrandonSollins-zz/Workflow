@@ -200,7 +200,7 @@ class BookingsController < ApplicationController
       booking.statuses[:studio_reconfirmed] = "Rejected (#{Time.now})"
       booking.booking_status = "Failed - Messaged Dane (#{Time.now})"
       booking.save!
-      message_dane("Studio rejected reconfirm")
+      message_dane("Studio rejected reconfirm - Booking ##{booking.id}")
     elsif !booking.statuses[:studio_times].values[-1].include?("Message Sent")
       @double_click = true
       return
@@ -208,7 +208,7 @@ class BookingsController < ApplicationController
       booking.statuses[:studio_times][booking[:statuses][:studio_times].keys[-1]] = "Rejected (#{Time.now})"
       booking.booking_status = "Failed - Messaged Dane (#{Time.now})"
       booking.save!
-      message_dane("The studio isn't available")
+      message_dane("The studio isn't available - Booking ##{booking.id}")
     end
   end
 
@@ -275,9 +275,9 @@ class BookingsController < ApplicationController
     booking_time = booking.statuses[:studio_times].keys[-1]
     booking.statuses[:instruments].keys.each do |instrument|
       confirmed_musician = booking.statuses[:musicians][instrument].select{ |k,v| v.include?("Confirmed") }
-      phone_number = eval("#{instrument}_list".upcase)[confirmed_musician.keys[0]]
+      phone_number = eval("#{instrument}_list".upcase)[confirmed_musician.keys[0]][:phone_number]
       message = "We have a booking! \n\n" \
-        "See you at #{booking.studio} at #{booking_time} for recording #{instrument}. \n\n" \
+        "See you at #{booking.studio} at #{booking_time} for recording #{instrument.to_s.gsub('_', ' ')}. \n\n" \
         "Click below to see the song and session info: \n\n" \
         "app.custom-tracks.com/bookings/#{booking.id}"
       send_message(message, phone_number)
