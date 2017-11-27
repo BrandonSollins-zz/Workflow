@@ -295,7 +295,11 @@ class BookingsController < ApplicationController
       "To confirm the booking, click here: app.custom-tracks.com/b/#{booking.id}/sc?r=1 \n\n" \
       "If things have changed, click here: app.custom-tracks.com/b/#{booking.id}/sr?r=1 \n\n" \
       "Thanks!"
-    send_message(message, STUDIO_NUMBER)
+    if booking.studio == 'WHP'
+      send_message(message, DANE_NUMBER)
+    else
+      send_message(message, STUDIO_NUMBER)
+    end
     booking.statuses[:studio_reconfirmed] = "Message Sent (#{Time.now})"
     booking.save!
   end
