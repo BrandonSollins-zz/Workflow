@@ -52,7 +52,7 @@ class BookingsController < ApplicationController
   TENOR_SAX_LIST = {
     #1 => { "name": "tenor_sax1", "phone_number": "+17726313753" },
     #2 => { "name": "tenor_sax2", "phone_number": "+17726313753" },
-    1 => { "name": "Dex Wilborn", "phone_number": "+13213423779" }
+    1 => { "name": "Dex Wilborn", "phone_number": "+13212433779" }
   }
   TRUMPET_LIST = {
     #1 => { "name": "trumpet1", "phone_number": "+17726313753" },
