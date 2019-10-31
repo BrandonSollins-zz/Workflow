@@ -1,0 +1,126 @@
+<html>
+
+  Filter Songwriters By:
+  <select id='data_select'>
+    <option id='all_data'> All Songwriters </option>
+    <option id='city'> City </option>
+    <option id='region'> State/Region </option>
+    <option id='country'> Country </option>
+    <option id='time_zone'> Time Zone </option>
+    <option id='custom_list'> Custom List </option>
+  </select>
+
+  <select id='additional_select' style='visibility:hidden'></select><br>
+
+  <button id='submit'> Select </button><br><br>
+
+  <h3 style="float: left"> Viewing Data For: &nbsp </h3>
+  <h3 id='current_data' style="float: left, clear: both"></h3>
+  <div id='data_view'></div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+function build_select(options) {
+  options.forEach(function(x) {
+    $('#additional_select').append($('<option>', {
+      id: x,
+      text: x
+    }))
+  })
+}
+
+function show_list(list) {
+  element = $('#' + list)
+  if (element.attr('style') == 'display:none') {
+    element.attr('style', 'display:block')
+    $('#show_list_' + list).html('<u>Hide Emails</u>')
+  } else {
+    element.attr('style', 'display:none')
+    $('#show_list_' + list).html('<u>Show Emails</u>')
+  }
+}
+
+function display_data(data) {
+  Object.keys(data).forEach(function(x) {
+    x_id = x.replace(' ', '')
+    if (data[x]['count'] > 0) {
+      button = '<p id="show_list_' + x_id + '" onclick="show_list(\'' + x_id + '\')"> <u>Show Emails</u> </p>'
+      list = '<ul id="' + x_id + '" style="display:none">'
+      for (email in data[x]['emails']) {
+        list += '<li>' + data[x]['emails'][email] + '</li>'
+      }
+      list += '</ul>'
+    } else {
+      button = ''
+      list = ''
+    }
+    html = '<p> <b>' +  x + '</b> - Total: ' + data[x]['count'] + ' ' + button + list + '</p><br>'
+    $('#data_view').append(html)
+  })
+}
+
+function build_data(main_select, additional_select) {
+  data = <%= raw @data %>
+  $('#data_view').empty()
+  if (main_select == 'all_data') {
+    display_data(data['all_data'])
+    $("#current_data").html('All Songwriters')
+  } else if (main_select == 'time_zone') {
+    display_data(data['time_zones'][additional_select])
+    $("#current_data").html('Time Zone - ' + additional_select)
+  } else if (main_select == 'city') {
+    display_data(data['cities'][additional_select])
+    $("#current_data").html('City - ' + additional_select)
+  } else if (main_select == 'region') {
+    display_data(data['regions'][additional_select])
+    $("#current_data").html('State/Region - ' + additional_select)
+  } else if (main_select == 'country') {
+    display_data(data['countries'][additional_select])
+    $("#current_data").html('Country - ' + additional_select)
+  } else if (main_select == 'custom_list') {
+    $("#current_data").html('Custom List - ' + additional_select)
+  }
+}
+
+$('#submit').on('click', function() {
+  main_select = $('#data_select').find(':selected').attr('id')
+  additional_select = $('#additional_select').find(':selected').attr('id')
+  build_data(main_select, additional_select)
+})
+
+$('#data_select').on('change', function() {
+  $('#additional_select').empty()
+  selected = $(this).find(':selected').attr('id')
+  if (selected == 'city') {
+    $('#additional_select').attr('style', 'visibility:visible')
+    cities = <%= raw @cities.to_json %>
+    build_select(cities)
+  } else if (selected == 'region') {
+    $('#additional_select').attr('style', 'visibility:visible')
+    regions = <%= raw @regions.to_json %>
+    build_select(regions)
+  } else if (selected == 'country') {
+    $('#additional_select').attr('style', 'visibility:visible')
+    countries = <%= raw @countries.to_json %>
+    build_select(countries)
+  } else if (selected == 'time_zone') {
+    $('#additional_select').attr('style', 'visibility:visible')
+    time_zones = <%= raw @time_zones.to_json %>
+    build_select(time_zones)
+  } else if (selected == 'custom_list') {
+    $('#additional_select').attr('style', 'visibility:hidden')
+    //time_zones = <%= raw @time_zones.to_json %>
+    //build_select(time_zones)
+  } else {
+    $('#additional_select').attr('style', 'visibility:hidden')
+  }
+})
+
+$(document).ready(function() {
+  build_data('all_data', null)
+})
+
+</script>
+
+</html>

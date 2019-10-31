@@ -1,0 +1,15 @@
+<html>
+
+  <% if @late_response %>
+    <p> Thank you for confirming! </p>
+    <p> Unfortunately, another musician confirmed before you were able to respond. </p>
+    <p> We wont be able to use you for this booking, but be on the lookout for future ones! </p>
+  <% elsif @double_click %>
+    <p> A response has already been received for this message </p>
+  <% else %>
+    <p> Thanks! </p>
+    <p> We'll check with the other musicians then confirm with you </p>
+    <p> Be on the lookout for an upcoming text! </p>
+  <% end %>
+</html>
+

@@ -1,0 +1,62 @@
+<html>
+
+  <h2> Create a new booking! </h2>
+
+  <%= form_for :booking do |f| %>
+
+    Instruments:
+    <%= f.select :instruments, @instruments, {}, { multiple: true } %>
+    <br><br>
+
+    Dates:
+    <%= f.text_area :dates %> <br>
+    <input id="month" placeholder="Month" size=5></input>
+    <input id="day" placeholder="Day" size=5></input>
+    <input id="time" placeholder="Time"></input>
+    <button type="button" onclick="addDate()"> Add Date </button>
+    <br><br>
+
+    MP3 Links:
+    <%= f.text_area :mp3_links %> <br><br>
+
+    Video Links:
+    <%= f.text_area :video_links %> <br><br>
+
+    Extra Links:
+    <%= f.text_area :extra_links %> <br><br>
+
+    Notes:
+    <%= f.text_area :notes %> <br><br>
+
+    Studio:
+    <%= f.select :studio, ["Studio A", "Studio B", "WHP"] %><br><br>
+
+    <%= f.submit %>
+    <br> <br>
+  <% end %>
+
+  <h2> Active Bookings </h2>
+
+  <% Booking.where("booking_status = 'Active'").order("created_at desc").each do |x| %>
+    <%= link_to "Booking #{x.id} - #{x.created_at.to_date} - #{x.instruments.join('/')}", controller: "bookings", action: "show_status", id: x.id %> <br>
+  <% end %>
+
+  <h2> Past Bookings </h2>
+
+  <% Booking.where("booking_status != 'Active'").order("created_at desc").each do |x| %>
+    <%= link_to "Booking #{x.id} - #{x.created_at.to_date} - #{x.instruments.join('/')}", controller: "bookings", action: "show_status", id: x.id %> <br>
+  <% end %>
+
+
+<script>
+function addDate() {
+  month = document.getElementById("month").value
+  day = document.getElementById("day").value
+  time = document.getElementById("time").value
+  dates = document.getElementById("booking_dates")
+  dates.value += month + "/" + day + " at " + time + "\n"
+}
+</script>
+
+
+</html>

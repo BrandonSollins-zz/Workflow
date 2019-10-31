@@ -1,0 +1,118 @@
+<style>
+
+table {
+  margin-left: 100px;
+}
+
+table tr:nth-child(even) {
+  background-color: #eee;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14;
+}
+
+table tr:nth-child(even):hover {
+  background-color: rgba(70,130,180,.5);
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14;
+}
+
+table tr:nth-child(odd) {
+  background-color:#fff;
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14;
+}
+
+table tr:nth-child(odd):hover {
+  background-color: rgba(70,130,180,.5);
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 14;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+
+th, td {
+  padding: 5px;
+  text-align: center;
+}
+
+th {
+  background-color: rgba(70,130,180,.8);
+  color: white;
+  font-family: Verdana, Geneva, sans-serif;
+  cursor: pointer;
+}
+
+
+</style>
+
+
+<html>
+
+  <% if @musician.is_a? String %>
+    <h3> <%= @musician %> </h3>
+  <% else %>
+
+    <div>
+      <h1> <u>Musician Info </u> </h1>
+      <p> <u>Name:</u> <%= @musician.name %> </p>
+      <p> <u>Email:</u> <%= @musician.email %> </p>
+      <p> <u>Phone:</u> <%= @musician.phone_number %> </p>
+      <p> <u>Instrument:</u> <%= @musician.primary_instrument %> </p>
+    </div>
+
+    <br><br>
+
+    <div>
+      <h1> <u>Musician Availability</u> </h1>
+      <h3> <%= @busy_header %> </h3>
+      <% unless @busy_times.empty? %>
+        <table>
+          <tr>
+            <th> Day (GMT) </th>
+            <th> From (GMT) </th>
+            <th> To (GMT) </th>
+            <th> Day (EDT) </th>
+            <th> From (EDT) </th>
+            <th> To (EDT) </th>
+          </tr>
+
+          <% @busy_times.each do |time| %>
+            <tr>
+              <td> <%= Time.parse(time[0]).strftime("%D") %> </td>
+              <td> <%= Time.parse(time[0]).strftime("%r") %> </td>
+              <td> <%= Time.parse(time[1]).strftime("%r") %> </td>
+              <td> <%= (Time.parse(time[0]) + Time.zone_offset('EDT')).strftime("%D") %> </td>
+              <td> <%= (Time.parse(time[0]) + Time.zone_offset('EDT')).strftime("%r") %> </td>
+              <td> <%= (Time.parse(time[1]) + Time.zone_offset('EDT')).strftime("%r") %> </td>
+            </tr>
+          <% end %>
+        </table>
+      <% end %>
+    </div>
+
+    <br><br>
+
+    <div>
+      <h1> <u>Recent Bookings</u> </h1>
+        <table>
+          <tr>
+            <th> Date/Time </th>
+            <th> More Info </th>
+          </tr>
+
+          <% @bookings.each do |booking| %>
+            <tr>
+              <td> <%= booking.time %> </td>
+              <td> <a href="https://www.custom-tracks.com/workflow/bookings/<%= booking.id %>" > Click for more info </a>  </td>
+            </tr>
+          <% end %>
+        </table>
+    </div>
+  <% end %>
+
+
+</html>

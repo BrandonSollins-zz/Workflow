@@ -1,0 +1,35 @@
+<html>
+
+  <div>
+    <h2> Booking Status (#<%= @booking.id %>)</h2>
+    <%= "Overall status: #{@booking.booking_status}" %>
+  </div><br>
+
+  <div>
+    <h3> Studio Status </h3>
+    <% @booking.statuses[:studio_times].each do |status| %>
+      <%= "Time attempted: #{status[0]} - Status: #{status[1]}" %> <br>
+    <% end %>
+  </div><br>
+
+  <div>
+    <h3> Instrument/Musician Status </h3>
+    <% @booking.statuses[:instruments].each do |instrument| %>
+      <div>
+        <%= "Instrument: #{instrument[0]} - Status: #{instrument[1]}" %>
+        <% @booking.statuses[:musicians][instrument[0]].each do |musician| %>
+          <p style="margin-left:30px">
+            <% musician_list = eval("@#{instrument[0]}_list") %>
+            <%= "Musician: #{musician_list[musician[0]][:name]} - Status: #{musician[1]}" %>
+          </p>
+        <% end %>
+      </div>
+    <% end %>
+  </div><br>
+
+  <div>
+    <h3> Studio Reconfirmed Status </h3>
+    <%= @booking.statuses[:studio_reconfirmed] %>
+  </div>
+
+</html>
